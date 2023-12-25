@@ -1,5 +1,11 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none
 } 
 
 body{
@@ -26,11 +32,13 @@ nav{
     font-family: Manrope;
     border:none;
     color: #FFFFFF;
-
-    
     font-weight: 400;
     font-size: 87.5%; 
     line-height: 137.5%;
+}.menuItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
     
 
@@ -38,14 +46,14 @@ nav{
     display: flex;
     position: fixed;
     top:0; left: 0; right: 0;
-    padding: 0.5rem 9%;
+    margin-left:7%;
+    margin-right: 7%;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
 }
 .darlingTitle{
     display: flex;
-    margin-left: -30px;
     color:#F5D38E;
     font-family:Cormorant Garamond;
 }
@@ -66,7 +74,8 @@ nav{
     z-index: 3;
     position: absolute;
     margin-top: 15%;
-    margin-left:8%;
+    margin-left:7%;
+    
 }
     .sparkleImage{
         width: 100%;
@@ -74,6 +83,7 @@ nav{
 
 .heroProductsImages{
     position: absolute;
+    justify-content: space-between;
     z-index: 2;
     margin-top: 10%;
     margin-left: 50%;
@@ -109,8 +119,36 @@ nav{
     line-height: 28px;
 }
 
-.menuItems{
+
+
+.description{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 5%;
 }
+    .description__container{
+        width: 20%;
+        font-family: Manrope;
+        font-size: 90%;
+        
+    
+    }
+    
+        .description__figure--logo {
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 15px;
+            
+            
+        }
+        .description__container--description__container--p--title{
+            font-weight: bold;
+        }
+        .description__container--description__container--p{
+            color:grey;
+        }
+   
+
+
+
