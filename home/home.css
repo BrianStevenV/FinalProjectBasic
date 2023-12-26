@@ -151,4 +151,111 @@ nav{
    
 
 
+/* espacio  para featured products */
+
+.featuresAndProducts{
+    display: flex;
+    
+}
+    .features{
+
+        margin-left:7%;
+
+    }
+
+
+
+
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 6%;
+    }.products__showcase{
+        margin: 30px;
+    }
+
+
+
+/* espacio para collections */
+
+
+
+
+/* espacio para selection */
+
+
+
+
+/* espacio para footer */
+
+
+.footer{
+    background-color: #093931;
+    max-width: 100%;
+}
+
+.section__footer{
+    display: flex;
+}
+
+.article__footer--h1--p{
+    text-align: center;
+    align-items: center;
+    color:#FFFFFF;
+    left: 7rem;
+    right: 10rem;
+    top:5rem;
+    bottom: 5rem;
+    position: relative;
+    width: 40%;
+    
+}
+
+.article__footer--h1{
+
+    position: relative;
+    margin-top: 10%;
+    font-size: 3rem;
+    font-family: Cormorant Garamond;
+    text-align: justify;
+
+}
+
+.article__footer--p{
+    font-family: Manrope;
+    font-size: 1rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+
+
+
+/*  footer img*/
+
+.footer_figure{
+    background-color: #171A1F4D;
+    display: flex;
+    width: 60%;
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.footer_img{
+    max-width: 100%;
+
+}
+
+.footer__figcaption{
+    
+    font-size: 1rem;
+    line-height: 26px;
+    font-family: Manrope;
+    text-align: justify;
+    /* align-items: center; */
+    color:#FFFFFF;
+    margin: 3rem 0;
+    width: 50%;
+}
 
