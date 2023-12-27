@@ -237,7 +237,34 @@ nav{
 /* espacio para selection */
 
 
+/* espacio para Our Story */
 
+.main__story{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.75rem;
+    margin-left:7%;
+    margin-right: 7%;
+}
+
+.main__story__title{
+    font-family: Cormorant Garamond;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0D554A;
+    margin: 1rem;
+    
+}
+
+.main__story__figure{
+    width: 100%;
+}
+.main__story__figure--image{
+    width:100%
+}
 
 /* espacio para footer */
 
@@ -300,6 +327,7 @@ nav{
 
 .footer_img{
     max-width: 100%;
+    border-radius: 8px 0 0 8px;
 
 }
 
@@ -307,9 +335,8 @@ nav{
     
     font-size: 1rem;
     line-height: 26px;
-    font-family: Manrope;
+    font-family: Manrope; 
     text-align: justify;
-    /* align-items: center; */
     color:#FFFFFF;
     margin: 4rem 0;
     width: 50%;
@@ -319,7 +346,7 @@ nav{
 .footer__figcaption--h1{
     margin-top: 2rem;
     margin-bottom: 0.2rem;
-    /* font-family: Manrope; */
+    font-family: Manrope;
     font-size: 1.25rem;
     
 }
@@ -347,11 +374,19 @@ nav{
 
 }
 
-.article__container__subscribe--p{
+.article__container__subscribe--p--primary{
     color: #FFFFFF;
     font-family: Cormorant Garamond;
-    font-size: 20px;
+    font-size: 1.8rem;
+    font-weight: 300px;
 
+
+}
+.article__container__subscribe--p--secundary{
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-family: Manrope;
+    font-weight: 200px;
 
 }
 
@@ -365,17 +400,16 @@ nav{
 
 .footer__input{
     margin-top: 1.5rem;
-    width: 23.8rem;
+    width: 25rem;
     border-radius: 18px 0px 0px 18px;
-    border-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
     height: 2.5rem; /*2.1875rem*/
     font-family: Manrope;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     background-color: #093931;
     background-image: url("../assets/Mail.png");
     background-repeat: no-repeat;
     background-position: 10px ;
-
 }
 
 .footer__input::placeholder{
@@ -389,9 +423,81 @@ nav{
     border-style: none;
     border-radius: 0px 18px 18px 0;
     width: 7.125rem;
-    height: 2.25rem;
+    height: 2.50rem;
     margin-left: -0.25rem;
 
 }
 
+.footer__container__socialmedia{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-bottom: 1%;
+    
+}
+
+.footer__container__socialmedia__copyright{
+    font-family: Manrope;
+    color: #FFFFFF;
+    font-size: 0.875rem;
+}
+
+.footer__socialmedia{
+    display: flex;
+    gap: 1rem;
+}
+
+.container__buttons{
+    position: absolute;
+    
+    left: 80%; /*80%*/
+    margin-top: 30rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 26px;
+    background: red;
+
+}
+
+.buttons_container{
+    display:flex;
+    gap:2rem;
+    position: absolute;
+    font-size: 1.9375rem;
+    background: transparent;
+    color:#FFFFFF;
+    right: 3.125rem;
+    margin-top: 1.40rem;
+    
+
+}
+
+.button__left{
+    width: 5rem; 
+    height: 5rem;
+    border-radius: 60px;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 0.3rem;
+    border:1px solid #FFFFFF;
+    background: transparent;
+    color:#FFFFFF;
+    font-family: Manrope;
+
+}
+
+.button__right{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 60px;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 0.3rem;
+    color:#FFFFFF;
+    border:1px solid #FFFFFF;
+    background: transparent;
+    font-family: Manrope;
+    
+}
 
