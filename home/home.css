@@ -1,7 +1,9 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 li{
@@ -22,52 +24,64 @@ header {
 nav{
     display: flex;
     justify-content: space-between;
+    margin-right:7%;
+
 }
 .menuItem{
     display: flex;
     justify-content: space-between;
     background-color: #093931;
     margin: 10px;
-    padding-top: 2%;
-    font-family: Manrope;
+    font-family: 'Cormorant Garamond', serif;
     border:none;
     color: #FFFFFF;
     font-weight: 400;
-    font-size: 87.5%; 
-    line-height: 137.5%;
-}.menuItems{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.25rem; 
+    line-height: 1.375rem;
+
 }
+
+
     
 
 .header{
     display: flex;
     position: fixed;
     top:0; left: 0; right: 0;
-    margin-left:7%;
-    margin-right: 7%;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    background-color: #093931;
+
+
 }
 .darlingTitle{
+    margin-left: 7%;
     display: flex;
     color:#F5D38E;
-    font-family:Cormorant Garamond;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    line-height: 2.8;
+    font-weight: 400;
+
 }
 
 .hero{
     background-color: #093931;
     position: relative;
+    width: 100%;
+    height: 55rem;
+}
+.hero__figure{
+    height: 100%;
 }
 .vector{
     width: 100%;
     height: 120px;
     z-index: 1;
     position: relative;
-    margin-top: 55px
+    margin-top: 6rem;
+
 }
 
 .heroSparkleText{
@@ -75,7 +89,6 @@ nav{
     position: absolute;
     margin-top: 15%;
     margin-left:7%;
-    
 }
     .sparkleImage{
         width: 100%;
@@ -105,18 +118,18 @@ nav{
 
 .buttonShopNow{
     background: #093931;
-    position: relative;
     border-radius: 26px;
     border: 1px solid #FFFFFF;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin-left: 100px;
-
     font-family: Manrope;
     font-weight: 400;
     color: #FFFFFF;
-    size: 18px;
     line-height: 28px;
+    bottom: 30%;
+    margin-left:7%;
+    position: absolute;
+    font-size: 1.125rem;
+    width: 12.5rem;
+    height: 3.25rem;
 }
 
 
@@ -130,7 +143,7 @@ nav{
     .description__container{
         width: 20%;
         font-family: Manrope;
-        font-size: 90%;
+        font-size: 1.5rem;
         
     
     }
@@ -155,24 +168,64 @@ nav{
 
 .featuresAndProducts{
     display: flex;
-    
+    margin-top:5%;
+    width: 100%;
 }
     .features{
-
         margin-left:7%;
-
+        width: 25%;
     }
+        .features__title{
+        margin-top: 30%;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.5rem;
+        color:#0D554A;
+        width: 50%;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
 
+        }
+        .features__text{
+        width: 100%;
+        font-size: 1.2rem;
+        font-family: Manrope;
+        color:#424955;
+        margin-bottom: 1rem;
+
+        }
+        .features__button{
+            background: none;
+            border-radius: 26px;
+            border: 1px solid #0D554A;
+            font-family: Manrope;
+            font-weight: 400;
+            color: #0D554A;
+            font-size: 1.125rem;
+            width: 12.5rem;
+            height: 3.25rem;
+        }
 
 
 
     .products{
         display: flex;
         flex-wrap: wrap;
-        margin-top: 6%;
-    }.products__showcase{
-        margin: 30px;
+        padding: 3%;
     }
+        .products__showcase{
+            padding: 1rem;
+        }
+            .products__title{
+                margin-left: 1rem;
+                margin-top: 1rem;
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+            .products__price{
+                margin-left: 1rem;
+                font-size: 1.2rem;
+                font-family: Manrope;  
+            }
 
 
 
@@ -202,7 +255,7 @@ nav{
     text-align: center;
     align-items: center;
     color:#FFFFFF;
-    left: 7rem;
+    left: 7%;
     right: 10rem;
     top:5rem;
     bottom: 5rem;
@@ -226,6 +279,7 @@ nav{
     font-size: 1rem;
     text-align: justify;
     margin-top: 1rem;
+    line-height: 1.7rem;
 }
 
 
@@ -240,6 +294,8 @@ nav{
     position: relative;
     text-align: center;
     border-radius: 8px;
+    margin-right: 7%;
+    margin-top: 5%;
 }
 
 .footer_img{
@@ -255,7 +311,87 @@ nav{
     text-align: justify;
     /* align-items: center; */
     color:#FFFFFF;
-    margin: 3rem 0;
+    margin: 4rem 0;
     width: 50%;
+    padding-left: 2.5rem;
 }
+
+.footer__figcaption--h1{
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+    /* font-family: Manrope; */
+    font-size: 1.25rem;
+    
+}
+
+.footer__container__contact{
+
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 5%;
+}
+
+.section__footer__items{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.footer__items--left, .footer__items--rigth{
+    color: #FFFFFF;
+    font-family: Manrope;
+    font-size: 0.875rem;
+    margin-bottom: 50px;
+
+}
+
+.article__container__subscribe--p{
+    color: #FFFFFF;
+    font-family: Cormorant Garamond;
+    font-size: 20px;
+
+
+}
+
+.footer__item--left--p, .footer__item--right--p{
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    margin-right: 8rem;
+    font-size: 1.25rem;
+    
+}
+
+.footer__input{
+    margin-top: 1.5rem;
+    width: 23.8rem;
+    border-radius: 18px 0px 0px 18px;
+    border-color: #FFFFFF;
+    height: 2.5rem; /*2.1875rem*/
+    font-family: Manrope;
+    font-size: 0.875rem;
+    background-color: #093931;
+    background-image: url("../assets/Mail.png");
+    background-repeat: no-repeat;
+    background-position: 10px ;
+
+}
+
+.footer__input::placeholder{
+    color: #FFFFFF;
+}
+
+.footer__btn{
+    background-color: #F2C66D;
+    font-family: Manrope;
+    font-size: 0.875rem;
+    border-style: none;
+    border-radius: 0px 18px 18px 0;
+    width: 7.125rem;
+    height: 2.25rem;
+    margin-left: -0.25rem;
+
+}
+
 
