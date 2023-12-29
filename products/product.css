@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #093931;
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-right:7%;
+
+}
+.menuItem{
+    display: flex;
+    justify-content: space-between;
+    background-color: #093931;
+    margin: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    border:none;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1.25rem; 
+    line-height: 1.375rem;
+
+}
+
+.menuItem:hover{
+    color: #F2C66D;
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    border-bottom: 2px solid #F2C66D; /* Agrega una línea en la parte inferior */
+    padding-bottom: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+    
+
+.header{
+    display: flex;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #093931;
+
+
+}
+.darlingTitle{
+    margin-left: 7%;
+    display: flex;
+    color:#F5D38E;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    line-height: 2.8;
+    font-weight: 400;
+
+}
+
+.container__hero{
+    background-color: #093931;
+    position: relative;
+    width: 100%;
+    height: 63rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container__hero__title{
+    margin-top: 500px;
+    position: absolute;
+
+}
+
+.hero__title{
+    color: #F5D38E;
+    font-family: Cormorant Garamond;
+    font-size: 3.875rem;
+    font-weight: lighter;
+}
+
+
+/* Container hero input*/
+
+.container__hero__input{
+    position: absolute;
+    margin-top: 600px;
+}
+
+.hero__input{
+    font-family: Manrope;
+    font-size: 0.9rem;
+    width: 65rem;
+    height: 3.1875rem;
+    border-radius: 26px 26px 26px 26px;
+    border: 1px solid #FFFFFF;
+    background-image: url("../assets/Search.png");
+    background-repeat: no-repeat;
+    background-position: 10px ;
+}
+    .hero__input::placeholder{
+        color:#323842;
+    }
+
+
+.vector{
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    position: relative;
+    margin-top: 6rem;
+    
+}
+
+
+
+/*  main section*/
+
+/*  main nav up*/
+
+.main__container__up{
+    display: flex;
+    /* text-align: center; */
+    margin-top: 5%;
+    /* margin-left: 7%;
+    margin-right: 7%; */
+
+    /* max-width: 100%;
+    width: 100%; */
+    font-family: Manrope;
+    font-size: 1.3rem;
+    font-weight: lighter;
+
+    width: 100%;
+    justify-content: space-between;  /* Is correct ??*/
+    
+
+}
+    .container__nav{
+        display: flex;
+        gap: 2rem;
+        max-width: 60%;
+        margin-left: 7%;
+    
+    }
+    .ul{
+
+       padding: 10px 50px;
+       border-radius: 19px 19px 19px 19px;
+       color: #0D554A;
+       text-align: center;
+       align-items: flex-start;
+
+       width: 100%;
+    }
+
+    .ul:hover{
+        background-color: #093931;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+.container__sortprice{
+
+    width: 40%;
+    margin-right: 7%;
+    display: flex;
+    justify-content: flex-end;
+}
+    .prices{
+        border: none;
+        width: 120px;
+        color: #171A1F;
+        border-bottom: 1px solid #9095A0;
+        
+    }
+
+
+
+
+/* foooter */
+
+.footer{
+    background-color: #093931;
+    max-width: 100%;
+}
+
+.footer__container__contact{
+    
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 7%;
+}
+
+.section__footer__items{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    margin-right: 7rem;
+}
+
+.footer__items--left, .footer__items--rigth{
+    color: #FFFFFF;
+    font-family: Manrope;
+    font-size: 0.875rem;
+    margin-bottom: 50px;
+
+}
+
+.article__container__subscribe{
+    margin-top: 1rem;
+}
+
+.article__container__subscribe--p--primary{
+    color: #FFFFFF;
+    font-family: Cormorant Garamond;
+    font-size: 1.8rem;
+    font-weight: 300px;
+
+
+}
+.article__container__subscribe--p--secundary{
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-family: Manrope;
+    font-weight: 200px;
+
+}
+
+.footer__item--left--p, .footer__item--right--p{
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    margin-right: 8rem;
+    font-size: 1.8rem;
+    
+}
+
+.footer__input{
+    margin-top: 1.5rem;
+    width: 25rem;
+    border-radius: 18px 0px 0px 18px;
+    border: 1px solid #FFFFFF;
+    height: 2.5rem; /*2.1875rem*/
+    font-family: Manrope;
+    font-size: 0.9rem;
+    background-color: #093931;
+    background-image: url("../assets/Mail.png");
+    background-repeat: no-repeat;
+    background-position: 10px ;
+}
+
+.footer__input::placeholder{
+    color: #FFFFFF;
+}
+
+.footer__btn{
+    background-color: #F2C66D;
+    font-family: Manrope;
+    font-size: 0.875rem;
+    border-style: none;
+    border-radius: 0px 18px 18px 0;
+    width: 7.125rem;
+    height: 2.50rem;
+    margin-left: -0.25rem;
+
+}
+
+.footer__container__socialmedia{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-bottom: 1%;
+    
+}
+
+.footer__container__socialmedia__copyright{
+    font-family: Manrope;
+    color: #FFFFFF;
+    font-size: 0.875rem;
+}
+
+.footer__socialmedia{
+    display: flex;
+    gap: 1rem;
+}
+
