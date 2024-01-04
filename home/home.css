@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Cormorant Garamond', serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 li{
@@ -11,40 +13,63 @@ li{
 } 
 
 
-body{
+/* body{
     padding: 0;
     margin: 0;
     
-}
+} */
 
 header {
     background-color: #093931;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+ul{
+    display: flex;
+    margin-right:10%;
+    gap: 5px;
+    /* Se quita el gap*/
 }
 nav{
     display: flex;
     justify-content: space-between;
     margin-right:7%;
+    /* margin-rigth: 10% */
 
 }
 .menuItem{
     display: flex;
     justify-content: space-between;
-    background-color: #093931;
+    /* background-color: #093931; */
     margin: 10px;
-    font-family: 'Cormorant Garamond', serif;
     border:none;
     color: #FFFFFF;
     font-weight: 400;
-    font-size: 1.25rem; 
+    /* font-size: 1.25rem;  */
     line-height: 1.375rem;
+    padding: 0 15px;
 
+}
+    .menuItem a{
+        text-decoration: none;
+        color: inherit;
+        font-family: 'Manrope';
+        font-weight: lighter;
+        
+    }
+
+#menu-icon{
+    display: none;
+    color: #FFFFFF;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
 }
 .menuItem:hover{
     color: #F2C66D;
     text-decoration: none; /* Quita el subrayado predeterminado */
-    border-bottom: 2px solid #F2C66D; /* Agrega una línea en la parte inferior */
+    border-bottom: 3px solid #F2C66D; /* Agrega una línea en la parte inferior */
     padding-bottom: 5px;
     cursor: pointer;
     border-radius: 2px;
@@ -53,52 +78,73 @@ nav{
 
 .header{
     display: flex;
-    position: fixed;
+    position: absolute;
+    /* position: fixed */
     top:0; left: 0; right: 0;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    background-color: #093931;
-
-
+    background-color: #093931; 
+    /* margin-bottom: -50px; */
+    height: 45px;
+    padding-top: 50px;
+    padding-bottom: 25px;
 }
+
+
+
 .darlingTitle{
-    margin-left: 7%;
+    margin-left: 10%;
     display: flex;
     color:#F5D38E;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond';
     font-size: 2rem;
     line-height: 2.8;
     font-weight: 400;
 
 }
 
+
+
 .hero{
     background-color: #093931;
     position: relative;
     width: 100%;
-    height: 63rem;
+    /* height: 63rem; */
 }
 .hero__figure{
-    height: 100%;
+    width: 100%;
+    height: 100vh; /* 100% del viewport height */
+    overflow: hidden;
+    position: relative;
 }
-.vector{
+/* .vector{
     width: 100%;
     height: 120px;
     z-index: 1;
     position: relative;
     margin-top: 6rem;
 
+    Este es de vectores
+
+} */
+
+.vector{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
 }
+
 
 .heroSparkleText{
     z-index: 3;
     position: absolute;
     margin-top: 15%;
-    margin-left:7%;
+    margin-left:10%;
 }
     .sparkleImage{
-        width: 100%;
+        width: 120%;
     }
 
 .heroProductsImages{
@@ -106,19 +152,22 @@ nav{
     justify-content: space-between;
     z-index: 2;
     margin-top: 10%;
-    margin-left: 53%;
-    background-color: red;
+    right: 49%;
+    /* margin-left: 53%; */
+
 }
     .necklaceImage{
-        width:37rem;
-        height: 43rem;
+        width:28rem;
+        /* height: 43rem; */
+        height: auto;
         position: absolute;
 
     }
     .ringsImage{
         position: absolute;
-        width: 17rem;
-        margin-left: 30rem;
+        width: 20rem;
+        height: auto;
+        margin-left: 20rem;
         z-index: 3;
         margin-top:7.3rem;
 
@@ -133,12 +182,14 @@ nav{
     font-weight: 400;
     color: #FFFFFF;
     line-height: 28px;
-    bottom: 30%;
-    margin-left:7%;
+    bottom: 29%;
+    margin-left:10%;
     position: absolute;
     font-size: 1.125rem;
-    width: 12.5rem;
+    /* width: 12.5rem; */
+    width: 13rem;
     height: 3.25rem;
+
 }
 
 
@@ -168,7 +219,7 @@ nav{
             font-weight: bold;
         }
         .description__container--description__container--p{
-            color:grey;
+            color:#9095A0;
         }
    
 
@@ -182,11 +233,14 @@ nav{
 
 }
     .features{
-        margin-left:7%;
-        margin-right: 7%;
+        margin-left:10%;
+        margin-right: 10%;
         width: 25%;
     }
-    
+
+            .features__content{
+                margin-top: 5rem;
+            }    
     
             .features__title{
             margin-top: 20%;
@@ -202,8 +256,10 @@ nav{
             width: 100%;
             font-size: 1.2rem;
             font-family: Manrope;
-            color:#424955;
-            margin-bottom: 1rem;
+            /* color:#424955; */
+            color:#9095A0;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
 
             }
             .features__button{
@@ -223,18 +279,30 @@ nav{
     .products{
         display: flex;
         overflow: hidden;
-        margin-left: -0.5rem;
+        margin-left: -4.5rem;
         /* flex-wrap: wrap; */
         padding: 3%;
+        /* background: red; */
+        width: 100%;
     }
+
+        .products__figure{
+            width: 100%;
+        }
         .products__showcase{
             padding: 1rem;
         }
-            .products__image{
+            /* .products__image{
             border-radius: 10px 10px 0px 0px;
             width: 20rem;
             height: 25rem;
-            }
+            } */
+
+            .products__image{
+                border-radius: 10px 10px 0px 0px;
+                width: 20rem;
+                /* height: 25rem; */
+                }
             .products__title{
                 margin-left: 1rem;
                 margin-top: 1rem;
@@ -253,8 +321,8 @@ nav{
 .main__collections{
     display: flex;
     flex-direction: column;
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
     justify-content: center;
@@ -333,7 +401,7 @@ nav{
     display: flex;
     flex-direction: column;
     margin-bottom: 3.75rem;
-    margin-left:7%;
+    margin-left:10%;
     margin-right: 7%;
 }
 
@@ -601,6 +669,46 @@ nav{
     background: transparent;
     font-family: Manrope;
     
+}
+
+@media only screen and (max-width: 480px){
+    
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* *{
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+    }
+
+    
+
+    .header{
+        background: red;
+        max-width: 1280px;
+    } */
+}
+
+
+
+
+@media only screen and (min-width: 1281px) {
+
 }
 
 
