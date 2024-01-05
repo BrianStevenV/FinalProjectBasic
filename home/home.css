@@ -337,6 +337,12 @@ nav{
     .section__container__collections--imgs{
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        /* gap: 100px; */
+        width: 100%;
+        height: 100vh;
+        margin-top: -100px;
+
     }
 
 
@@ -355,8 +361,9 @@ nav{
 
     .collections__img{
         border-radius: 8px;
-        margin-top: 2rem;
-        width: 90%;
+        /* margin-top: 2rem; */
+        /* margin-top: ; */
+        width: 100%;
     }
 
     .section__container__collections--btn{
