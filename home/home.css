@@ -215,6 +215,8 @@ nav{
 
     
     }
+
+    /* QUITAR FONT SIZE DE TITLE Y TEXT ???? */
     
         .description__figure--logo {
             justify-content: center;
@@ -227,11 +229,12 @@ nav{
         .description__container--description__container--p--title{
             font-weight: bold;
             font-family: Cormorant Garamond;
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
         .description__container--description__container--p{
             color:#9095A0;
             font-family: Manrope;
+            font-size: 1.2rem;
         }
    
 
