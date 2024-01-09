@@ -918,6 +918,178 @@ nav{
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    .header{
+        width: 100%;
+    }
+
+    ul{
+        margin-right: 0;
+    }
+
+    nav{
+        margin-right: 0;
+    }
+
+    .hero{
+        width: 100%;
+        height: 90vh;
+    }
+
+
+    .darlingTitle{
+        margin-left: 10%;
+    
+    }
+
+    .heroSparkleText{
+        z-index: 3;
+        position: absolute;
+        margin-top: 20%;
+        margin-left:10%;
+    }
+        .sparkleImage{
+            width: 85%;
+        }
+
+
+
+        .heroProductsImages{
+            position: absolute;
+            justify-content: space-between;
+            z-index: 2;
+            margin-top: 15%;
+            /* right: 49%; */
+            margin-left: 60%;
+            /* margin-left: 53%; */
+        
+        }
+            .necklaceImage{
+                width:22rem;
+                /* height: 43rem; */
+                height: auto;
+                position: absolute;
+        
+            }
+            .ringsImage{
+                position: absolute;
+                width: 14.5rem;
+                height: auto;
+                margin-left: 12rem;
+                z-index: 3;
+                margin-top:7.3rem;
+        
+            }
+            .buttonHeroPng{
+                position: absolute;
+                z-index: 1000;
+                top: 380px;
+                left: 900px;
+                background-color: transparent;
+                border-style: none;
+            }
+        
+        .buttonShopNow{
+            bottom: 37%;
+        }
+
+        .vector{
+            height: 90vh;
+        }
+
+    /*  Description ---->  */
+
+    .description{
+        width: 100%;
+    }
+
+        .description__container{
+            margin-left: 0px;
+            width: 30%;
+        }
+        
+
+
+
+        .description__figure--logo {
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 15px;
+            
+            margin-bottom: 0px;
+            
+        }
+        .description__container--description__container--p--title{
+            font-weight: bold;
+            font-family: Cormorant Garamond;
+            font-size: 1.6rem;
+        }
+        .description__container--description__container--p{
+            color:#9095A0;
+            font-family: Manrope;
+            font-size: 1rem;
+        }
+
+
+        /* Featured Products */
+
+        .features--title{
+            font-size: 2.6rem;
+            width: 16.5rem;
+        }
+
+        .features--text{
+            font-size: 1rem;
+            width: 16.5rem;
+        }
+
+
+
+        .container--products{
+            margin-left: 2.5rem;
+        }
+        .product--img{
+            width: 15rem;
+
+        }
+
+
+        /* Collections ----> */
+
+
+        .figcaption__collections__img1, .figcaption__collections__img2,
+    .figcaption__collections__img3, .figcaption__collections__img4,
+    .figcaption__collections__img5, .figcaption__collections__img6 {
+        font-family: Cormorant Garamond;
+        font-size: 1.7rem;
+        text-align: center;
+        color: #FFFFFF;
+        position: relative;
+        bottom: 3rem;
+    }
+
+    .section__container__collections--btn{
+        margin-top: 1rem;
+
+    }
+
+    .section__container__collections--imgs{
+        margin-top: -175px;
+    }
+
+        
+
+    /* Footer */
+
+    
+
+    
 }
 
 
@@ -985,6 +1157,23 @@ nav{
             cursor: pointer;
         }
 
+        /* Description  */
+
+        .description{
+            width: 100%;
+            margin-right: 0px;
+        }
+
+            .description__container{
+                width: 25%;
+                margin-left: 0px;
+            }
+            .description__container--description__container--p--title{
+                font-size: 1.485rem;
+            }
+            .description__container--description__container--p{
+                font-size: 1.125rem;
+            }
 
         
         /* Featured products */
@@ -1183,9 +1372,7 @@ nav{
                 
                 }
 
-                .footer__items--right{
-                
-                }
+            
 
                 .footer__item--left--p, .footer__item--right--p{
                     color: #FFFFFF;
