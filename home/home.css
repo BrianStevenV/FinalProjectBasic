@@ -512,7 +512,7 @@ nav{
     color:#FFFFFF;
     left: 10%;
     right: 10rem;
-    top:7rem;
+    top:4rem;
     bottom: 5rem;
     position: relative;
     width:40%;
@@ -570,10 +570,11 @@ nav{
     font-family: Manrope; 
     text-align: justify;
     color:#FFFFFF;
-    margin: 4rem 0;
-    width: 85%;
+    margin: 4rem 4rem 4rem 1rem;
     padding-left: 3.5rem;
     font-weight: lighter;
+    width: 45%;
+    justify-content: center;
 
 }
 
@@ -1087,8 +1088,91 @@ nav{
 
     /* Footer */
 
-    
 
+    .section__footer{
+        display: flex;
+        /* flex-direction: column;
+        align-items: center; */
+    }
+
+    .article__footer--h1--p{
+        top: 10rem;
+        left: 7rem;
+        right: 0px;
+    }
+
+        .article__footer--h1{
+            font-size: 2.3rem;
+        }
+
+        .article__footer--p{
+            font-size: 1rem;
+        }
+
+    .footer_figure{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        margin-left: 75px;
+        width: 43%;
+        margin-top: 15%;
+    }
+
+    .footer_img{
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 8px 8px;
+    }
+
+    .footer__figcaption{
+        font-size: 1rem;
+        width: 75%;
+        /* ACA  */
+        padding-left: 0;
+        line-height: 35px;
+        justify-content: center;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+
+
+    }
+
+    .footer__figcaption--p{
+        font-size: 1rem;
+    }
+
+
+    /* Subscribe */
+
+    .article__container__subscribe{
+        position: absolute;
+        /* top: -30px; */
+        margin-top:-500px;
+        z-index: 100000;
+    }
+
+    .article__container__subscribe--p--primary{
+        color:#F2C66D;
+    }
+
+    .article__container__subscribe--p--secundary{
+        margin-top: 1.3rem;
+        width: 60%;
+    }
+
+    .footer__input{
+        width: 22rem;
+        border-radius: 18px 18px 18px 18px;
+    }
+
+    .footer__btn{
+        position: absolute;
+        top: 200px;
+        left: 115px;
+        border-radius: 18px 18px 18px 18px;
+    }
+
+    
     
 }
 
