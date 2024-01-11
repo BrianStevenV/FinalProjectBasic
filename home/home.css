@@ -1076,6 +1076,144 @@ nav{
     .section__container__collections--btn{
         margin-top: -14rem;
     }
+
+
+
+    /* Featured products   */
+
+
+
+
+
+
+
+    /* Our Story */
+
+
+    .main__story{
+        /* background: red; */
+        width: 80%;
+        height: auto;
+        /* max-width: 80%; */
+    }
+
+    .main__story__figure{
+        width: 100%;
+        margin-top: 1.5rem;
+    
+    }
+
+    .main__story__figure--image{
+        width: 100%;
+        height: 25vh;
+    
+    }
+
+    .button__ourstory{
+        margin-top: 80px;
+    }
+
+
+
+
+
+
+    /* Footer */
+
+    .section__footer{
+        display: block;
+    }
+
+    .article__footer--h1--p{
+        left: 30%;
+        max-width: 50%;
+        width: 50%;
+    }
+        .article__footer--h1{
+            font-size: 2.3rem;
+        }
+        .article__footer--p{
+            font-size: 1rem;
+        }
+
+
+
+        .footer_figure{
+            display: block;
+            left: 20%;
+            margin-top: 10rem;
+            width: 63%;
+            border-radius: 8px 8px;
+
+        }
+            .footer_img{
+                border-radius: 8px 8px;
+            }
+
+
+
+            .footer__figcaption{
+                width: 100%;
+                font-size: 1.125rem;
+                margin: 0 0 0 0;
+                text-align: justify;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .footer__figcaption--h1{
+                font-size: 1.3rem;
+            }
+            .footer__figcaption--p{
+                font-size: 1.125rem;
+            }
+
+            .button__left{
+                width: 4rem;
+                height: 4rem;
+                top: -4.125rem;
+
+            }
+            .button__right{
+                width: 4rem;
+                height: 4rem;
+                top: -4.125rem;
+
+            }
+
+
+
+            /* Subscribe */
+
+            .footer__container__contact{
+                display: flex;
+                flex-direction: column-reverse;
+                margin-top: 3.5rem;
+            }
+
+            .article__container__subscribe--p--primary{
+                color:#F2C66D;
+            }
+
+            .footer__input{
+                border-radius: 18px 18px 18px 18px;
+                width: 23.5rem;
+            }
+            .footer__btn{
+                border-radius: 18px 18px 18px 18px;
+                margin-left: 8rem;
+                margin-top: 1.5rem;
+            }
+
+            .section__footer__items{
+                display: flex;
+                margin-left: 10rem;
+                margin-top: 7rem;
+            }
+
+
+
+
 }
 
 
