@@ -921,7 +921,7 @@ nav{
         right: -7%;
         width: 300px;
         height: 40vh;
-        display: none;
+        display: block;
         align-items: center;
         flex-direction: column;
         padding: 50px 20px;
@@ -930,16 +930,19 @@ nav{
     }
 
     #navlist.open{
-        right: 0;
+        transform: translate(0);
+        right: -100%;
     }
 
+    
+
     ul{
-        display: none;
+        display: block;
         margin-left: 50px;
     }
 
-    nav a{
-        display: none;
+    #navlist a{
+        display: block;
         /* margin: 7px 0; */
         font-size: 1.2rem;
     }
@@ -1247,7 +1250,7 @@ nav{
     }
 
     #navlist.open{
-        right: 0;
+        right: -100%;
     }
 
     ul{
@@ -1497,6 +1500,12 @@ nav{
         .footer__darlingTitle{
             margin-left: 13rem;
             margin-bottom: 5rem;
+        }
+
+        .section__footer__items{
+            display: flex;
+            margin-left: 17rem;
+            margin-top: 7rem;
         }
             
 }
