@@ -913,18 +913,297 @@ nav{
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
+    .header{
+        max-width: 100%;
+    }
+
+
+    #menu-icon{
+        display: flex;
+        position: relative;
+        right: 1.5rem;
+
+    }
+
+    #navlist{
+        position: absolute;
+        top: 100%;
+        right: -7%;
+        width: 300px;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        background: red;
+        transition: all .55s ease;
+    }
+
+    #navlist.open{
+        right: 0;
+    }
+
+    ul{
+        display: block;
+        margin-left: 50px;
+    }
+
+    nav a{
+        display: block;
+        /* margin: 7px 0; */
+        font-size: 1.2rem;
+    }
+
+    /* Hero */
+
+
+    .heroSparkleText{
+        /* width: 50%; */
+        top: 10rem;
+    }
+        .sparkleImage{
+            width: 60%;
+        }
+
+    .buttonShopNow{
+        bottom: 37%;
+    }
+
+
+    
+        .necklaceImage{
+            width:18rem;
+            /* height: 43rem; */
+            height: auto;
+            position: absolute;
+            top: 10rem;
+            left: 3rem;
+
+        }
+        .ringsImage{
+            position: absolute;
+            width: 12.5rem;
+            height: auto;
+            /* margin-left: 12rem; */
+            z-index: 3;
+            margin-top:7.3rem;
+
+            left: -8rem;
+            top: 9rem;
+
+        }
+        .buttonHeroPng{
+            position: absolute;
+            z-index: 1000;
+            top: 26.25rem;
+            left: 40.625rem;
+            background-color: transparent;
+            border-style: none;
+        }
+
+
+        /* Description */
+
+        .description{
+            width: 100%;
+        } 
+            .description__container{
+                width: 30%;
+                margin-left: 0px;
+            }
+
+            .description__figure--logo{
+                padding-bottom: 5px;
+            }
+
+            .description__container--description__container--p--title{
+                font-size: 1.3rem;
+            }
+
+            .description__container--description__container--p{
+                font-size: 1rem;
+            }
+
+
+        /* Featured Products */
+
+        .container--featured{
+            margin-left: 5%;
+            width: 25%;
+        }
+
+            .features--title{
+                font-size: 2.3rem;
+                /* width: 100%; */
+                width: 25vh;
+        
+            }
+
+            .features--text{
+                font-size: 1rem;
+                width: 13rem;
+            }
+
+        
+
+        .container--products{
+            margin-left: 3rem;
+        }
+            .product--img{
+                width: 15rem;
+            }
+
+            .product--figcaption--title{
+                font-size: 1.2rem;
+            }
+
+            .product--figcaption--text{
+                font-size: 1rem;
+            }
+
+
+        /* Our collections */
+
+        .main__collections{
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 10%;
+        }
+
+            .section__container__collections--imgs{
+                margin-top: -150px;
+                gap: 1rem;
+                width: 100%;
+                margin-top: -180px;
+                margin-bottom: -100px;
+            }
+
+            .collections__img{
+                width: 100%;
+            }
+
+            .figcaption__collections__img1, .figcaption__collections__img2,
+            .figcaption__collections__img3, .figcaption__collections__img4,
+            .figcaption__collections__img5, .figcaption__collections__img6 {
+                font-family: Cormorant Garamond;
+                font-size: 1.5rem;
+                text-align: center;
+                color: #FFFFFF;
+                position: relative;
+                bottom: 3.8rem;
+    }
+
+    /* Footer */
+
+    
+
+    .section__footer{
+        display: block;
+    }
+
+    .article__footer--h1--p{
+        left: 35%;
+    }
+
+    .article__footer--h1{
+        font-size: 2.3rem;
+    }
+
+    .article__footer--p{
+        font-size: 1.25rem;
+    }
+
+
+    .footer_figure{
+        display: block;
+        left: 30%;
+        margin-top: 10rem;
+        width: 50%;
+        height: auto;
+    }
+
+        .footer_img{
+            height: auto;
+            width: 100%;
+        }
+
+        .footer__figcaption{
+            width: 100%;
+            font-size: 1.25rem;
+            margin: 0 0 0 0;
+            text-align: justify;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+        
+        .footer__figcaption--h1{
+            font-size: 1.3rem;
+        }
+
+        .footer__figcaption--p{
+            font-size: 1.25rem;
+        }
+
+        .button__left{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+            top: -4rem;
+        }
+
+        .button__right{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+            top: -4rem;
+        }
+
+
+        /*  Subscribe */
+        
+        
+
+        .footer__container__contact{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .article__container__subscribe--p--primary{
+            color:#F2C66D;
+            margin-left: 10rem;
+        }
+        .article__container__subscribe--p--secundary{
+            margin-left: 10rem;
+        }
+
+        .footer__input{
+            margin-left: 5rem;
+        }
+
+        .section__footer__items{
+            display: block;
+            margin-left: 15rem;
+            margin-top: 2.5rem;
+        }
+
+        .footer__darlingTitle{
+            margin-left: 13rem;
+            margin-bottom: 5rem;
+        }
+            
 }
 
 
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
-    *{
+    /* *{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
         text-decoration: none;
-    }
+    } */
 
     .header{
         width: 100%;
@@ -967,7 +1246,13 @@ nav{
             z-index: 2;
             margin-top: 15%;
             /* right: 49%; */
-            margin-left: 60%;
+
+
+            
+            /* margin-left: 60%; */
+            left: 8.6%;
+
+
             /* margin-left: 53%; */
         
         }
