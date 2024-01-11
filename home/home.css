@@ -115,7 +115,7 @@ nav{
 .hero__figure{
     width: 100%;
     /* width: auto; */
-    height: 100vh; /* 100% del viewport height */
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
@@ -316,7 +316,6 @@ nav{
         padding: 3%;
         /* background: red; */
         width: 100%;
-        background: blue;
     }
 
         .products__figure{
@@ -324,7 +323,7 @@ nav{
         }
         .products__showcase{
             padding: 1rem;
-            background: red;
+
         }
             /* .products__image{
             border-radius: 10px 10px 0px 0px;
@@ -546,7 +545,7 @@ nav{
 .footer_figure{
     background-color: #171A1F4D;
     display: flex;
-    width: 50%; /*60%*/
+    width: 50%;
     position: relative;
     text-align: center;
     border-radius: 8px;
@@ -712,7 +711,7 @@ nav{
 .container__buttons{
     position: absolute;
     
-    left: 80%; /*80%*/
+    left: 80%;
     margin-top: 30rem;
     width: 3.25rem;
     height: 3.25rem;
@@ -956,7 +955,7 @@ nav{
 
     /* Hero */
 
-
+    
     .heroSparkleText{
         /* width: 50%; */
         top: 10rem;
