@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+}
+
+:root{
+    --font-manrope: 'Manrope';
+    --font-cormorant-garamond: 'Cormorant-Garamond';
+    --color-tittles: #F5D38E;
+    --color-navlist-a:#FFFFFF;
+    --color-body-select: #0D554A;
+    --color--card--info: #424955;
+    --font-size-1-125:1.125rem;
+    --font-size-1-3:1.3rem;
+
+}
+
+
+/* Header */
+.header{
+    background-color: #093931;
+    display: flex;
+    justify-content: space-between;
+    padding:1% 10%;
+    overflow: hidden;
+}
+
+        .header__a{
+            color: var(--color-tittles);
+            font-family: var(--font-cormorant-garamond);
+            font-size: 2rem;
+            font-weight: lighter;
+        }
+
+    .header__nav{
+        max-width: 60%;
+        width: 60%;
+        display: flex;
+    }
+
+    .header__ul{
+        display: flex;
+        width: 100%;
+        gap: 10%;
+    }
+        .header__a--nav{
+            color: #FFFFFF;
+            font-family: var(--font-manrope);
+            font-size: 1.125rem;
+            font-weight: lighter;
+            width: 100%;
+        }
+
+        #menu-icon{
+            color: #FFFFFF;
+            display: none;
+        }
+
+        /* Header Hover */
+
+        .header__li:hover{
+            color: var(--color-tittles);
+            text-decoration: none; /* Quita el subrayado predeterminado */
+            border-bottom: 3px solid #F2C66D; /* Agrega una línea en la parte inferior */
+            padding-bottom: 5px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+            .header__a--nav:hover{
+                color: var(--color-tittles);
+            }
+
+
+/* Main */
+
+
+/* Section Card Product */
+
+.main{
+    padding:1% 10%;
+}
+
+.ul__product--nav{
+    display: flex;
+    font-size: var(--font-size-1-125);
+    gap: 20px;
+    color: var(--color-body-select);
+    margin-top: 5%;
+}
+    .li__product--nav--a{
+        color: var(--color-body-select);
+    }
+    .li__product--separator{
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #000000;
+    }
+
+
+/* Card product main */
+
+/* O se aplica el var de 1.3rem a los subtitulos de card main ... o se aplica el fontsize de Code */
+
+.card__product__container{
+    display: flex;
+    margin-top: 3%;
+}
+    .card__product__aside--left{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1.5%;
+        border-radius: 8px;
+        gap: 1%;
+
+    }
+
+    .card__product__main{
+        display: flex;
+        overflow: hidden;
+    }
+        .card__product__main--figcaption{
+            margin-left: 5%;
+            width: 50vw;
+        }
+            .card__product__main--information{
+                font-family: var(--font-manrope);
+                font-size: var(--font-size-1-3);
+                gap: 2%;
+
+            }
+                .card__product__main--title{
+                    color: var(--color-body-select);
+                    font-size: 1.6rem;
+                }
+                .card__product__main--code{
+                    color: #323842;
+                }
+                .card__product__main--price{
+                    color:#B37D10;
+                    font-size: 2.1rem;
+                    font-weight: bold;
+                }
+                .card__product__main--color--name{
+                    color: var(--color--card--info);
+                    font-weight: bold;
+                }
+
+                /* Falta colocar selctor de color */
+
+            .card__product__main--size{
+                display: flex;
+                justify-content: space-between;
+            }
+                .card__product__main--size--text{
+                    font-size: var(--font-size-1-3);
+                    color: var(--color--card--info);
+                    font-weight: bold;
+                }
+                .card__product__main--size--question{
+                    color: var(--color--card--info);
+                    font-size: 0.85rem;
+                }
+
+
+            /* Ul selector size */
+
+            .card__product__main--ul{
+                display: flex;
+                justify-content: space-between;
+                font-size: var(--font-size-1-125);
+                font-family: var(--font-manrope);
+                margin-top: 1%;
+            }
+                .card__product__main--li{
+                    gap: 10px;
+                    padding: 1%;
+                    border: 1px solid #565E6C;
+                    color: #565E6C;
+                }
+
+
+            /* Quantity */
+
+            .card__product__main--quantity{
+                font-family: var(--font-manrope);
+                margin-top: 2%;
+            }   
+                .card__product__main--quantity--title{
+                    color: var(--color--card--info);
+                    font-weight: bold;
+                    font-size: var(--font-size-1-3);
+                }
+                .card__product__main--quantity--ul{
+                    display: flex;
+                    margin-left: 2%;
+                    gap: 5%;
+                    font-size: var(--font-size-1-125);
+                    color: #565E6C;
+                }
+
+
+            /* btns acctions */
+
+            .card__product__main--btn--actions{
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+            }
+
+                .card__product__main--btn--add{
+                    color: var(--color-body-select);
+                    font-size: 1.8rem;
+                    padding: 1.5% 15%;
+                    border-radius: 26px;
+                    border: 1px solid var(--color-body-select);
+
+                }
+                .card__product__main--btn--buy{
+                    background: var(--color-body-select);
+                    font-size: 1.8rem;
+                    font-weight: lighter;
+                    color: #FFFFFF;
+                    padding: 1.5% 15%;
+                    border-radius: 26px;
+                    border-style: none;
+                }
+
+
+            /* Card Product More */
+            .card__product__main--more{
+                display: block;
+            }
