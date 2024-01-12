@@ -239,6 +239,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 margin-top: 5%;
+                font-family: var(--font-manrope);
                 
             }
                 .card__product__main--label{
@@ -256,3 +257,98 @@
                     border-bottom: 1px solid black;
 
                 }
+
+            
+
+/* Card product description */
+
+.card__product__description{
+    margin-top: 5%;
+    font-family: var(--font-manrope);
+
+}
+    .description--p{
+        font-size: var(--font-size-1-3);
+        margin-bottom: 3%;
+        color: #323842;
+    
+    }
+
+    .card__product__description__figure{
+        /* background: red; */
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .card__product__description__figure--figcaption{
+        display: flex;
+        flex-direction: column;
+    }
+        .card__product__description__figure--title{
+            color: var(--color-body-select);
+            font-size: 1.8rem;
+            margin-bottom: 2%;
+        }
+        .card__product__description__figure--text{
+            font-size: 1.6rem;
+            color:#323842;
+            margin-bottom: 3%;
+        }
+        .card__product__description__img{
+            height: auto;
+        }
+
+
+/* Section description */
+.section__description{
+    margin-top: 15%;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+    
+    .card__figcaption--title{
+        font-family: var(--font-cormorant-garamond);
+        font-size: 1.6rem;
+        margin-top: 5%;
+    }
+    .card__figcaption--text{
+        font-family: var(--font-manrope);
+        font-size: 1.2rem;
+        color:#9095A0;
+        width: 75%;
+        text-align: center;
+        align-items: center;
+        margin-left: 10%;
+        margin-bottom: 20%;
+    }
+
+
+/* Products More */
+
+.section__products__more{
+    margin-top: 5%;
+}
+    .section__products__more--title{
+        font-size: 1.8rem;
+        color: var(--color-body-select);
+        margin-bottom: 3%;
+    }
+    .section__products__more--figure--container{
+        display: flex;
+
+    }
+        .section__products__more--figcaption{
+            margin-left: 3%;
+        }
+            .section__products__more--figcaption--title{
+                font-size: 1.6rem;
+                font-weight: bold;
+                font-family: var(--font-cormorant-garamond);
+            }
+            .section__products__more--figcaption--text{
+                font-size: 1.3rem;
+                font-family: var(--font-manrope);
+            }
