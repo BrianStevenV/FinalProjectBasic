@@ -188,7 +188,6 @@ ul, ol{
 /*  Section figure Top*/
 
 .section__figure--top{
-    background: red;
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
@@ -197,7 +196,8 @@ ul, ol{
 }
     .figure--top{
         width: 25%;
-        background: purple;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
     }
         .figure--top--img{
             width: 100%;
@@ -208,6 +208,102 @@ ul, ol{
         .figcaption__p{
             font-size: 1.3rem;
         }
+
+        .figure--top--figcaption{
+            margin-left: 5%;
+        }
+
+
+/* Section figure Bottom */
+.section__figure--bottom{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+    .card__primary__container{
+        width: 73%;
+        height: auto;
+    }
+        
+    .card__secondary__container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .figure--bottom{
+        width: 50%;
+    }
+    .figure--bottom--img{
+        width: 100%;
+    }
+    .figure--bottom--figcaption{
+        margin-left: 5%;
+    }
+
+
+
+/* Section pagination */
+
+.section__pagination{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    color: #9095A0;
+    /* No hace nada */
+}
+    .ul__pagination{
+        /* background: red; */
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        font-size: 1rem;
+        color: #9095A0;
+    }
+    .li__pagination{
+        border-radius: 60px;
+        padding: .5rem .5rem;
+
+    }
+    .li__pagination:hover{
+        /* border-style: 1px solid #093931; */
+        color: #093931;
+        outline: 1px solid #093931;
+    }
+
+    .li__pagination--a{
+        width: auto;
+        font-size: 1.6rem;
+        /* background: blue; */
+    }
+/* Section description */
+.section__description{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+    
+    .card__figcaption--title{
+        font-family: var(--font-cormorant-garamond);
+        font-size: 1.6rem;
+        margin-top: 5%;
+    }
+    .card__figcaption--text{
+        font-family: var(--font-manrope);
+        font-size: 1.2rem;
+        color:#9095A0;
+        width: 75%;
+        text-align: center;
+        align-items: center;
+        margin-left: 10%;
+        margin-bottom: 20%;
+    }
 
 
 /* Footer */
