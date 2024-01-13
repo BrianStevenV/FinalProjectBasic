@@ -338,6 +338,9 @@
     }
     .section__products__more--figure--container{
         display: flex;
+        width: 100%;
+        gap: 20px;
+        overflow: hidden;
 
     }
         .section__products__more--figcaption{
@@ -352,3 +355,242 @@
                 font-size: 1.3rem;
                 font-family: var(--font-manrope);
             }
+
+    
+/* Footer */
+.footer{
+    padding: 1% 10%;
+    margin-top: 5%;
+    background-color: #093931 ;
+}
+
+/* Footer banner */
+.footer__banner{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10%;
+    color: #FFFFFF;
+}
+    .footer__message{
+        /* background: green; */
+        width: 55%;
+        margin-top: 7%;
+    }
+    .footer__message--title{
+        font-family: var(--font-cormorant-garamond);
+        font-size: 3.5rem;
+
+    }
+    .footer__message--text{
+        font-family: var(--font-manrope);
+        font-size: var(--font-size-1-3);
+        text-align: justify;
+        margin-top: 5%;
+        font-weight: lighter;
+    }
+
+
+/* Footer figure banner */
+
+.footer__figure{
+    background-color: #171A1F4D;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+}
+    .footer__figure--imgs{
+        display: flex;
+        width: auto;
+        /* height: 100%; */
+    }
+    .footer__figure--figcaption{
+        margin: 5% 5%;
+        font-family: var(--font-manrope);
+        font-size: var(--font-size-1-3);
+        font-weight: lighter;
+        width: 45%;
+        line-height: 40px;
+        font-weight: 400px;
+    }
+    .footer__figcaption--title{
+        margin-top: 5%;
+        font-weight: bold;
+    }
+    .footer__figcaption--p{
+        margin-top: 2.5%;
+
+    }
+
+
+
+.footer__container__contact{
+    background: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+    .footer__section__socialmedia{
+        display: flex;
+        justify-content: space-between;
+        color: #FFFFFF;
+        font-size: 0.875rem;
+        margin-top: 5%;
+    }
+        .copyrigth-container{
+            font-size: var(--font-size-1-125);
+        }
+        .social-icons{
+            display: flex;
+            justify-content: space-between;
+            width: 10%;
+        }
+
+
+        .footer__section--top{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10%;
+        }
+    
+            .footer__section__container--top{
+                margin-top: 2rem;
+            }
+    
+                .footer__a{
+                    color: var(--color-tittles);
+                    font-family: var(--font-cormorant-garamond);
+                    font-size: 2rem;
+                    font-weight: lighter;
+                }
+            .footer__ul{
+                display: flex;
+                flex-wrap: wrap;
+            }
+                .footer__li{
+                    flex: 0 0 50%;
+                }
+                .footer__a--nav{
+                    display: block;
+                    padding: 10px;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 1.125rem;
+                    color: #FFFFFF;
+                    font-family: var(--font-manrope);
+                }
+    
+                .subscribe__item--title{
+                    color: #F4F4FB;
+                    font-size: 1.8rem;
+                    font-family: var(--font-cormorant-garamond);
+                    font-weight: 300px;
+                }
+                .subscribe__item--p{
+                    font-size: 1.125rem;
+                    font-family: var(--font-manrope);
+                    font-weight: 200px;
+                    color: #FFFFFF;
+                }
+                .subscribe__item--input{
+                    background-color: #093931;
+                    width: 25rem;
+                    height: 2.5rem;
+                    border-radius: 18px 0 0 18px;
+                    border: 1px solid #FFFFFF;
+                    font-size: 0.9rem;
+                    font-family: var(--font-manrope);
+                    margin-top: 1.5rem;
+                    background-image: url("../assets/Mail.png");
+                    background-repeat: no-repeat;
+                    background-position: 10px ;
+                }
+                    .subscribe__item--input::placeholder{
+                        color: #FFFFFF;
+                    }
+                    .subscribe__item--input:focus{
+                        outline: none;
+                        color: #FFFFFF;
+                        background-image: none;
+                        padding-left: 15px;
+                    }
+    
+                .subscribe__btn{
+                    background-color: #F2C66D;
+                    width: 7.125rem;
+                    height: 2.50rem;
+                    margin-left: -0.25rem;
+                    border-radius: 0 18px 18px 0;
+                    font-family: var(--font-manrope);
+                    font-size: 0.875rem;
+                    border-style: none;
+                }
+
+
+
+
+
+                .buttons_container{
+                    display:flex;
+                    gap:1.6rem;
+                    position: absolute;
+                    /* font-size: 1.9375rem; */
+                    background: transparent;
+                    color:#FFFFFF;
+                    right: 4rem;
+                    margin-top: 26.5rem;
+                    margin-right: 15rem;
+                    font-weight: lighter;
+                    
+                
+                }
+                .button__left{
+                    width: 5rem; 
+                    height: 5rem;
+                    border-radius: 60px;
+                    font-size: 5rem;
+                    padding-bottom: 0.3rem;
+                    border: 1px solid #FFFFFF;
+                    background: transparent;
+                    color: #FFFFFF;
+                    font-family: Manrope;
+                    position: absolute;
+                    right: 5rem;
+                    top: -1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 1;
+                    
+                
+                }
+                
+                    .button__left:hover{
+                        cursor: pointer;
+                    }
+                
+                .button__right{
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 60px;
+                    padding-bottom: 0.3rem;
+                    color:#FFFFFF;
+                    border:1px solid #FFFFFF;
+                    background: transparent;
+                    font-family: Manrope;
+                    font-size: 5rem;
+                    position:absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: -1rem;
+                    right: -1rem;
+                    
+                }
+                
+                    .button__right:hover{
+                        cursor: pointer;
+                    }
