@@ -84,6 +84,53 @@
     padding:1% 10%;
 }
 
+    .purchase{
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        justify-content: space-between;
+    }
+        .purchase__objects{
+            font-family: var(--font-manrope);
+        }
+            .purchase__objects--title{ font-family: var(--font-cormorant-garamond);}
+            .purchase__objects--figure{
+                display: flex;
+                margin-top: 10%;
+                width: 50vw;
+            }
+
+                .purchase__objects--img{
+                    border-radius: 8px;
+                }
+                .purchase__objects--figcaption{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-left: 5%;
+                    margin-top: 3.5%;
+                    gap: 20px;
+                }
+
+                    .purchase__objects--title{
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                    
+                    }
+                    .purchase__objects--code{
+                        color:#565E6C;
+                        font-size: 1.2rem;
+                    }
+                    .purchase__objects--price{
+                        font-weight: bold;
+                        font-size: 1.4rem;
+                        text-align: center;
+                        width: 25%;
+                    }
+                    #trash-icon{
+                        font-size: 2.5rem;
+                        color: #565E6C;
+                    }
 
 
 
