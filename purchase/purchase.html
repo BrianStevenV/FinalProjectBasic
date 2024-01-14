@@ -42,7 +42,7 @@
     <main class="main">
         <section class="purchase">
             <section class="purchase__objects">
-                <p class="purchase__objects--title">Order summary</p>
+                <p class="purchase__objects--order">Order summary</p>
                 <figure class="purchase__objects--figure">
                     <img src="../assets/purchase_img/Img 1 Purchase.png" alt="Luxury Charms Ring" class="purchase__objects--img">
                     <figcaption class="purchase__objects--figcaption">
@@ -78,42 +78,46 @@
                 </figure>
             </section>
             <section class="purchase__payment">
-                <p>Payment method</p>
-                <p>Change payment methods</p>
-                <input type="text" placeholder="Mastercard">
-                <p>Voucher</p>
-                <div>
-                    <input type="text" placeholder="$15 OFF">
-                    <button>Apply</button>
+                <p class="purchase__payment--title">Payment method</p>
+                <p class="purchase__payment--change">Change payment methods</p>
+                <input type="text" placeholder="             Mastercard                                             ****5987" class="purchase__payment--input--card">
+                <p class="purchase__payment--voucher">Voucher</p>
+                <div class="purchase__payment--voucher--container">
+                    <input type="text" placeholder="$15 OFF" class="purchase__payment--input--voucher">
+                    <button class="purchase__payment--btn--voucher--apply">Apply</button>
                 </div>
-                <p>$15 Off</p>
+                <p class="purchase__payment--discount">$15 Off</p>
 
-                <div>
-                    <p>Summary</p>
-                    <div>
-                        <p>Subtotal</p>
-                        <p>$1073.72</p>
+                <div class="purchase__payment--summary">
+                    <p class="purchase__payment--title--summary">Summary</p>
+                    <div class="purchase__payment--cont">
+                        <p class="purchase__payment--summary--subtitle">Subtotal</p>
+                        <p class="purchase__payment--summary--information">$1073.72</p>
                     </div>
-                    <div>
-                        <p>Discount</p>
-                        <p>-$15</p>
+                    <div class="purchase__payment--cont">
+                        <p class="purchase__payment--summary--subtitle">Discount</p>
+                        <p class="purchase__payment--summary--information">-$15</p>
                     </div>
-                    <div>
-                        <p>Fee</p>
-                        <p>$0</p>
+                    <div class="purchase__payment--cont">
+                        <p class="purchase__payment--summary--subtitle">Fee</p>
+                        <p class="purchase__payment--summary--information">$0</p>
                     </div>
                 </div>
-                <section>
-                    <p>Total</p>
-                    <p>$1058.72</p>
+                <section class="purchase__payment--total">
+                    <p class="purchase__payment--summary--subtitle">Total</p>
+                    <p class="purchase__payment--summary--total">$1058.72</p>
                 </section>
-                <button>Proceed to payment</button>
+                <button class="purchase__payment--payment--btn">Proceed to payment</button>
 
                 
             </section>
         </section>
         <section class="section__products__more">
-            <p class="section__products__more--title">You may also like</p>
+            <div class="section__products__more--container--titleview">
+                <p class="section__products__more--title">You may also like</p>
+                <p class="section__products__more--viewmore">View more</p>
+            </div>
+            
             <section class="section__products__more--figure--container">
                 <figure class="section__products__more--figure">
                     <img src="../assets/jewelry.png" alt="" class="section__products__more--img">
@@ -236,7 +240,6 @@
                 </li>
             </ul>
         </section>
-
     </footer>
     
 </body>
