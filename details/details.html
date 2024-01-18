@@ -16,7 +16,7 @@
 
         <nav class="header__nav">
 
-            <ul class="header__ul">
+            <ul class="header__ul" id="navlist">
                 <li class="header__li"><a href="" class="header__a header__a--nav">Home</a></li>
                 <li class="header__li"><a href="" class="header__a header__a--nav">Shop</a></li>
                 <li class="header__li"><a href="" class="header__a header__a--nav">Collections</a></li>
@@ -75,6 +75,11 @@
                         <p class="card__product__main--code">Code: 78205</p>
                         <p class="card__product__main--price">$620.73</p>
                         <p class="card__product__main--color--name">Color - Rose Gold</p>
+                        <div class="choose__color">
+                            <input type="radio" name="color" class="color--name--white">
+                            <input type="radio" name="color" class="color--name--rosegold">
+
+                        </div>
                     </section>
                     <section class="card__product__main--size">
                         <p class="card__product__main--size card__product__main--size--text">Size - 48</p>
@@ -304,6 +309,8 @@
         </section>
 
     </footer>
+
+    <script src="./details.js"></script>
     
 </body>
 </html>
