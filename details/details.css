@@ -180,7 +180,7 @@
                 }
 
                 
-                
+
 
             .card__product__main--size{
                 display: flex;
@@ -689,6 +689,53 @@
                 font-size: 1.6rem;
                 font-weight: bold;
             }
+
+            .card__product__main--color--name{
+                font-size: 1.125rem;
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+            .choose__color{
+                margin: 5% 0%;
+            }
+
+
+            .card__product__main--size{
+                font-size: 1.125rem;
+                margin: 5% 0%;
+            }
+
+            .card__product__main--ul{
+                margin-bottom: 10%;
+            }
+
+            .card__product__main--quantity{
+                margin: 15% 0%;
+                
+            }
+                .card__product__main--quantity--title{
+                    font-size: 1.125rem;
+                }
+
+            .card__product__main--btn--actions{
+                width: 150%;
+                gap: 50px;
+                margin-bottom: 25%;
+            }
+                .card__product__main--btn--add{
+                    font-size: 1rem;
+                }
+                .card__product__main--btn--buy{
+                    font-size: 1rem;
+                }
+
+
+
+            .card__product__main--more{
+                width: 150%;
+
+            }
+
 
 }
 
