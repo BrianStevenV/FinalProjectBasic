@@ -432,11 +432,10 @@
     border-radius: 8px;
     display: flex;
 }
-    .footer__figure--imgs{
+    /* .footer__figure--imgs{
         display: flex;
         width: auto;
-        /* height: 100%; */
-    }
+    } */
     .footer__figure--figcaption{
         margin: 5% 5%;
         font-family: var(--font-manrope);
@@ -819,4 +818,188 @@
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
+    
+    .header{
+        padding: 5%;
+    }
+    .header__ul{
+        flex-direction: column;
+        transition: all .55s ease;
+    }
+    .header__a--nav{
+        font-size: 1rem;
+    }
+    #menu-icon{
+        display: flex;
+    }
+    #navlist.header__ul{
+        right: -100%;
+        transform: translate(0);
+        position: absolute;
+    }
+
+    /* Main */
+
+    .card__product__container{
+        display: block;
+    }
+        .card__product__aside--left{
+            flex-direction: row;
+            gap: 3%;
+        }
+        .card__product__aside--img{
+            width: 100%;
+        }
+
+
+        .card__product__main{
+            display: block;
+        }
+            .card__product__main--img{
+                width: 100%;
+                height: 60vh;
+                margin-top: 5%;
+            }
+            .card__product__main--figcaption{
+                margin-top: 5%;
+            }
+            .card__product__main--information{
+                font-size: 1.125rem;
+            }
+            .card__product__main--code{
+                margin-top: 3%;
+            }
+            .card__product__main--price{
+                margin-top: 3%;
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+
+            .card__product__main--color--name{
+                font-size: 1.125rem;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+            .choose__color{
+                margin: 3% 0%;
+            }
+
+
+            .card__product__main--size{
+                font-size: 1.125rem;
+                margin: 5% 0%;
+            }
+
+            .card__product__main--ul{
+                margin-bottom: 5%;
+                gap: 3%;
+            }
+
+            .card__product__main--quantity{
+                margin: 10% 0%;
+                
+            }
+                .card__product__main--quantity--title{
+                    font-size: 1.125rem;
+                }
+
+            .card__product__main--btn--actions{
+                width: 150%;
+                gap: 50px;
+                margin-bottom: 15%;
+            }
+                .card__product__main--btn--add{
+                    font-size: 1rem;
+                }
+                .card__product__main--btn--buy{
+                    font-size: 1rem;
+                }
+
+
+
+            .card__product__main--more{
+                width: 150%;
+            }
+
+
+            .section__description{
+                width: 100%;
+                margin-left: 0;
+                padding: 0;
+            }
+            .card__description{
+                margin-left: 0;
+                width: 100%;
+            }
+            .card__figcaption--text{
+                width: 100%;
+                margin: 0;
+                text-align: start;
+                padding: 0 20px;
+            }
+
+
+
+/* Footer */
+    .footer__banner{
+     display: block;   
+     padding: 15% 12.5%;
+
+    }
+        .footer__message{
+            width: 100%;
+            
+        }
+        .footer__message--title{
+            font-size: 2.2rem;
+        }
+        .footer__message--text{
+            font-size: 1.6rem;
+        }
+
+
+
+    .footer__figure{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 15%;
+
+    }
+        .footer__figure--img{
+            width: 100%;
+            height: auto;
+        }
+        .footer__figure--figcaption{
+            width: 90%;
+        }
+        .buttons_container{
+            margin-top: -3rem;
+            right: -2rem;
+        }
+
+
+    /* Subscribe */
+    .footer__section--top{
+        flex-direction: column-reverse;
+    }
+        .subscribe__container{
+            margin-left: 2.5rem;
+        }
+        .subscribe__item--title{
+            color: #F2C66D;
+        }
+
+        .footer__ul{
+            margin: 10% 0%;
+        }
+
+        .social-icons{
+            gap: 10px;
+            width: 30%;
+        }
+    
+        
+
+        
 }
