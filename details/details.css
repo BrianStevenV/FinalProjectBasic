@@ -106,7 +106,6 @@
 
 /* Card product main */
 
-/* O se aplica el var de 1.3rem a los subtitulos de card main ... o se aplica el fontsize de Code */
 
 .card__product__container{
     display: flex;
@@ -306,7 +305,6 @@
     }
 
     .card__product__description__figure{
-        /* background: red; */
         display: flex;
         flex-direction: column-reverse;
     }
@@ -405,7 +403,6 @@
     color: #FFFFFF;
 }
     .footer__message{
-        /* background: green; */
         width: 55%;
         margin-top: 7%;
     }
@@ -432,10 +429,7 @@
     border-radius: 8px;
     display: flex;
 }
-    /* .footer__figure--imgs{
-        display: flex;
-        width: auto;
-    } */
+    
     .footer__figure--figcaption{
         margin: 5% 5%;
         font-family: var(--font-manrope);
@@ -561,14 +555,10 @@
                 }
 
 
-
-
-
                 .buttons_container{
                     display:flex;
                     gap:1.6rem;
                     position: absolute;
-                    /* font-size: 1.9375rem; */
                     background: transparent;
                     color:#FFFFFF;
                     right: 4rem;
@@ -747,7 +737,6 @@
     /* Footer */
     .footer__banner{
         display: block;
-        /* margin-left: 10%; */
     }
         .footer__message{
             padding-left: 12.5%;
@@ -999,7 +988,5 @@
             width: 30%;
         }
     
-        
-
         
 }

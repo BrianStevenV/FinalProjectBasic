@@ -3,7 +3,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* font-family: 'Cormorant Garamond', serif; */
     list-style: none;
     text-decoration: none;
 
@@ -15,40 +14,30 @@ li{
 } 
 
 
-/* body{
-    padding: 0;
-    margin: 0;
-    
-} */
+
 
 header {
     background-color: #093931;
-    /* width: 100%; */
-    /* height: 100%; */
 }
 
 ul{
     display: flex;
     margin-right:10%;
     gap: 5px;
-    /* Se quita el gap*/
 }
 nav{
     display: flex;
     justify-content: space-between;
     margin-right:7%;
-    /* margin-rigth: 10% */
 
 }
 .menuItem{
     display: flex;
     justify-content: space-between;
-    /* background-color: #093931; */
     margin: 10px;
     border:none;
     color: #FFFFFF;
     font-weight: 400;
-    /* font-size: 1.25rem;  */
     line-height: 1.375rem;
     padding: 0 15px;
 
@@ -81,13 +70,11 @@ nav{
 .header{
     display: flex;
     position: absolute;
-    /* position: fixed */
     top:0; left: 0; right: 0;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
     background-color: #093931; 
-    /* margin-bottom: -50px; */
     height: 45px;
     padding-top: 50px;
     padding-bottom: 25px;
@@ -112,11 +99,9 @@ nav{
     background-color: #093931;
     position: relative;
     width: 100%;
-    /* height: 63rem; */
 }
 .hero__figure{
     width: 100%;
-    /* width: auto; */
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -145,14 +130,11 @@ nav{
     justify-content: space-between;
     z-index: 2;
     margin-top: 10%;
-    /* right: 49%; */
     margin-left: 50%;
-    /* margin-left: 53%; */
 
 }
     .necklaceImage{
         width:28rem;
-        /* height: 43rem; */
         height: auto;
         position: absolute;
 
@@ -196,7 +178,6 @@ nav{
     margin-left:10%;
     position: absolute;
     font-size: 1.125rem;
-    /* width: 12.5rem; */
     width: 13rem;
     height: 3.25rem;
     z-index: 1000;
@@ -213,16 +194,13 @@ nav{
     justify-content: space-evenly;
     text-align: center;
     margin-top: 5%;
-    /* background: red; */
     margin-right: 10%;
 }
     .description__container{
         width: 20%;
         font-family: Manrope;
-        font-size: 1.5rem;   /* ELIMINAR ????*/
+        font-size: 1.5rem;   
         margin-left: 10%;
-
-    
     }
 
     /* QUITAR FONT SIZE DE TITLE Y TEXT ???? */
@@ -250,42 +228,6 @@ nav{
 
 /* espacio  para featured products */
 
-.main__features__products{
-    display: flex;
-    margin-top:5%;
-    width: 100%;
-
-}
-    .features{
-        margin-left:10%;
-        margin-right: 10%;
-        width: 25%;
-    }
-
-            .features__content{
-                margin-top: 5rem;
-            }    
-    
-            .features__title{
-            margin-top: 20%;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            color:#0D554A;
-            width: 50%;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-
-            }
-            .features__text{
-            width: 100%;
-            font-size: 1.2rem;
-            font-family: Manrope;
-            /* color:#424955; */
-            color:#9095A0;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-
-            }
             .features__button{
                 background: none;
                 border-radius: 26px;
@@ -296,48 +238,6 @@ nav{
                 font-size: 1.125rem;
                 width: 12.5rem;
                 height: 3.25rem;
-            }
-
-
-
-    .products{
-        display: flex;
-        overflow: hidden;
-        margin-left: -4.5rem;
-        /* flex-wrap: wrap; */
-        padding: 3%;
-        /* background: red; */
-        width: 100%;
-    }
-
-        .products__figure{
-            width: 100%;
-        }
-        .products__showcase{
-            padding: 1rem;
-
-        }
-            /* .products__image{
-            border-radius: 10px 10px 0px 0px;
-            width: 20rem;
-            height: 25rem;
-            } */
-
-            .products__image{
-                border-radius: 10px 10px 0px 0px;
-                width: 20rem;
-                /* height: 25rem; */
-                }
-            .products__title{
-                margin-left: 1rem;
-                margin-top: 1rem;
-                font-size: 1.6rem;
-                font-weight: bold;
-            }
-            .products__price{
-                margin-left: 1rem;
-                font-size: 1.2rem;
-                font-family: Manrope;  
             }
 
 
@@ -352,7 +252,6 @@ nav{
     margin-bottom: 7%;
     justify-content: center;
     align-items: center;
-    /* background: red; */
 }
 
     .section__container__collections--title{
@@ -374,28 +273,22 @@ nav{
 
     .section__container__collections--left{
         margin-top: 15rem;
-        /* width: 35%; */
         width: auto;
     }
 
     .section__container__collections--center{
         margin-top: 10rem;
-        /* width: 35%; */
         width: auto;
     }
 
     .section__container__collections--rigth{
         margin-top: 15rem;
-        /* width: 35%; */
         width: auto;
     }
 
     .collections__img{
         border-radius: 8px;
-        /* margin-top: 2rem; */
-        /* margin-top: ; */
         width: 100%;
-        background: green;
     }
 
     .section__container__collections--btn{
@@ -412,7 +305,6 @@ nav{
         position: relative;
         bottom: 4.0625rem;
     }
-/* border-radius: 10px 10px 10px 10px; */
 
 
 /* espacio para selection */
@@ -457,12 +349,9 @@ nav{
 
 .main__story__figure{
     width: 100%;
-    /* background: red;
-    text-align: center; */
 }
 .main__story__figure--image{
     width:100%;
-    /* width: auto; */
     
 }
 
@@ -546,7 +435,6 @@ nav{
 }
 
 .footer_img{
-    /* width: 50rem; */
     width: auto;
     height: 100%;
     border-radius: 8px 0 0 8px;
@@ -555,7 +443,7 @@ nav{
 
 .footer__figcaption{
     
-    font-size: 1.2rem; /*1 Rem*/
+    font-size: 1.2rem; 
     line-height: 40px;
     font-weight: 400px;
     font-family: Manrope; 
@@ -596,9 +484,7 @@ nav{
 
 .section__footer__items{
     display: flex;
-    /* flex-wrap: wrap; */
     margin-bottom: 15px;
-    /* margin-right: 7rem; */
     width: 40%;
     justify-content: center;
 }
@@ -715,7 +601,6 @@ nav{
     display:flex;
     gap:1.6rem;
     position: absolute;
-    /* font-size: 1.9375rem; */
     background: transparent;
     color:#FFFFFF;
     right: 4rem;
@@ -788,8 +673,6 @@ nav{
 .main--features--products{
     max-width: 100%;
     overflow: hidden;
-    /* margin-left: 10%;
-    margin-right: 10%; */
     margin-top: 5%;
     display: flex;
     
@@ -798,8 +681,6 @@ nav{
 .container--featured{
     width: 25%;
     padding-right: 100px;
-    /* margin-top: 1rem; */
-    /* background: red; */
     margin-left: 10%;
 }
     .features--title{
@@ -808,7 +689,6 @@ nav{
         color: #0D554A;
         margin-bottom: 0.5rem;
         margin-top: 0.7rem;
-        /* background: yellow; */
     }
 
     .features--text{
@@ -835,7 +715,6 @@ nav{
 
 .product--img{
     width: 20rem;
-    /* width: auto; */
     border-radius: 10px 10px 0px 0px;
 }
     .product--img--figcaption{
@@ -935,11 +814,8 @@ nav{
 
     #navlist a{
         display: block;
-        /* margin: 7px 0; */
         font-size: 1.2rem;
     }
-
-    /* Cambiar display none a block y display */
 
 
     /* Hero */
@@ -1077,19 +953,12 @@ nav{
     /* Featured products   */
 
 
-
-
-
-
-
     /* Our Story */
 
 
     .main__story{
-        /* background: red; */
         width: 80%;
         height: auto;
-        /* max-width: 80%; */
     }
 
     .main__story__figure{
@@ -1107,10 +976,6 @@ nav{
     .button__ourstory{
         margin-top: 80px;
     }
-
-
-
-
 
 
     /* Footer */
@@ -1175,7 +1040,6 @@ nav{
                 top: -4.125rem;
 
             }
-
 
 
             /* Subscribe */
@@ -1252,7 +1116,6 @@ nav{
 
     nav a{
         display: block;
-        /* margin: 7px 0; */
         font-size: 1.2rem;
     }
 
@@ -1260,7 +1123,6 @@ nav{
 
     
     .heroSparkleText{
-        /* width: 50%; */
         top: 10rem;
     }
         .sparkleImage{
@@ -1275,7 +1137,6 @@ nav{
     
         .necklaceImage{
             width:18rem;
-            /* height: 43rem; */
             height: auto;
             position: absolute;
             top: 10rem;
@@ -1286,7 +1147,6 @@ nav{
             position: absolute;
             width: 12.5rem;
             height: auto;
-            /* margin-left: 12rem; */
             z-index: 3;
             margin-top:7.3rem;
 
@@ -1336,7 +1196,6 @@ nav{
 
             .features--title{
                 font-size: 2.3rem;
-                /* width: 100%; */
                 width: 25vh;
         
             }
@@ -1397,7 +1256,7 @@ nav{
 
     /* Footer */
 
-    
+
 
     .section__footer{
         display: block;
@@ -1465,7 +1324,6 @@ nav{
         /*  Subscribe */
         
         
-
         .footer__container__contact{
             display: flex;
             flex-direction: column-reverse;
@@ -1506,12 +1364,6 @@ nav{
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
-    /* *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-    } */
 
     .header{
         width: 100%;
@@ -1553,20 +1405,10 @@ nav{
             justify-content: space-between;
             z-index: 2;
             margin-top: 15%;
-            /* right: 49%; */
-
-
-            
-            /* margin-left: 60%; */
             left: 8.6%;
-
-
-            /* margin-left: 53%; */
-        
         }
             .necklaceImage{
                 width:22rem;
-                /* height: 43rem; */
                 height: auto;
                 position: absolute;
         
@@ -1684,8 +1526,6 @@ nav{
 
     .section__footer{
         display: flex;
-        /* flex-direction: column;
-        align-items: center; */
     }
 
     .article__footer--h1--p{
@@ -1720,13 +1560,11 @@ nav{
     .footer__figcaption{
         font-size: 1rem;
         width: 75%;
-        /* ACA  */
         padding-left: 0;
         line-height: 35px;
         justify-content: center;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
-
 
     }
 
@@ -1739,7 +1577,6 @@ nav{
 
     .article__container__subscribe{
         position: absolute;
-        /* top: -30px; */
         margin-top:-500px;
         z-index: 100000;
     }
@@ -1806,7 +1643,6 @@ nav{
 
         .necklaceImage{
             width:auto;
-            /* height: 43rem; */
             height: auto;
             position: absolute;
     
@@ -1857,8 +1693,6 @@ nav{
         .container--featured{
             width: 25%;
             padding-right: 100px;
-            /* margin-top: 1rem; */
-            /* background: red; */
             margin-left: 10%;
         }
             .features--title{
@@ -1867,7 +1701,6 @@ nav{
                 color: #0D554A;
                 margin-bottom: 0.5rem;
                 margin-top: 0.7rem;
-                /* background: yellow; */
             }
         
             .features--text{
@@ -1882,7 +1715,6 @@ nav{
 
             .product--img{
                 width: 18rem;
-                /* width: auto; */
                 border-radius: 10px 10px 0px 0px;
             }
                 .product--img--figcaption{
@@ -1906,7 +1738,6 @@ nav{
                     position: relative;
                     margin-top: 25%;
                     margin-bottom: 1.5rem;
-                    /* font-size: 3.250rem; */
                     font-size: 2.6rem;
                     font-family: Cormorant Garamond;
                     text-align: justify;
@@ -1928,7 +1759,7 @@ nav{
                 .footer_figure{
                     background-color: #171A1F4D;
                     display: flex;
-                    width: 100%; /*60%*/
+                    width: 100%;
                     position: relative;
                     text-align: center;
                     border-radius: 8px;
@@ -1938,7 +1769,6 @@ nav{
                 }
                 
                 .footer_img{
-                    /* width: 50rem; */
                     width: 60%;
                     height: 100%;
                     border-radius: 8px 0 0 8px;
@@ -1946,8 +1776,6 @@ nav{
                 }
                 
                 .footer__figcaption{
-                    
-                    /* font-size: 1.2rem; 1 Rem */
                     line-height: 30px;
                     font-weight: 200px;
                     font-family: Manrope; 
@@ -1963,10 +1791,8 @@ nav{
                 
                 .footer__figcaption--h1{
                     margin-top: 0.825rem;
-                    /* margin-bottom: 0.2rem; */
                     font-family: Manrope;
                     font-size: 1.3rem;
-                    
                 }
                 
                 .footer__figcaption--p{
@@ -1991,8 +1817,6 @@ nav{
                     justify-content: center;
                     align-items: center;
                     line-height: 1;
-                    
-                
                 }
 
                 .button__right{
@@ -2011,13 +1835,7 @@ nav{
                     align-items: center;
                     top: -0.285rem;
                     right: -1rem;
-                    
                 }
-
-
-
-
-
 
 
                 .footer__container__contact{
@@ -2033,13 +1851,10 @@ nav{
                 
                 .section__footer__items{
                     display: flex;
-                    /* flex-wrap: wrap; */
                     margin-bottom: 15px;
-                    /* margin-right: 7rem; */
                     width: 35%;
                     justify-content: center;
                     margin-left: 10%;
-
                 }
                 
                 .footer__items--left, .footer__items--right{
@@ -2049,7 +1864,6 @@ nav{
                 
                 }
 
-            
 
                 .footer__item--left--p, .footer__item--right--p{
                     color: #FFFFFF;
@@ -2057,12 +1871,7 @@ nav{
                     margin-right: 8rem;
                     font-size: 1.125em;
                     z-index: 1000;
-                    
                 }
-
-
-
-
 
                 .article__container__subscribe{
                     margin-top: -0.5rem;
@@ -2090,7 +1899,7 @@ nav{
                     width: 20rem;
                     border-radius: 18px 0px 0px 18px;
                     border: 1px solid #FFFFFF;
-                    height: 2.5rem; /*2.1875rem*/
+                    height: 2.5rem;
                     font-family: Manrope;
                     font-size: 0.9rem;
                     background-color: #093931;
