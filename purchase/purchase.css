@@ -29,7 +29,8 @@
     display: flex;
     justify-content: space-between;
     padding:1% 10%;
-    overflow: hidden;
+    height: 4rem;
+    width: 100%;
 }
 
         .header__a{
@@ -39,17 +40,23 @@
             font-weight: lighter;
         }
 
-    .header__nav{
-        max-width: 60%;
-        width: 60%;
-        display: flex;
-    }
+        
+        .header__ul{
+            display: flex;
+            gap: 8%;
+            margin-right: 10rem;
+            margin-top: 0.5rem;
+        }
+            
+        
+                .header__a--header__a--nav{
+                    color: #FFFFFF;
+                    font-family: var(--font-manrope);
+                    font-size: 1.125rem;
+                    font-weight: lighter;
+                    width: 100%;
+                }
 
-    .header__ul{
-        display: flex;
-        width: 100%;
-        gap: 10%;
-    }
         .header__a--nav{
             color: #FFFFFF;
             font-family: var(--font-manrope);
@@ -742,4 +749,14 @@
                gap: 10px;
                width: 30%;
            }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+    .subscribe__item--input{
+        width: 60%;
+    }
+
+
 }

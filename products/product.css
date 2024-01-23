@@ -25,12 +25,15 @@ ul, ol{
     list-style: none;
 }
 
+
+
 .header{
     background-color: #093931;
     display: flex;
     justify-content: space-between;
     padding:1% 10%;
-    overflow: hidden;
+    height: 4rem;
+    width: 100%;
 }
 
         .header__a{
@@ -40,17 +43,33 @@ ul, ol{
             font-weight: lighter;
         }
 
-    .header__nav{
-        max-width: 60%;
-        width: 60%;
-        display: flex;
-    }
+        
+        .header__ul{
+            display: flex;
+            gap: 8%;
+            margin-right: 10rem;
+            margin-top: 0.5rem;
+        }
+            
+        
+                .header__a--header__a--nav{
+                    color: #FFFFFF;
+                    font-family: var(--font-manrope);
+                    font-size: 1.125rem;
+                    font-weight: lighter;
+                    width: 100%;
+                }
 
-    .header__ul{
-        display: flex;
-        width: 100%;
-        gap: 10%;
-    }
+
+
+
+
+
+        
+
+    
+
+    
         .header__a--nav{
             color: #FFFFFF;
             font-family: var(--font-manrope);
@@ -742,5 +761,122 @@ ul, ol{
         text-align:left ;
 
     }
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+.section__figure--top{
+    gap: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.figure--top--img{
+    border-radius: 10px;
+}
+.figcaption__p{
+    font-family: var(--font-manrope);
+}
+
+.figure--bottom--img--big{
+    height: 40rem;
+}
+
+.section__figure--bottom{
+    gap: 1%;
+}
+
+.card__primary__container{
+    margin-left: 1rem;
+}
+
+
+.subscribe__item--input{
+    width: 60%;
+}
+
+}
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1520px){
+
+
+    .section__figure--top{
+        gap: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    }
+    .figure--top--img{
+        border-radius: 10px;
+    }
+    .figcaption__p{
+        font-family: var(--font-manrope);
+    }
+    
+    .figure--bottom--img--big{
+        height: 40rem;
+    }
+    
+    .section__figure--bottom{
+        gap: 1%;
+    }
+    
+    .card__primary__container{
+        margin-left: 1rem;
+    }
+    
+    
+    .subscribe__item--input{
+        width: 60%;
+    }
+    
+}
+
+
+@media only screen and (min-width: 1521px) and (max-width: 1920px) {
+
+    
+    .section__figure--top{
+        gap: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    }
+    .figure--top--img{
+        border-radius: 10px;
+    }
+    .figcaption__p{
+        font-family: var(--font-manrope);
+    }
+    
+    .figure--bottom--img--big{
+        height: 40rem;
+    }
+    
+    .section__figure--bottom{
+        gap: 1%;
+    }
+    
+    .card__primary__container{
+        margin-left: 1rem;
+    }
+    
+    
+    .subscribe__item--input{
+        width: 60%;
+    }
+    
 
 }
