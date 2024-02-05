@@ -22,7 +22,7 @@
         <nav class="header__nav" id="navlist">
 
             <ul class="header__ul">
-                <li class="header__li"><a href="" class="header__a header__a--nav">Home</a></li>
+                <li class="header__li"><a href="../home/home.html" class="header__a header__a--nav">Home</a></li>
                 <li class="header__li"><a href="" class="header__a header__a--nav">Shop</a></li>
                 <li class="header__li"><a href="" class="header__a header__a--nav">Collections</a></li>
                 <li class="header__li"><a href="" class="header__a header__a--nav">About</a></li>
@@ -57,16 +57,20 @@
     <main class="main">
         <section class="section__nav">
             <ul class="section__nav--ul" id="navlist-section">
-                <li class="navli__item">All</li>
-                <li class="navli__item">Rings</li>
-                <li class="navli__item">Bracelets</li>
-                <li class="navli__item">Necklaces</li>
-                <li class="navli__item">Earrings</li>
+                <li class="navli__item" id="AllCategory">All</li>
+                <li class="navli__item" id="RingCategory">Rings</li>
+                <li class="navli__item" id="BraceletsCategory">Bracelets</li>
+                <li class="navli__item" id="NecklaceCategory">Necklaces</li>
+                <li class="navli__item" id="EarringsCategory">Earrings</li>
             </ul>
 
             <div class="section__select">
                 <label for="Sorty by price" class="section__select--label">Sort by price</label>
-                <select name="Sort by price" id="select" class="section__select--select"></select>
+                <select name="Sort by price" id="select" class="section__select--select">
+                    <option value=""></option>
+                    <option value="">Ascendant</option>
+                    <option value="">Descendant</option>
+                </select>
             </div>
 
             <div class="bx bx-menu" id="menu-icon-section"></div>
@@ -304,6 +308,7 @@
         </section>
     </footer>
     <script src="./product.js"></script>
+    <script src="products.js"></script>
 
 </body>
 </html>
