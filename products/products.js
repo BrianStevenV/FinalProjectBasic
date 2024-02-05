@@ -1,6 +1,7 @@
 const containerTop = document.querySelector(".section__figure--top");
 const containerBottom = document.querySelector(".section__figure--bottom");
 
+
 const btnAll = document.getElementById("AllCategory");
 const btnRings = document.getElementById("RingCategory");
 const btnBracelets = document.getElementById("BraceletsCategory");
@@ -19,35 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-const filterProductsByCategory = async (categoryName) => {
-    const responseApi = await fetch(`http://localhost:3000/api/product/category/${categoryName}`);
-    
-    if(responseApi.ok) {
-        const categoryData = await responseApi.json();
-        containerTop.innerHTML = "";
-        containerBottom.innerHTML = "";
-
-        let htmlContent = "";  
-
-        categoryData.forEach(product => {
-            htmlContent += `<figure class="figure--top">
-                <img src="${product.images}" alt="${product.name}" class="figure--top--img">
-                <figcaption class="figure--top--figcaption">
-                    <p class="figcaption__h1">${product.name}</p>
-                    <p class="figcaption__p">$${product.price}</p>
-                </figcaption>
-            </figure>`;
-        });
-
-        
-        containerTop.innerHTML = htmlContent;
-    }   else {
-        console.error("Error if");
-    }
-};
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const originalHTMLTop = document.querySelector('.section__figure--top').innerHTML;
@@ -60,4 +32,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+const fetchDataAndRenderProducts = async (url) => {
+    try {
+        const responseApi = await fetch(url);
+
+        if (responseApi.ok) {
+            const categoryData = await responseApi.json();
+            containerTop.innerHTML = "";
+            containerBottom.innerHTML = "";
+
+            let htmlContent = "";
+
+            categoryData.forEach(product => {
+                htmlContent += `<figure class="figure--top">
+                    <img src="${product.images}" alt="${product.name}" class="figure--top--img">
+                    <figcaption class="figure--top--figcaption">
+                        <p class="figcaption__h1">${product.name}</p>
+                        <p class="figcaption__p">$${product.price}</p>
+                    </figcaption>
+                </figure>`;
+            });
+
+            containerTop.innerHTML = htmlContent;
+        } else {
+            console.error("Error fetching data");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+};
+
+const getValueFromSelect = async () => {
+    const select = document.querySelector("#select");
+    const optionSelect = select.options[select.selectedIndex];
+    const value = optionSelect.value;
+    const url = `http://localhost:3000/api/product/price/${value}`;
+
+    await fetchDataAndRenderProducts(url);
+};
+
+const filterProductsByCategory = async (categoryName) => {
+    const url = `http://localhost:3000/api/product/category/${categoryName}`;
+    await fetchDataAndRenderProducts(url);
+};
 

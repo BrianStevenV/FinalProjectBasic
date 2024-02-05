@@ -66,10 +66,10 @@
 
             <div class="section__select">
                 <label for="Sorty by price" class="section__select--label">Sort by price</label>
-                <select name="Sort by price" id="select" class="section__select--select">
-                    <option value=""></option>
-                    <option value="">Ascendant</option>
-                    <option value="">Descendant</option>
+                <select name="Sort by price" id="select" class="section__select--select" onchange="getValueFromSelect()">
+                    <option value="none">Choose an option</option>
+                    <option value="asc">Ascendant</option>
+                    <option value="desc">Descendant</option>
                 </select>
             </div>
 

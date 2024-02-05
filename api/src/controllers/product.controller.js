@@ -43,7 +43,7 @@ export const getByName = async (req, res) => {
 
 }
 export const getByPrice = async (req, res) => {
-    const searchPrice = req.body;
+    const searchPrice = req.params.price.trim();
 
     const limit = 10;
     const page = 1;
