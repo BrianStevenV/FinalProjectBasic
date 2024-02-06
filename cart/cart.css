@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+#close-icon {
+    position: fixed;
+    top: 58px;
+    right: 10px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.body__cart{
+    display: flex;
+    padding: 25% 5%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    height: 100vh;
+}
+.your__cart{
+    width: 30rem;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.your__cart--h1__p__container{
+    display: flex;
+    justify-content: space-between;
+}
+.h1__p__container--h1{
+    color: #0D554A;
+    font-family: 'Cormorant Garamond';
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 2.5rem;
+
+}
+.h1__p__container--close{
+    margin-right: 2.5rem;
+    margin-top: 5.5rem;
+}
+
+    
+.cart__container{
+    /**/
+    
+    
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 85%;
+}
+    .cart__img{
+        width: 25%;
+    }
+    .cart__figcaption{
+        color: #323842;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 1rem;
+        /* line-height: 0.5; */
+
+    }
+        .title__container{
+            font-family: 'Cormorant Garamond'; 
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        
+        .code__container{
+            color: #9095A0;
+            font-family: 'Manrope'; 
+        }
+        .price__container{
+            color: #171A1F;
+            font-family: 'Manrope'; 
+            font-size: 1.2rem;
+        }
+    .cart__misc{
+        display: flex;
+        flex-direction: column;
+    }
+        .quantity__container{
+            margin-top: 2rem;
+            font-family: 'Manrope'; 
+            font-size: 1.2rem;
+        }
+
+
+
+
+
+
+.cart__footer{
+    display: flex;
+    flex-direction: column;
+}
+.cart__footer--total__price{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.total__price--total{
+    font-family: 'Manrope';
+    font-size:1.3rem;
+
+
+}
+.total__price--price{
+    font-family: 'Cormorant Garamond';
+    font-weight: 700;
+    font-size:1.3rem;
+}
+
+.cart__footer--button__container{
+    display: flex;
+    justify-content: center;
+    
+}
+.cart__footer--button__container--button{
+    background-color: #0D554A;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 28px;
+    border: none;
+    width: 100%;
+    font-size:1.3rem;
+    font-family: 'Manrope';
+
+}
+hr{
+    width: 87%;
+}
+.footer__hr{
+    margin-top: 10rem;
+}
+.cart__footer{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 659px){
+
+    
+}
+
+@media only screen and (min-width: 660px) and (max-width: 2100px){
+
+   
+}
+
