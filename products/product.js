@@ -16,3 +16,16 @@ menuMainSection.onclick = () => {
     menuMainSection.classList.toggle('bx-x');
     navlistMainSection.classList.toggle('section__nav--ul');
 }
+
+
+const buyNow = () => {
+    buyNow.addEventListener(
+        container.innerHTML = `
+        
+        <
+
+        `
+        
+
+    )
+}
