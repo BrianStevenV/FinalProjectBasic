@@ -6,7 +6,6 @@
     <title>Final Project</title>
     <link rel="stylesheet" href="details.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="../cart/cart.css">
 </head>
 <body>
     <header class="header">
@@ -32,7 +31,7 @@
                 </li>
                 <li class="header__li">
                     <a href="" class="header__a header__a--nav">
-                    <img src="../assets/Shopping cart 1.png" alt="Shopping Cart" onclick="printCartSection()">
+                    <img src="../assets/Shopping cart 1.png" alt="Shopping Cart">
                     </a>
                 </li>
             </ul>
@@ -44,17 +43,16 @@
     </header>
 
     <main class="main">
-        
 
         <ul class="ul__product--nav">
             <li class="li__product--nav">
-                <a href="../home/home.html" class="li__product--nav li__product--nav--a">Home</a>
+                <a href="" class="li__product--nav li__product--nav--a">Home</a>
             </li>
             <li class="li__product--separator">
                 >
             </li>
             <li class="li__product--nav">
-                <a href="../products/product.html" class="li__product--nav li__product--nav--a">Shop</a>
+                <a href="" class="li__product--nav li__product--nav--a">Shop</a>
             </li>
             <li class="li__product--separator">
                 >
@@ -112,18 +110,39 @@
                         </ul>
                     </section>
                     <section class="card__product__main--btn--actions">
-                        <button class="card__product__main--btn--add" id="btn-add" onclick="addToCart()">Add to bag</button>
-                        <button class="card__product__main--btn--buy" id="btn--buy" onclick="createCartSection()">Buy now</button>
+                        <article class="card__product__main--btn--actions--container">
+
+                            <button class="card__product__main--btn--add" id="btn-add">Add to bag</button>
+
+                        </article>
+
+                        <article class="card__product__main--btn--actions--container">
+                            <button class="card__product__main--btn--buy" id="btn--buy">Buy now</button>
+
+
+                        </article>
                     </section>
                     <section class="card__product__main--more">
-                        <label for="" class="card__product__main--label">Delivery</label>
-                        <select name="" id="" class="card__product__main--select"></select>
-                        <label for="" class="card__product__main--label">Payment</label>
-                        <select name="" id="" class="card__product__main--select"></select>
-                        <label for="" class="card__product__main--label">Warranty</label>
-                        <select name="" id="" class="card__product__main--select"></select>
-                        <label for="" class="card__product__main--label">Care</label>
-                        <select name="" id="" class="card__product__main--select"></select>
+                        <article class="card__product__main--more--container">
+                            <select name="Delivery" id="" class="card__product__main--select">
+                                <option value="delivery">Delivery</option>
+                            </select>
+                            <select name="" id="" class="card__product__main--select">
+                                <option value="payment">Payment</option>
+                            </select>
+                        </article>
+                        
+                            
+                        </article>
+                        <article class="card__product__main--more--container">
+                            <select name="Delivery" id="" class="card__product__main--select">
+                                <option value="delivery">Warranty</option>
+                            </select>
+                            <select name="" id="" class="card__product__main--select">
+                                <option value="payment">Care</option>
+                            </select>
+                        </article>
+                        
                     </section>
                     
                 </figcaption>
@@ -298,8 +317,6 @@
     </footer>
 
     <script src="./details.js"></script>
-    <script src="../cart/cart.js"></script>
-    <script src="./detail.js"></script>
     
 </body>
 </html>

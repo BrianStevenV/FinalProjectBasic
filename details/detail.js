@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             
             if (responseApi.ok) {
                 const productData = await responseApi.json();
-                console.log('Product Data:', productData);
+                createProductDetailsSection(productData)
+                createProductDescription(productData);
 
-                // Aquí puedes utilizar productData para actualizar la interfaz de usuario
+        
             } else {
                 console.error('Error en la solicitud:', responseApi.status, responseApi.statusText);
             }
@@ -78,5 +79,131 @@ const fetchDataAndRenderProduct = async (name) => {
 }
 
 
+function createProductDetailsSection(productObject) {
+    
+
+    const product = productObject;
+
+    const productDetailsSection = document.createElement('section');
+    productDetailsSection.className = 'card_product_container';
+
+    productDetailsSection.innerHTML = `
+
+    <figure class="card_product_aside--left">
+                <img src="../assets/details_img/Img 1 aside.png" alt="Ring 1" class="card_product_aside--img">
+                <img src="../assets/details_img/Img 2 aside.png" alt="Ring 2" class="card_product_aside--img">
+                <img src="../assets/details_img/Img 3 aside.png" alt="RIng 3" class="card_product_aside--img">
+                <img src="../assets/details_img/Img 4 aside.png" alt="Ring 4" class="card_product_aside--img">
+            </figure>
+        <figure class="card_product_main">
+            <img src="${product.images}" alt="" class="card_productmain cardproduct_main--img">
+            <figcaption class="card_product_main--figcaption">
+                <section class="card_product_main--information">
+                    <p class="card_product_main--title">${product.name}</p>
+                    <p class="card_product_main--code">Code: ${product.code}</p>
+                    <p class="card_product_main--price">$${product.price}</p>
+                    <p class="card_product_main--color--name">Color - ${product.color}</p>
+                    <div class="choose__color">
+                        <input type="radio" name="color" class="color--name--white">
+                        <input type="radio" name="color" class="color--name--rosegold">
+                    </div>
+                </section>
+                <section class="card_product_main--size">
+                    <p class="card_productmain--size cardproduct_main--size--text">Size - ${product.amount.size[0]}</p>
+                    <p class="card_productmain--size cardproduct_main--size--question">What is my size?</p>
+                </section>
+                <ul class="card_product_main--ul">
+                    ${product.amount.size.map(size => `<li class="card__product__main--li">${size}</li>`).join('')}
+                </ul>
+                <section class="card_product_main--quantity">
+                        <p class="card_product_main--quantity--title">Quantity</p>
+                        <ul class="card_product_main--quantity--ul">
+                            <li class="card_product_main--quantity--li">-</li>
+                            <li class="card_product_main--quantity--li">1</li>
+                            <li class="card_product_main--quantity--li">+</li>
+                        </ul>
+                    </section>
+                    <section class="card_product_main--btn--actions">
+                        <article class="card_product_main--btn--actions--container">
+
+                            <button class="card_product_main--btn--add" id="btn-add">Add to bag</button>
+
+                        </article>
+
+                        <article class="card_product_main--btn--actions--container">
+                            <button class="card_product_main--btn--buy" id="btn--buy">Buy now</button>
+
+
+                        </article>
+                    </section>
+                    <section class="card_product_main--more">
+                        <article class="card_product_main--more--container">
+                            <select name="Delivery" id="" class="card_product_main--select">
+                                <option value="delivery">Delivery</option>
+                            </select>
+                            <select name="" id="" class="card_product_main--select">
+                                <option value="payment">Payment</option>
+                            </select>
+                        </article>
+                        
+                            
+                        </article>
+                        <article class="card_product_main--more--container">
+                            <select name="Delivery" id="" class="card_product_main--select">
+                                <option value="delivery">Warranty</option>
+                            </select>
+                            <select name="" id="" class="card_product_main--select">
+                                <option value="payment">Care</option>
+                            </select>
+                        </article>
+                        
+                    </section>
+            </figcaption>
+        </figure>
+        </section>
+
+       
+        
+    `;
+
+    const existingProductDetailsSection = document.querySelector('.card_product_container');
+
+    existingProductDetailsSection.replaceWith(productDetailsSection);
+}
+
+
+
+function createProductDescription(productObject) {
+    // Crear el contenido HTML dinámico
+    const product = productObject;
+
+    const productDescriptionSection = document.createElement('section');
+    productDescriptionSection.className = 'card_product_container';
+
+
+    const productDescriptionHTML = `
+        <section class="card_product_description">
+            <p class="description--p">Description</p>
+            <figure class="card_productdescription_figure">
+                <img src="${product.images}" alt="" class="card_productdescription_img">
+                <figcaption class="card_productdescriptionfigure cardproductdescription_figure--figcaption">
+                    <p class="card_productdescriptionfigure cardproductdescription_figure--title">${product.name}</p>
+                    <p class="card_productdescriptionfigure cardproductdescription_figure--text">${product.description}</p>
+                </figcaption>
+            </figure>
+        </section>
+    `;
+
+    const descriptionContainer = document.createElement('div');
+    descriptionContainer.innerHTML = productDescriptionHTML;
+
+    const existingProductDescription = document.querySelector('.card_product_description');
+
+    if (existingProductDescription) {
+        existingProductDescription.replaceWith(descriptionContainer);
+    } else {
+        document.body.appendChild(descriptionContainer);
+    }
+}
 
 

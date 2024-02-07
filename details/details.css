@@ -148,7 +148,7 @@
 
     .card__product__main{
         display: flex;
-        overflow: hidden;
+        
     }
         .card__product__main--figcaption{
             margin-left: 5%;
@@ -233,7 +233,7 @@
                 margin-top: 1%;
             }
                 .card__product__main--li{
-                    gap: 10px;
+                    gap: 1%;
                     padding: 1%;
                     border: 1px solid #565E6C;
                     color: #565E6C;
@@ -264,53 +264,75 @@
 
             .card__product__main--btn--actions{
                 display: flex;
-                justify-content: space-between;
-                text-align: center;
                 margin-top: 5%;
+                justify-content: space-between;
+                
+            }
+            .card__product__main--btn--actions--container{
+                width: 46%;
+                
             }
 
                 .card__product__main--btn--add{
                     color: var(--color-body-select);
+                    width: 100%;
+
                     font-size: 1.8rem;
-                    padding: 1.5% 15%;
-                    border-radius: 26px;
                     border: 1px solid var(--color-body-select);
+                    border-radius: 50px;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem
 
                 }
                 .card__product__main--btn--buy{
                     background: var(--color-body-select);
                     font-size: 1.8rem;
+                    width: 100%;
+
                     font-weight: lighter;
                     color: #FFFFFF;
-                    padding: 1.5% 15%;
-                    border-radius: 26px;
                     border-style: none;
+
+                    border-radius: 50px;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+
                 }
 
 
-            /* Card Product More */
+
             .card__product__main--more{
                 display: flex;
-                flex-wrap: wrap;
-                margin-top: 5%;
-                font-family: var(--font-manrope);
-                
+                flex-direction: column;
+                justify-content: space-between;
             }
-                .card__product__main--label{
-                    width: 25%;
-                    margin-top: 2.5%;
-                    font-size: var(--font-size-1-3);
-                    border-bottom: 1px solid black;
+            .card__product__main--more--container{
+                display: flex;
+                width: 100%;
+                gap:3.5rem;
+            }
+            
 
-                }
-                .card__product__main--select{
-                    width: 25%;
-                    margin-top: 2.5%;
-                    font-size: var(--font-size-1-3);
-                    border: none;
-                    border-bottom: 1px solid black;
+            .card__product__main--select{
+                width: 100%;
+                margin-top: 2.5%;
+                font-size: var(--font-size-1-3);
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #9095A0;
+                background-repeat: no-repeat;
+                background-position: right center; 
+                padding-right: 20px; 
+                background-image: url('../assets/arrow.png');
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-family: var(--font-manrope);
 
-                }
+
+            }
 
             
 
@@ -321,8 +343,9 @@
     font-family: var(--font-manrope);
     width: 93%;
     height: 90%;
-    margin-left: 7%;
-
+    background-color: #FAFAFB;
+    padding: 8%;
+    border-radius: 20px;
 }
     .description--p{
         font-size: var(--font-size-1-3);
@@ -350,7 +373,7 @@
             margin-bottom: 3%;
         }
         .card__product__description__img{
-            height: auto;
+            height: 40rem;
         }
 
 
