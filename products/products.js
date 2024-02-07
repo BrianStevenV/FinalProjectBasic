@@ -1,6 +1,7 @@
 const containerTop = document.querySelector(".section__figure--top");
 const containerBottom = document.querySelector(".section__figure--bottom");
 
+const searchBar = document.querySelector("#search-bar");
 
 const btnAll = document.getElementById("AllCategory");
 const btnRings = document.getElementById("RingCategory");
@@ -77,4 +78,39 @@ const filterProductsByCategory = async (categoryName) => {
     const url = `http://localhost:3000/api/product/category/${categoryName}`;
     await fetchDataAndRenderProducts(url);
 };
+
+
+const containerFigureTops = document.querySelectorAll(".figure--top");
+const containerFigureBottoms = document.querySelectorAll(".figure--bottom");
+const containerFigurePrimary = document.querySelector(".figure__primary--bottom");
+
+containerFigurePrimary.addEventListener('click', () => {
+    const redirectURL = '../details/details.html';
+    window.location.href = redirectURL;
+})
+
+containerFigureTops.forEach(containerFigureTop => {
+    containerFigureTop.addEventListener('click', () => {
+        const redirectURL = '../details/details.html';
+        window.location.href = redirectURL;
+        captureFigcaptionH1(containerFigureTop);
+
+    });
+});
+
+containerFigureBottoms.forEach(containerFigureBottom => {
+    containerFigureBottom.addEventListener('click', () => {
+        const redirectURL = '../details/details.html';
+        window.location.href = redirectURL;
+        captureFigcaptionH1(containerFigureBottom)
+    });
+});
+
+const captureFigcaptionH1 = (element) => {
+    const h1Element = element.querySelector('.figcaption__h1');
+    const valueOnly = h1Element.textContent.trim();
+    
+    const storage = sessionStorage.setItem('productTitle', valueOnly);
+    
+}
 
