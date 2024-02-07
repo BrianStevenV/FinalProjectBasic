@@ -82,77 +82,79 @@ const fetchDataAndRenderProduct = async (name) => {
 function createProductDetailsSection(productObject) {
     
 
+    const detailsContainer = document.querySelector(".card__product__container");
+    detailsContainer.innerHTML= ''; 
     const product = productObject;
 
-    const productDetailsSection = document.createElement('section');
-    productDetailsSection.className = 'card_product_container';
+    // const productDetailsSection = document.createElement('section');
+    // productDetailsSection.className = 'card__product__container';
 
-    productDetailsSection.innerHTML = `
+    detailsContainer.innerHTML = `
 
-    <figure class="card_product_aside--left">
-                <img src="../assets/details_img/Img 1 aside.png" alt="Ring 1" class="card_product_aside--img">
-                <img src="../assets/details_img/Img 2 aside.png" alt="Ring 2" class="card_product_aside--img">
-                <img src="../assets/details_img/Img 3 aside.png" alt="RIng 3" class="card_product_aside--img">
-                <img src="../assets/details_img/Img 4 aside.png" alt="Ring 4" class="card_product_aside--img">
+    <figure class="card__product__aside--left">
+                <img src="../assets/details_img/Img 1 aside.png" alt="Ring 1" class="card__product__aside--img">
+                <img src="../assets/details_img/Img 2 aside.png" alt="Ring 2" class="card__product__aside--img">
+                <img src="../assets/details_img/Img 3 aside.png" alt="RIng 3" class="card__product__aside--img">
+                <img src="../assets/details_img/Img 4 aside.png" alt="Ring 4" class="card__product__aside--img">
             </figure>
-        <figure class="card_product_main">
-            <img src="${product.images}" alt="" class="card_productmain cardproduct_main--img">
-            <figcaption class="card_product_main--figcaption">
-                <section class="card_product_main--information">
-                    <p class="card_product_main--title">${product.name}</p>
-                    <p class="card_product_main--code">Code: ${product.code}</p>
-                    <p class="card_product_main--price">$${product.price}</p>
-                    <p class="card_product_main--color--name">Color - ${product.color}</p>
+        <figure class="card__product__main">
+            <img src="${product.images}" alt="" class="card__product__main card__product__main--img">
+            <figcaption class="card__product__main--figcaption">
+                <section class="card__product__main--information">
+                    <p class="card__product__main--title">${product.name}</p>
+                    <p class="card__product__main--code">Code: ${product.code}</p>
+                    <p class="card__product__main--price">$${product.price}</p>
+                    <p class="card__product__main--color--name">Color - ${product.color}</p>
                     <div class="choose__color">
                         <input type="radio" name="color" class="color--name--white">
                         <input type="radio" name="color" class="color--name--rosegold">
                     </div>
                 </section>
-                <section class="card_product_main--size">
-                    <p class="card_productmain--size cardproduct_main--size--text">Size - ${product.amount.size[0]}</p>
-                    <p class="card_productmain--size cardproduct_main--size--question">What is my size?</p>
+                <section class="card__product__main--size">
+                    <p class="card__product__main--size card__product__main--size--text">Size - ${product.amount[0].size}</p>
+                    <p class="card__product__main--size card__product__main--size--question">What is my size?</p>
                 </section>
-                <ul class="card_product_main--ul">
-                    ${product.amount.size.map(size => `<li class="card__product__main--li">${size}</li>`).join('')}
+                <ul class="card__product__main--ul">
+                    ${product.amount.map(size => `<li class="card__product__main--li">${size.color}</li>`).join('')}
                 </ul>
-                <section class="card_product_main--quantity">
-                        <p class="card_product_main--quantity--title">Quantity</p>
-                        <ul class="card_product_main--quantity--ul">
-                            <li class="card_product_main--quantity--li">-</li>
-                            <li class="card_product_main--quantity--li">1</li>
-                            <li class="card_product_main--quantity--li">+</li>
+                <section class="card__product__main--quantity">
+                        <p class="card__product__main--quantity--title">Quantity</p>
+                        <ul class="card__product__main--quantity--ul">
+                            <li class="card__product__main--quantity--li">-</li>
+                            <li class="card__product__main--quantity--li">1</li>
+                            <li class="card__product__main--quantity--li">+</li>
                         </ul>
                     </section>
-                    <section class="card_product_main--btn--actions">
-                        <article class="card_product_main--btn--actions--container">
+                    <section class="card__product__main--btn--actions">
+                        <article class="card__product__main--btn--actions--container">
 
-                            <button class="card_product_main--btn--add" id="btn-add">Add to bag</button>
+                            <button class="card__product__main--btn--add" id="btn-add">Add to bag</button>
 
                         </article>
 
-                        <article class="card_product_main--btn--actions--container">
-                            <button class="card_product_main--btn--buy" id="btn--buy">Buy now</button>
+                        <article class="card__product__main--btn--actions--container">
+                            <button class="card__product__main--btn--buy" id="btn--buy">Buy now</button>
 
 
                         </article>
                     </section>
-                    <section class="card_product_main--more">
-                        <article class="card_product_main--more--container">
-                            <select name="Delivery" id="" class="card_product_main--select">
+                    <section class="card__product__main--more">
+                        <article class="card__product__main--more--container">
+                            <select name="Delivery" id="" class="card__product__main--select">
                                 <option value="delivery">Delivery</option>
                             </select>
-                            <select name="" id="" class="card_product_main--select">
+                            <select name="" id="" class="card__product__main--select">
                                 <option value="payment">Payment</option>
                             </select>
                         </article>
                         
                             
                         </article>
-                        <article class="card_product_main--more--container">
-                            <select name="Delivery" id="" class="card_product_main--select">
+                        <article class="card__product__main--more--container">
+                            <select name="Delivery" id="" class="card__product__main--select">
                                 <option value="delivery">Warranty</option>
                             </select>
-                            <select name="" id="" class="card_product_main--select">
+                            <select name="" id="" class="card__product__main--select">
                                 <option value="payment">Care</option>
                             </select>
                         </article>
@@ -165,10 +167,11 @@ function createProductDetailsSection(productObject) {
        
         
     `;
+    console.log(detailsContainer);
 
-    const existingProductDetailsSection = document.querySelector('.card_product_container');
+    // const existingProductDetailsSection = document.querySelector('.card_product_container');
 
-    existingProductDetailsSection.replaceWith(productDetailsSection);
+    // existingProductDetailsSection.replaceWith(productDetailsSection);
 }
 
 

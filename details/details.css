@@ -227,7 +227,6 @@
 
             .card__product__main--ul{
                 display: flex;
-                justify-content: space-between;
                 font-size: var(--font-size-1-125);
                 font-family: var(--font-manrope);
                 margin-top: 1%;
