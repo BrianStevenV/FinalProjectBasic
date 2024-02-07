@@ -1,23 +1,23 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const detailsContainer = document.querySelector(".card__product__container");
 
-// document.addEventListener('DOMContentLoaded', function() {
+  detailsContainer.addEventListener('click', function(event) {
+      const purchaseButton = event.target.closest('.card__product__main--btn--buy');
 
+      if (purchaseButton) {
+          console.log('Purchase button clicked');
+          // Agrega aquí el código que deseas ejecutar cuando se hace clic en el botón "Buy now"
+          createCartSection();
+      }
+  });
+});
 
-//     const purchaseButton = document.querySelector('.card__product__main--btn--buy');
-//     console.log(`Purhcase ${purchaseButton}`);
-
-    
-//       purchaseButton.addEventListener('click', function() {
-//         createCartSection();
-//       });
-    
-   
-
-//   });
   
 
   
 
   function createCartSection() {
+    console.log(`Hola`);
     // innerHTML='';
     const bodyCartSection = document.createElement('section');
     bodyCartSection.className = 'body__cart';
@@ -142,12 +142,14 @@
     bodyCartSection.innerHTML = cartContent;
   
     const print = document.body.appendChild(bodyCartSection);
+    console.log(`prtin print print ${print}`);
 
   }
 
 //averiguar como hacer que se aplique el estilo brightness/contrast al fondo al abrir el carrito
    const printProducts = (listProducts, container) =>{
 
+    console.log(`From print product`);
     container.innerHTML = '';
     listProducts.foreach(Product => {
 

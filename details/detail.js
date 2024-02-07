@@ -86,8 +86,6 @@ function createProductDetailsSection(productObject) {
     detailsContainer.innerHTML= ''; 
     const product = productObject;
 
-    // const productDetailsSection = document.createElement('section');
-    // productDetailsSection.className = 'card__product__container';
 
     detailsContainer.innerHTML = `
 
@@ -169,9 +167,7 @@ function createProductDetailsSection(productObject) {
     `;
     console.log(detailsContainer);
 
-    // const existingProductDetailsSection = document.querySelector('.card_product_container');
-
-    // existingProductDetailsSection.replaceWith(productDetailsSection);
+    
 }
 
 
@@ -180,33 +176,36 @@ function createProductDescription(productObject) {
     // Crear el contenido HTML dinámico
     const product = productObject;
 
-    const productDescriptionSection = document.createElement('section');
-    productDescriptionSection.className = 'card_product_container';
+    const productDescriptionContainer = document.querySelector('.card__product__description')
+    productDescriptionContainer.innerHTML = '';
 
 
-    const productDescriptionHTML = `
-        <section class="card_product_description">
-            <p class="description--p">Description</p>
-            <figure class="card_productdescription_figure">
-                <img src="${product.images}" alt="" class="card_productdescription_img">
-                <figcaption class="card_productdescriptionfigure cardproductdescription_figure--figcaption">
-                    <p class="card_productdescriptionfigure cardproductdescription_figure--title">${product.name}</p>
-                    <p class="card_productdescriptionfigure cardproductdescription_figure--text">${product.description}</p>
+    productDescriptionContainer.innerHTML = `
+    <p class="description--p">Description</p>
+            <figure class="card__product__description__figure">
+                <img src="${product.images}" alt="" class="card__product__description__img">
+                <figcaption class="card__product__description__figure card__product__description__figure--figcaption">
+                    <p class="card__product__description__figure card__product__description__figure--title">${product.name}</p>
+                    <p class="card__product__description__figure card__product__description__figure--text">${product.description}</p>
                 </figcaption>
             </figure>
-        </section>
-    `;
+            `;
 
-    const descriptionContainer = document.createElement('div');
-    descriptionContainer.innerHTML = productDescriptionHTML;
+    console.log(productDescriptionContainer);
+    
 
-    const existingProductDescription = document.querySelector('.card_product_description');
+    
 
-    if (existingProductDescription) {
-        existingProductDescription.replaceWith(descriptionContainer);
-    } else {
-        document.body.appendChild(descriptionContainer);
-    }
+//     const descriptionContainer = document.createElement('div');
+//     descriptionContainer.innerHTML = productDescriptionHTML;
+
+//     const existingProductDescription = document.querySelector('.card_product_description');
+
+//     if (existingProductDescription) {
+//         existingProductDescription.replaceWith(descriptionContainer);
+//     } else {
+//         document.body.appendChild(descriptionContainer);
+//     }
 }
 
 
