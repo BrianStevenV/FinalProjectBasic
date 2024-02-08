@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         
@@ -11,6 +12,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const productData = await responseApi.json();
                 createProductDetailsSection(productData)
                 createProductDescription(productData);
+                printNavBar(productData);
+                const btnAddToBag = document.getElementById("btn-add");
+                btnAddToBag.addEventListener('click', () => addProductBag(productData))
 
         
             } else {
@@ -24,8 +28,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+const fetchProductData = async (productTitle) => {
+    try {
+        const responseApi = await fetch(`http://localhost:3000/api/product/name/${encodeURIComponent(storedProductTitle)}`);
+        if(responseApi.ok){
+            return await responseApi.json();
+        }   else{
+            console.error("Error", responseApi.status, responseApi.statusText);
+            return null;
+        }
+    } catch (error) {
+        console.error("Fetch error", error);
+        return null
+    }
+}
 
-const btnAddToBag = document.querySelector("#btn-add");
 const btnBuyNow = document.querySelector("#btn--buy");
 
 const containerProductNav = document.querySelector(".ul__product--nav");
@@ -193,19 +210,59 @@ function createProductDescription(productObject) {
 
     console.log(productDescriptionContainer);
     
-
-    
-
-//     const descriptionContainer = document.createElement('div');
-//     descriptionContainer.innerHTML = productDescriptionHTML;
-
-//     const existingProductDescription = document.querySelector('.card_product_description');
-
-//     if (existingProductDescription) {
-//         existingProductDescription.replaceWith(descriptionContainer);
-//     } else {
-//         document.body.appendChild(descriptionContainer);
-//     }
 }
+
+let productList = [];
+
+const addProductBag = (productData) => {
+    // Obtener la lista de productos almacenada en sessionStorage
+    const storedProductList = sessionStorage.getItem('productList');
+
+    // Convertir la lista almacenada en JSON a un array
+    const productList = storedProductList ? JSON.parse(storedProductList) : [];
+
+    // Agregar el nuevo producto al array
+    productList.push(productData);
+
+    // Guardar la lista actualizada en sessionStorage
+    sessionStorage.setItem('productList', JSON.stringify(productList));
+
+    console.log('Product added to the bag:', productList);
+};
+
+function printNavBar(productObject){
+    console.log(`From begin function print nav`);
+
+    const storedProductTitle = sessionStorage.getItem('productTitle');
+    console.log(storedProductTitle);
+
+    const navContainer = document.querySelector('.ul__product--nav');
+    navContainer.innerHTML='';
+
+    const navToPrint =  `
+    <li class="li__product--nav">
+                <a href="../home/home.html" class="li__product--nav li__product--nav--a">Home</a>
+            </li>
+            <li class="li__product--separator">
+                >
+            </li>
+            <li class="li__product--nav">
+                <a href="../products/product.html" class="li__product--nav li__product--nav--a">Shop</a>
+            </li>
+            <li class="li__product--separator">
+                >
+            </li>
+            <li class="li__product--nav">
+                <a href="" class="li__product--nav li__product--nav--a">${storedProductTitle}</a>
+            </li>
+        </ul>
+
+    `;
+
+    navContainer.innerHTML = navToPrint;
+
+
+}
+
 
 

@@ -8,7 +8,6 @@ const btnRings = document.getElementById("RingCategory");
 const btnBracelets = document.getElementById("BraceletsCategory");
 const btnNecklaces = document.getElementById("NecklaceCategory");
 const btnEarrings = document.getElementById("EarringsCategory");
-const btnPrice = document.getElementById("");
 
 const categoryFilter = [btnRings, btnBracelets, btnNecklaces, btnEarrings];
 
@@ -109,8 +108,9 @@ containerFigureBottoms.forEach(containerFigureBottom => {
 const captureFigcaptionH1 = (element) => {
     const h1Element = element.querySelector('.figcaption__h1');
     const valueOnly = h1Element.textContent.trim();
-    
+    console.log(`value ${valueOnly}`);
     const storage = sessionStorage.setItem('productTitle', valueOnly);
+    console.log(storage);
     
 }
 

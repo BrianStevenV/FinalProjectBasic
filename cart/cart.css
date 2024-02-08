@@ -45,17 +45,18 @@
 
     
 .cart__container{
-    /**/
-    
+    margin-left: 2.5rem;
     
 }
 
 .cart{
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-self: center;
-    width: 85%;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+
 }
     .cart__img{
         width: 25%;
@@ -87,6 +88,7 @@
     .cart__misc{
         display: flex;
         flex-direction: column;
+        padding-right: 0.7rem;
     }
         .quantity__container{
             margin-top: 2rem;
