@@ -1,1 +1,1 @@
-Poketeca Pro Max Iphone Alpha Phalanx v11.3
+Poketeca Pro Max Apple Alpha Phalanx v11.3
