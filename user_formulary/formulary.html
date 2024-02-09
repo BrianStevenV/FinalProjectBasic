@@ -46,6 +46,16 @@
           </article>
 
           <article class="form__article">
+            <label class="form__label" for="card-select">Card Method</label>
+              <select class="form__select" id="card-select">
+                <option value=""></option>
+                <option value="visa" id="visa">Visa</option>
+                <option value="mastercard" id="mastercard">Mastercard</option>
+                <option value="amex" id="amex">American Express</option>
+              </select>
+          </article>
+
+          <article class="form__article">
             <label class="form__label">Card number</label>
             <input class="form__input card__number--input" type="text" />
           </article>
@@ -74,9 +84,14 @@
           </article>
 
           <article class="form__button__container">
-            <button class="form__button__container--button" type="submit">
-              Finish and proceed
-            </button>
+            <a href="../buying/payment.html">
+
+              <button class="form__button__container--button" type="submit">
+                Finish and proceed
+              </button>
+
+            </a>
+            
           </article>
         </form>
       </section>

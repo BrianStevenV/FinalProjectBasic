@@ -114,6 +114,21 @@ main{
             background-color: #e0e0e0;
             border-radius: 8px;
         }
+            #visa{
+                background-image: url('../assets/visa.png');
+                background-repeat: no-repeat;
+            }
+            #mastercard{
+                background-image: url('../assets/mastercard.png');
+                background-repeat: no-repeat;
+            }
+            #amex{
+                background-image: url('../assets/amex.png');
+                background-repeat: no-repeat;
+
+            }
+
+
         .form__input{
             height: 2rem;
             border: none;
