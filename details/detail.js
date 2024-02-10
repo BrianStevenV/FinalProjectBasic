@@ -105,85 +105,95 @@ function createProductDetailsSection(productObject) {
 
 
     detailsContainer.innerHTML = `
-
     <figure class="card__product__aside--left">
                 <img src="../assets/details_img/Img 1 aside.png" alt="Ring 1" class="card__product__aside--img">
                 <img src="../assets/details_img/Img 2 aside.png" alt="Ring 2" class="card__product__aside--img">
                 <img src="../assets/details_img/Img 3 aside.png" alt="RIng 3" class="card__product__aside--img">
                 <img src="../assets/details_img/Img 4 aside.png" alt="Ring 4" class="card__product__aside--img">
             </figure>
-        <figure class="card__product__main">
-            <img src="${product.images}" alt="" class="card__product__main card__product__main--img">
-            <figcaption class="card__product__main--figcaption">
-                <section class="card__product__main--information">
+            <figure class="card__product__main">
+                <img src="${product.images}" alt="${product.name}"
+                    class="card__product__main__card__product__main--img">
+            </figure>
+            <section class="card__product__main--figcaption">
+                <article class="card__product__main--information">
                     <p class="card__product__main--title">${product.name}</p>
-                    <p class="card__product__main--code">Code: ${product.code}</p>
+                    <p class="card__product__main--code">Code:${product.code}</p>
                     <p class="card__product__main--price">$${product.price}</p>
                     <p class="card__product__main--color--name">Color - ${product.color}</p>
                     <div class="choose__color">
                         <input type="radio" name="color" class="color--name--white">
                         <input type="radio" name="color" class="color--name--rosegold">
                     </div>
-                </section>
-                <section class="card__product__main--size">
-                    <p class="card__product__main--size card__product__main--size--text">Size - ${product.amount[0].size}</p>
-                    <p class="card__product__main--size card__product__main--size--question">What is my size?</p>
-                </section>
-                <ul class="card__product__main--ul">
+                </article>
+                <article class="card__product__main--size">
+                    <p class="card__product__main--size__card__product__main--size--text">Size ${product.amount[0].size}</p>
+                    <p class="card__product__main--size__card__product__main--size--question">What is my size?</p>
+                </article>
+                <article class="card__product__main--ul__container">
+
+                    <ul class="card__product__main--ul">
                     ${product.amount.map(size => `<li class="card__product__main--li">${size.color}</li>`).join('')}
-                </ul>
-                <section class="card__product__main--quantity">
+                    </ul>
+
+                </article>
+
+                <article class="card__product__main--quantity">
+
+                    <article>
                         <p class="card__product__main--quantity--title">Quantity</p>
-                        <ul class="card__product__main--quantity--ul">
-                            <li class="card__product__main--quantity--li">-</li>
-                            <li class="card__product__main--quantity--li">1</li>
-                            <li class="card__product__main--quantity--li">+</li>
-                        </ul>
-                    </section>
-                    <section class="card__product__main--btn--actions">
-                        <article class="card__product__main--btn--actions--container">
+                    </article>
+                    <article class="card__product__main--quantity__container">
+                        <p class="card__product__main--quantity--p">-</p>
+                        <p class="card__product__main--quantity--p">1</p>
+                        <p class="card__product__main--quantity--p">+</p>
 
-                            <button class="card__product__main--btn--add" id="btn-add">Add to bag</button>
+                    </article>                    
+                </article>
 
-                        </article>
+                <article class="card__product__main--btn--actions">
+                    <article class="card__product__main--btn--actions--container">
 
-                        <article class="card__product__main--btn--actions--container">
-                            <button class="card__product__main--btn--buy" id="btn--buy">Buy now</button>
-
-
-                        </article>
-                    </section>
-                    <section class="card__product__main--more">
+                        <button class="card__product__main--btn--add" id="btn-add">Add to bag</button>
                         <article class="card__product__main--more--container">
                             <select name="Delivery" id="" class="card__product__main--select">
                                 <option value="delivery">Delivery</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
                             </select>
-                            <select name="" id="" class="card__product__main--select">
+                            <select name="Payment" id="" class="card__product__main--select">
                                 <option value="payment">Payment</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
                             </select>
                         </article>
-                        
-                            
-                        </article>
+                    </article>
+
+                    <article class="card__product__main--btn--actions--container">
+                        <button class="card__product__main--btn--buy" id="btn--buy">Buy now</button>
+
                         <article class="card__product__main--more--container">
-                            <select name="Delivery" id="" class="card__product__main--select">
+                            <select name="Warranty" id="" class="card__product__main--select">
                                 <option value="delivery">Warranty</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+
+                                
                             </select>
-                            <select name="" id="" class="card__product__main--select">
+                            <select name="Care" id="" class="card__product__main--select">
                                 <option value="payment">Care</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
                             </select>
                         </article>
-                        
-                    </section>
-            </figcaption>
-        </figure>
-        </section>
-
-       
-        
-    `;
-    console.log(detailsContainer);
-
+                    </article>
+                </article>
+    
+    `
     
 }
 
@@ -196,19 +206,20 @@ function createProductDescription(productObject) {
     const productDescriptionContainer = document.querySelector('.card__product__description')
     productDescriptionContainer.innerHTML = '';
 
-
     productDescriptionContainer.innerHTML = `
-    <p class="description--p">Description</p>
+    <article class="card__product__description__figure__card__product__description__figure--figcaption">
+                <p class="card__product__description__figur_card__product__description__figure--title">
+                    ${product.name}</p>
+                <p 
+                class="card__product__description__figure__card__product__description__figure--text">
+                ${product.description}</p>
+            </article>
             <figure class="card__product__description__figure">
-                <img src="${product.images}" alt="" class="card__product__description__img">
-                <figcaption class="card__product__description__figure card__product__description__figure--figcaption">
-                    <p class="card__product__description__figure card__product__description__figure--title">${product.name}</p>
-                    <p class="card__product__description__figure card__product__description__figure--text">${product.description}</p>
-                </figcaption>
+                <img src="${product.images}" alt=""
+                    class="card__product__description__img">
             </figure>
-            `;
-
-    console.log(productDescriptionContainer);
+    
+    `;
     
 }
 

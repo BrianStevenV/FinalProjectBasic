@@ -381,10 +381,9 @@ header{
         }
         .card__product__description__figure{
             display: flex;
+            height: 30rem;
         }
-            .card__product__description__img{
-                height: 10%;
-            }
+            
 
 
 /* Section description */

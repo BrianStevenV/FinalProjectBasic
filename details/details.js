@@ -5,3 +5,5 @@ menu.onclick = () => {
     menu.classList.toggle('bx-x');
     navlist.classList.toggle('header__ul');
 }
+
+
