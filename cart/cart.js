@@ -75,7 +75,8 @@ function createCartSection() {
         </article>
         <article class="cart__footer--button__container">
           <button class="cart__footer--button__container--button">
-            Continue to check out
+          <a href="../purchase/purchase.html" class="button--a">Continue to check out</a>
+            
           </button>
         </article>
       </section>
@@ -88,6 +89,7 @@ function createCartSection() {
   console.log(`print print print ${print.textContent}`);
   console.log(`Var content ${bodyCartSection.textContent}`);
 }
+
 
 
 const printProducts = (listProduct) => {
@@ -121,7 +123,8 @@ const printProducts = (listProduct) => {
       htmlContent += cartSection.outerHTML;  
   });
 
-  return htmlContent;  
+  return htmlContent;   
 }
+
 
 
