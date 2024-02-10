@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,39 +9,22 @@
     <link rel="stylesheet" href="../cart/cart.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
+
 <body>
-    <header class="header">
-<article>
-        <p class="header__p">
-            <a href="" class="header__a">Darling.</a>
-        </p>
-    </article>
+    <header>
+        <article class="header__title">
+            <p>Darling.</p>
+        </article>
 
-    <article>
-        <nav class="header__nav">
-
-            <ul class="header__ul" id="navlist">
-                <li class="header__li"><a href="" class="header__a header__a--nav">Home</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Shop</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Collections</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">About</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Contact</a></li>
-                <li class="header__li">
-                    <a href="" class="header__a header__a--nav">
-                    <img src="../assets/Profile 1.png" alt="Profile">
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="" class="header__a header__a--nav">
-                    <img src="../assets/Shopping cart 1.png" alt="Shopping Cart">
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-    </article>
-        <div class="bx bx-menu" id="menu-icon"></div>
-
+        <article class="header__nav">
+            <button class="header__nav--button" id="home">Home</button>
+            <button class="header__nav--button" id="shop">Shop</button>
+            <button class="header__nav--button" id="collections">Collections</button>
+            <button class="header__nav--button" id="about">About</button>
+            <button class="header__nav--button" id="contact">Contact</button>
+            <button class="header__nav--button" id="profile"><img src="../assets/Profile 1.png" alt="" /></button>
+            <button class="header__nav--button" id="cart"><img src="../assets/Shopping cart 1.png" alt="" /></button>
+        </article>
     </header>
 
     <main class="main">
@@ -71,23 +55,26 @@
                 <img src="../assets/details_img/Img 4 aside.png" alt="Ring 4" class="card__product__aside--img">
             </figure>
             <figure class="card__product__main">
-                <img src="../assets/details_img/card main img.png" alt="" class="card__product__main card__product__main--img">
-                <figcaption class="card__product__main--figcaption">
-                    <section class="card__product__main--information">
-                        <p class="card__product__main--title">Luxury Charms Ring</p>
-                        <p class="card__product__main--code">Code: 78205</p>
-                        <p class="card__product__main--price">$620.73</p>
-                        <p class="card__product__main--color--name">Color - Rose Gold</p>
-                        <div class="choose__color">
-                            <input type="radio" name="color" class="color--name--white">
-                            <input type="radio" name="color" class="color--name--rosegold">
+                <img src="../assets/details_img/card main img.png" alt=""
+                    class="card__product__main__card__product__main--img">
+            </figure>
+            <section class="card__product__main--figcaption">
+                <article class="card__product__main--information">
+                    <p class="card__product__main--title">Luxury Charms Ring</p>
+                    <p class="card__product__main--code">Code: 78205</p>
+                    <p class="card__product__main--price">$620.73</p>
+                    <p class="card__product__main--color--name">Color - Rose Gold</p>
+                    <div class="choose__color">
+                        <input type="radio" name="color" class="color--name--white">
+                        <input type="radio" name="color" class="color--name--rosegold">
+                    </div>
+                </article>
+                <article class="card__product__main--size">
+                    <p class="card__product__main--size__card__product__main--size--text">Size - 48</p>
+                    <p class="card__product__main--size__card__product__main--size--question">What is my size?</p>
+                </article>
+                <article class="card__product__main--ul__container">
 
-                        </div>
-                    </section>
-                    <section class="card__product__main--size">
-                        <p class="card__product__main--size card__product__main--size--text">Size - 48</p>
-                        <p class="card__product__main--size card__product__main--size--question">What is my size?</p>
-                    </section>
                     <ul class="card__product__main--ul">
                         <li class="card__product__main--li">48</li>
                         <li class="card__product__main--li">50</li>
@@ -102,65 +89,90 @@
                         <li class="card__product__main--li">68</li>
                         <li class="card__product__main--li">70</li>
                     </ul>
-                    <section class="card__product__main--quantity">
+
+                </article>
+
+                <article class="card__product__main--quantity">
+
+                    <article>
                         <p class="card__product__main--quantity--title">Quantity</p>
-                        <ul class="card__product__main--quantity--ul">
-                            <li class="card__product__main--quantity--li">-</li>
-                            <li class="card__product__main--quantity--li">1</li>
-                            <li class="card__product__main--quantity--li">+</li>
-                        </ul>
-                    </section>
-                    <section class="card__product__main--btn--actions">
-                        <article class="card__product__main--btn--actions--container">
+                    </article>
+                    <article class="card__product__main--quantity__container">
+                        <p class="card__product__main--quantity--p">-</p>
+                        <p class="card__product__main--quantity--p">1</p>
+                        <p class="card__product__main--quantity--p">+</p>
 
-                            <button class="card__product__main--btn--add" id="btn-add" >Add to bag</button>
+                    </article>                    
+                </article>
 
-                        </article>
+                <article class="card__product__main--btn--actions">
+                    <article class="card__product__main--btn--actions--container">
 
-                        <article class="card__product__main--btn--actions--container">
-                            <button class="card__product__main--btn--buy" id="btn--buy">Buy now</button>
-
-
-                        </article>
-                    </section>
-                    <section class="card__product__main--more">
+                        <button class="card__product__main--btn--add" id="btn-add">Add to bag</button>
                         <article class="card__product__main--more--container">
                             <select name="Delivery" id="" class="card__product__main--select">
                                 <option value="delivery">Delivery</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
                             </select>
-                            <select name="" id="" class="card__product__main--select">
+                            <select name="Payment" id="" class="card__product__main--select">
                                 <option value="payment">Payment</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
                             </select>
                         </article>
-                        
-                            
-                        </article>
+                    </article>
+
+                    <article class="card__product__main--btn--actions--container">
+                        <button class="card__product__main--btn--buy" id="btn--buy">Buy now</button>
+
                         <article class="card__product__main--more--container">
-                            <select name="Delivery" id="" class="card__product__main--select">
+                            <select name="Warranty" id="" class="card__product__main--select">
                                 <option value="delivery">Warranty</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+
+                                
                             </select>
-                            <select name="" id="" class="card__product__main--select">
+                            <select name="Care" id="" class="card__product__main--select">
                                 <option value="payment">Care</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
+                                <option value="delivery">Sample porpouse</option>
                             </select>
                         </article>
-                        
-                    </section>
+                    </article>
+                </article>
+                <section class="card__product__main--more">
                     
-                </figcaption>
-            </figure>
+
+
+                    
+
+                </section>
+
+            </section>
         </section>
 
         <section class="card__product__description">
             <p class="description--p">Description</p>
+
+            <article class="card__product__description__figure__card__product__description__figure--figcaption">
+                <p class="card__product__description__figur_card__product__description__figure--title">
+                    Exquisite Elegance and Timeless Charm</p>
+                <p 
+                class="card__product__description__figure__card__product__description__figure--text">
+                Lorem esse et culpa proident duis mollit nisi proident elit pariatur elit sit 
+                consectetur et do proident ea voluptate deserunt. Consequat dolore qui aute 
+                magna voluptate enim qui id cillum enim excepteur occaecat culpa deserunt eu.
+                Culpa labore incididunt labore proident eu anim in.</p>
+            </article>
             <figure class="card__product__description__figure">
-                <img src="../assets/details_img/card img description.png" alt="" class="card__product__description__img">
-                <figcaption class="card__product__description__figure card__product__description__figure--figcaption">
-                    <p class="card__product__description__figure card__product__description__figure--title">Exquisite Elegance and Timeless Charm</p>
-                    <p class="card__product__description__figure card__product__description__figure--text">Lorem esse et culpa proident duis mollit nisi proident elit pariatur elit sit consectetur
-                         et do proident ea voluptate deserunt. Consequat dolore qui aute magna voluptate enim qui
-                          id cillum enim excepteur occaecat culpa deserunt eu.Culpa labore incididunt labore proident
-                           eu anim in.</p>
-                </figcaption>
+                <img src="../assets/details_img/card img description.png" alt=""
+                    class="card__product__description__img">
             </figure>
         </section>
 
@@ -169,21 +181,24 @@
                 <img src="../assets/Delivery time 1.png" alt="Delivery" class="card__img">
                 <figcaption class="card__figcaption">
                     <p class="card__figcaption card__figcaption--title">Delivery</p>
-                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
+                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur
+                        nisi. Voluptate elit d</p>
                 </figcaption>
             </figure>
             <figure class="card__description">
                 <img src="../assets/Love message 1.png" alt="Customer Care" class="card__img">
                 <figcaption class="card__figcaption">
                     <p class="card__figcaption card__figcaption--title">Customer Care</p>
-                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
+                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur
+                        nisi. Voluptate elit d</p>
                 </figcaption>
             </figure>
             <figure class="card__description">
                 <img src="../assets/Lock landscape 1.png" alt="Payment Security" class="card__img">
                 <figcaption class="card__figcaption">
                     <p class="card__figcaption card__figcaption--title">Payment Security</p>
-                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
+                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur
+                        nisi. Voluptate elit d</p>
                 </figcaption>
             </figure>
         </section>
@@ -194,36 +209,46 @@
                 <figure class="section__products__more--figure">
                     <img src="../assets/jewelry.png" alt="" class="section__products__more--img">
                     <figcaption class="section__products__more--figcaption">
-                        <p class="section__products__more--figcaption section__products__more--figcaption--title">Radiance Necklace</p>
-                        <p class="section__products__more--figcaption section__products__more--figcaption--text">$168.76</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--title">
+                            Radiance Necklace</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--text">
+                            $168.76</p>
                     </figcaption>
                 </figure>
                 <figure class="section__products__more--figure">
                     <img src="../assets/jewelry 2.png" alt="" class="section__products__more--img">
                     <figcaption class="section__products__more--figcaption">
-                        <p class="section__products__more--figcaption section__products__more--figcaption--title">Exquisite Earrings</p>
-                        <p class="section__products__more--figcaption section__products__more--figcaption--text">$125.28</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--title">
+                            Exquisite Earrings</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--text">
+                            $125.28</p>
                     </figcaption>
                 </figure>
                 <figure class="section__products__more--figure">
                     <img src="../assets/jewelry 1.png" alt="" class="section__products__more--img">
                     <figcaption class="section__products__more--figcaption">
-                        <p class="section__products__more--figcaption section__products__more--figcaption--title">Glamour Necklace</p>
-                        <p class="section__products__more--figcaption section__products__more--figcaption--text">$620.73</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--title">
+                            Glamour Necklace</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--text">
+                            $620.73</p>
                     </figcaption>
                 </figure>
                 <figure class="section__products__more--figure">
                     <img src="../assets/jewelry 4 page.png" alt="" class="section__products__more--img">
                     <figcaption class="section__products__more--figcaption">
-                        <p class="section__products__more--figcaption section__products__more--figcaption--title">Delights Earrings</p>
-                        <p class="section__products__more--figcaption section__products__more--figcaption--text">$327.71</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--title">
+                            Delights Earrings</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--text">
+                            $327.71</p>
                     </figcaption>
                 </figure>
                 <figure class="section__products__more--figure">
                     <img src="../assets/jewelry.png" alt="" class="section__products__more--img">
                     <figcaption class="section__products__more--figcaption">
-                        <p class="section__products__more--figcaption section__products__more--figcaption--title">Dreamy Necklace</p>
-                        <p class="section__products__more--figcaption section__products__more--figcaption--text">$327.71</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--title">
+                            Dreamy Necklace</p>
+                        <p class="section__products__more--figcaption section__products__more--figcaption--text">
+                            $327.71</p>
                     </figcaption>
                 </figure>
             </section>
@@ -237,89 +262,100 @@
                     You're the reason we're here and <br>the reason we do what we do.</p>
             </div>
             <figure class="footer__figure">
-                <img src="../assets/footerImg.png" alt="footer__figure--img">
-                <figcaption class="footer__figure--figcaption">The ring itself is stunning, with a beautiful design that catches the light and sparkles from every angle. 
-                    The quality of the materials used is evident, as the ring feels substantial and durable. The gemstone is exquisite,
-                     with a vibrant color and exceptional clarity.
-                    <p class="footer__figcaption--title">Anna Fernandez</p>
-                    <p class="footer__figcaption--p">USA</p>
-                </figcaption>
+                
+                <img class="footer__figure--img__container--woman__img" src="../assets/footerImg.png" alt="footer__figure--img">
                 <div class="buttons_container">
                     <button class="button__left">&lt;</button>
                     <button class="button__right">&gt;</button>
                 </div>
+                <figcaption class="footer__figure--figcaption">The ring itself is stunning, with a beautiful design that
+                    catches the light and sparkles from every angle.
+                    The quality of the materials used is evident, as the ring feels substantial and durable. The
+                    gemstone is exquisite,
+                    with a vibrant color and exceptional clarity.
+                    <p class="footer__figcaption--title">Anna Fernandez</p>
+                    <article>
+
+                    <p class="footer__figcaption--p">USA</p>
+
+                    </article>
+                    
+            
+                </figcaption>
+                
             </figure>
+            
         </section>
-
-
         
-        <section class="footer__section--top">
-            <h1 class="footer__section__container--top">
-                <a class="footer__a">Darling</a>  
-                <!-- Se puede re utilizar el title -->
-            </h1>
-            <ul class="footer__ul">
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Shop</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Collections</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">About</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Contact</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Privacy</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Terms</a>
-                </li>
-            </ul>
-            <div class="subscribe__container">
-                <p class="subscribe__item--title">Subscribe to our newsletter</p>
-                <p class="subscribe__item--p">For product announcements and exclusive insights</p>
-                <input class="subscribe__item--input"type="text" placeholder="           Input your email">
-                <button class="subscribe__btn">Subscribe</button>
-            </div>
+
+
+
+
+        <section class="footer__section">
+            <article class="footer__darling__container">
+                    <p class="footer__darling__container--darling">Darling</p>
+            </article>
+
+
+            <article class="footer__nav__container">
+                    <article class="footer__nav__container--left__column">
+                        <button class="footer__nav--button" id="shop">Shop</button>
+                        <button class="footer__nav--button" id="collections">Collections</button>
+                        <button class="footer__nav--button" id="about">About</button>
+                    </article>
+
+                    <article class="footer__nav__container--right__column">
+                        <button class="footer__nav--button" id="contact">Contact</button>
+                        <button class="footer__nav--button" id="privacy">Privacy</button>
+                        <button class="footer__nav--button" id="terms">Terms</button>
+                    </article>
+            </article>
+
+
+            <article class="footer__subscribe__container">
+                    <article class="footer__subscribe__container--text__container">
+                        <p class="footer__subscribe__container--text__container--title">Subscribe to our newsletter</p>
+                        <p class="footer__subscribe__container--text__container--text">For product announcements and exclcusivee insights</p>
+                    </article>
+                    
+                    <article  class="footer__subscribe__container--input__container">
+
+                        <input class="footer__subscribe__container--input__container--input" type="text" placeholder="           Input your email">
+                        <button class="footer__subscribe__container--input__container--button">Subscribe</button>
+
+                    </article>
+
+            </article>
+        </section>
+        <section class="footer__mark__section">
+            <article class="footer__mark__section--copyright">
+
+            <p class="footer__mark__section--copyright--text">© 2022 Brand, Inc.</p>
+
+            </article>
+
+            <article class="footer__mark__section">
+
+                <figure>
+                    <img src="../assets/Logo twitter 1.png" alt="">
+                    <img src="../assets/Logo facebook 1.png" alt="">
+                    <img src="../assets/Logo linkedin 1.png" alt="">
+                    <img src="../assets/Logo youtube 1.png" alt="">
+                </figure>
+
+            </article>
+
+
         </section>
 
-        <section class="footer__section__socialmedia">
-            <p class="footer__container copyrigth-container">
-                © 2022 Brand, Inc.
-            </p>
 
-            <ul class="social-icons">
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo twitter 1.png" alt="Twitter" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo facebook 1.png" alt="Meta" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo linkedin 1.png" alt="LinkedIn" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo youtube 1.png" alt="Youtube" class="social-icons__icon">
-                    </a>
-                </li>
-            </ul>
-        </section>
-
+    
     </footer>
 
     <script src="./details.js"></script>
     <script src="./detail.js"></script>
     <script src="../cart/cart.js"></script>
-    
+
 </body>
+
 </html>

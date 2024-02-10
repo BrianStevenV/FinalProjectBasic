@@ -287,6 +287,8 @@ footer{
         justify-content: space-between;
         margin-left: 7%;
         margin-right: 7%;
+        padding-top: 1%;
+        padding-bottom: 0.5rem;
     }
         .footer__mark__section--copyright--text{
             color: var(--fontsColor);
