@@ -215,16 +215,13 @@ function createProductDescription(productObject) {
 let productList = [];
 
 const addProductBag = (productData) => {
-    // Obtener la lista de productos almacenada en sessionStorage
+   
     const storedProductList = sessionStorage.getItem('productList');
 
-    // Convertir la lista almacenada en JSON a un array
     const productList = storedProductList ? JSON.parse(storedProductList) : [];
 
-    // Agregar el nuevo producto al array
     productList.push(productData);
 
-    // Guardar la lista actualizada en sessionStorage
     sessionStorage.setItem('productList', JSON.stringify(productList));
 
     console.log('Product added to the bag:', productList);

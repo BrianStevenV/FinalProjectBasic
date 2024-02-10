@@ -13,34 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
-const createFigureContainer = () => {
-  const figureContainer = document.createElement('figure');
-  figureContainer.className.add('card');
-  
-  var addedProduct = `
-          <figure
-            <img class="cart__img" src="${product.images}" alt="img" />
-            <figcaption class="cart__figcaption">
-              <section class="cart__info">
-                  <p class="title__container">${product.name}</p>
-
-                  <p  class="code__container">Code:${product.code}</p>
-
-                  <p class="price__container">$${product.price}</p>
-              </section>
-              <section class="cart__misc">
-                <article class="edit__container">
-                  <p>✏</p>
-                </article>
-
-                <article class="quantity__container">
-                  <p>x1</p>
-                </article>
-              </section>
-            </figcaption>`;
-}
   
 
 function createCartSection() {
@@ -51,10 +23,6 @@ function createCartSection() {
   const bodyCartSection = document.createElement('section');
   bodyCartSection.className = 'body__cart';
 
-  
-  const cartContainer = document.createElement('section');
-  cartContainer.className = 'cart__container';
-
   var cartContent = `
     <section class="your__cart">
       <article class="your__cart--h1__p__container">
@@ -63,7 +31,7 @@ function createCartSection() {
       </article>
 
       <section class="cart__container">
-          ${printProducts(productList, cartContainer)}
+          ${printProducts(productList)}
       </section>
       
       <hr class="footer__hr" />
@@ -74,10 +42,12 @@ function createCartSection() {
           <p class="total__price--price">$621.75</p>
         </article>
         <article class="cart__footer--button__container">
-          <button class="cart__footer--button__container--button">
-          <a href="../purchase/purchase.html" class="button--a">Continue to check out</a>
+          <a href="../purchase/purchase.html" class="button--a">
+            <button class="cart__footer--button__container--button">
+            Continue to check out
             
-          </button>
+            </button>
+          </a>
         </article>
       </section>
     </section>
@@ -85,9 +55,8 @@ function createCartSection() {
 
   bodyCartSection.innerHTML = cartContent;
 
-  const print = document.body.appendChild(bodyCartSection);
-  console.log(`print print print ${print.textContent}`);
-  console.log(`Var content ${bodyCartSection.textContent}`);
+  document.body.appendChild(bodyCartSection);
+  
 }
 
 
@@ -96,7 +65,6 @@ const printProducts = (listProduct) => {
   let htmlContent = '';  
 
   listProduct.forEach(product => {
-      console.log(`From for each print products`);
 
       var cartSection = document.createElement('figure')
       cartSection.classList.add('cart')
