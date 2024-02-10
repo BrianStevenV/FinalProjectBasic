@@ -149,6 +149,11 @@ hr{
     margin-right: 2.5rem;
 }
 
+.button--a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 
 
 @media only screen and (min-width: 600px) and (max-width: 659px){
