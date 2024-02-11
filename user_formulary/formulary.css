@@ -29,11 +29,15 @@ header{
         font-family: var(--fontCormorant);
         font-size: var(--titlesSize);
     }
+
+        .header__title:hover{
+            cursor: pointer;
+        }
+
     .header__nav{
         display: flex;
         margin-right: 7%;
         align-self: center;
-        width: 90%;
         justify-content: end;
         gap: 2rem;
     }

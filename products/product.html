@@ -11,44 +11,27 @@
 
 </head>
 <body>
-    <header class="header">
-<article>
-        <p class="header__p">
-            <a href="" class="header__a">Darling.</a>
-        </p>
-    </article>
-
-    <article>
-        <nav class="header__nav" id="navlist">
-
-            <ul class="header__ul">
-                <li class="header__li"><a href="../home/home.html" class="header__a header__a--nav">Home</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Shop</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Collections</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">About</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Contact</a></li>
-                <li class="header__li">
-                    <a href="" class="header__a header__a--nav">
-                    <img src="../assets/Profile 1.png" alt="Profile">
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="" class="header__a header__a--nav">
-                    <img src="../assets/Shopping cart 1.png" alt="Shopping Cart">
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-</article>
-        <div class="bx bx-menu" id="menu-icon"></div>
-
+    <header>
+        <article class="header__title">
+            <p>Darling.</p>
+        </article>
+        
+        <button id="navToggleButton">☰</button>
+        <article class="header__nav" id="navButtons">
+            <button class="header__nav--button" id="home">Home</button>
+            <button class="header__nav--button" id="shop">Shop</button>
+            <button class="header__nav--button" id="collections">Collections</button>
+            <button class="header__nav--button" id="about">About</button>
+            <button class="header__nav--button" id="contact">Contact</button>
+            <button class="header__nav--button" id="profile"><img src="../assets/Profile 1.png" alt="" /></button>
+            <button class="header__nav--button" id="cart"><img src="../assets/Shopping cart 1.png" alt="" /></button>
+        </article>
     </header>
 
     <section class="hero">
         <div class="heroTop">
-            <h1 class="hero heroTop__h1">Our Products</h1>
-            <input type="text" placeholder="Find jewelry you like" class="hero heroTop__input" id="search-bar">
+            <h1 class="hero--heroTop__h1">Our Products</h1>
+            <input type="text" placeholder="Find jewelry you like" class="hero--heroTop__input" id="search-bar">
         </div>
 
     
@@ -56,6 +39,7 @@
 
     <main class="main">
         <section class="section__nav">
+            <button id="filterButton">Filtros</button>
             <ul class="section__nav--ul" id="navlist-section">
                 <li class="navli__item" id="AllCategory">All</li>
                 <li class="navli__item" id="RingCategory">Rings</li>
@@ -65,15 +49,14 @@
             </ul>
 
             <div class="section__select">
-                <label for="Sorty by price" class="section__select--label">Sort by price</label>
+                <!-- <label for="Sorty by price" class="section__select--label">Sort by price</label> -->
                 <select name="Sort by price" id="select" class="section__select--select" onchange="getValueFromSelect()">
-                    <option value="none">Choose an option</option>
+                    <option value="none">Sort by price</option>
                     <option value="asc">Ascendant</option>
                     <option value="desc">Descendant</option>
                 </select>
             </div>
 
-            <div class="bx bx-menu" id="menu-icon-section"></div>
         </section>
 
         <section class="section__figure--top">
@@ -138,6 +121,8 @@
         </section>
 
         <section class="section__figure--bottom">
+
+
             <section class="card__primary__container">
                 <figure class="figure__primary--bottom">
                     <img src="../assets/products_img/Img 1-2-c-c-d-d page 2.png" alt="Timeless Elegance Earrings" class="figure--bottom--img--big">
@@ -147,6 +132,8 @@
                     </figcaption>
                 </figure>
             </section>
+
+
             
             <section class="card__secondary__container">
                 <figure class="figure--bottom">
@@ -184,37 +171,37 @@
         <section class="section__pagination">
             <ul class="ul__pagination">
                 <li class="li__pagination">
-                    <a href="" class="li__pagination li__pagination--a"></a>
+                    <a href="" class="li__pagination__li__pagination--a"></a>
                     &lt;
                 </li>
                 <li class="li__pagination">
-                    <a href="" class="li__pagination li__pagination--a">
+                    <a href="" class="li__pagination__li__pagination--a">
                         1
                     </a>
                 </li>
                 <li class="li__pagination">
-                    <a href="" class="li__pagination li__pagination--a">
+                    <a href="" class="li__pagination__li__pagination--a">
                         2
                     </a>
                 </li>
                 <li class="li__pagination">
-                    <a href="" class="li__pagination li__pagination--a">
+                    <a href="" class="li__pagination__li__pagination--a">
                         3
                     </a>
                 </li>
                 <li class="li__pagination" >
-                    <a href="" class="li__pagination li__pagination--a">
+                    <a href="" class="li__pagination__li__pagination--a">
                         ...
                     </a>
 
                 </li>
                 <li class="li__pagination">
-                    <a href="" class="li__pagination li__pagination--a">
+                    <a href="" class="li__pagination__li__pagination--a">
                         10
                     </a>
                 </li>
                 <li class="li__pagination">
-                    <a href="" class="li__pagination li__pagination--a">
+                    <a href="" class="li__pagination__li__pagination--a">
                         &gt;
                     </a>
                 </li>
@@ -225,89 +212,85 @@
             <figure class="card__description">
                 <img src="../assets/Delivery time 1.png" alt="Delivery" class="card__img">
                 <figcaption class="card__figcaption">
-                    <p class="card__figcaption card__figcaption--title">Delivery</p>
-                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
+                    <p class="card__figcaption__card__figcaption--title">Delivery</p>
+                    <p class="card__figcaption__card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
                 </figcaption>
             </figure>
             <figure class="card__description">
                 <img src="../assets/Love message 1.png" alt="Customer Care" class="card__img">
                 <figcaption class="card__figcaption">
-                    <p class="card__figcaption card__figcaption--title">Customer Care</p>
-                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
+                    <p class="card__figcaption__card__figcaption--title">Customer Care</p>
+                    <p class="card__figcaption__card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
                 </figcaption>
             </figure>
             <figure class="card__description">
                 <img src="../assets/Lock landscape 1.png" alt="Payment Security" class="card__img">
                 <figcaption class="card__figcaption">
-                    <p class="card__figcaption card__figcaption--title">Payment Security</p>
-                    <p class="card__figcaption card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
+                    <p class="card__figcaption__card__figcaption--title">Payment Security</p>
+                    <p class="card__figcaption__card__figcaption--text">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
                 </figcaption>
             </figure>
         </section>
     </main>
 
     <footer class="footer">
-        <section class="footer__section--top">
-            <h1 class="footer__section__container--top">
-                <a class="footer__a">Darling</a>  
-                <!-- Se puede re utilizar el title -->
-            </h1>
-            <ul class="footer__ul">
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Shop</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Collections</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">About</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Contact</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Privacy</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Terms</a>
-                </li>
-            </ul>
-            <div class="subscribe__container">
-                <p class="subscribe__item--title">Subscribe to our newsletter</p>
-                <p class="subscribe__item--p">For product announcements and exclusive insights</p>
-                <input class="subscribe__item--input"type="text" placeholder="           Input your email">
-                <button class="subscribe__btn">Subscribe</button>
-            </div>
+        <section class="footer__section">
+            <article class="footer__darling__container">
+                    <p class="footer__darling__container--darling">Darling</p>
+            </article>
+
+
+            <article class="footer__nav__container">
+                    <article class="footer__nav__container--left__column">
+                        <button class="footer__nav--button" id="shop">Shop</button>
+                        <button class="footer__nav--button" id="collections">Collections</button>
+                        <button class="footer__nav--button" id="about">About</button>
+                    </article>
+
+                    <article class="footer__nav__container--right__column">
+                        <button class="footer__nav--button" id="contact">Contact</button>
+                        <button class="footer__nav--button" id="privacy">Privacy</button>
+                        <button class="footer__nav--button" id="terms">Terms</button>
+                    </article>
+            </article>
+
+
+            <article class="footer__subscribe__container">
+                    <article class="footer__subscribe__container--text__container">
+                        <p class="footer__subscribe__container--text__container--title">Subscribe to our newsletter</p>
+                        <p class="footer__subscribe__container--text__container--text">For product announcements and exclcusivee insights</p>
+                    </article>
+                    
+                    <article  class="footer__subscribe__container--input__container">
+
+                        <input class="footer__subscribe__container--input__container--input" type="text" placeholder="           Input your email">
+                        <button class="footer__subscribe__container--input__container--button">Subscribe</button>
+
+                    </article>
+
+            </article>
+        </section>
+        <section class="footer__mark__section">
+            <article class="footer__mark__section--copyright">
+
+            <p class="footer__mark__section--copyright--text">© 2022 Brand, Inc.</p>
+
+            </article>
+
+            <article class="footer__mark__section">
+
+                <figure>
+                    <img src="../assets/Logo twitter 1.png" alt="">
+                    <img src="../assets/Logo facebook 1.png" alt="">
+                    <img src="../assets/Logo linkedin 1.png" alt="">
+                    <img src="../assets/Logo youtube 1.png" alt="">
+                </figure>
+
+            </article>
+
+
         </section>
 
-        <section class="footer__section__socialmedia">
-            <p class="footer__container copyrigth-container">
-                © 2022 Brand, Inc.
-            </p>
-
-            <ul class="social-icons">
-                <li class="social-icons__item">
-                    <a href="">
-                        <img src="../assets/Logo twitter 1.png" alt="Twitter" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="">
-                        <img src="../assets/Logo facebook 1.png" alt="Meta" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="">
-                        <img src="../assets/Logo linkedin 1.png" alt="LinkedIn" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="">
-                        <img src="../assets/Logo youtube 1.png" alt="Youtube" class="social-icons__icon">
-                    </a>
-                </li>
-            </ul>
-        </section>
     </footer>
     <script src="./product.js"></script>
     <script src="products.js"></script>

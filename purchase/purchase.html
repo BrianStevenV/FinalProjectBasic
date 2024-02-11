@@ -8,37 +8,22 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
-    <header class="header">
-
-        <p class="header__p">
-            <a href="" class="header__a">Darling.</a>
-        </p>
-
-        <nav class="header__nav">
-
-            <ul class="header__ul" id="navlist">
-                <li class="header__li"><a href="" class="header__a header__a--nav">Home</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Shop</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Collections</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">About</a></li>
-                <li class="header__li"><a href="" class="header__a header__a--nav">Contact</a></li>
-                <li class="header__li">
-                    <a href="" class="header__a header__a--nav">
-                    <img src="../assets/Profile 1.png" alt="Profile">
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="" class="header__a header__a--nav">
-                    <img src="../assets/Shopping cart 1.png" alt="Shopping Cart">
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-
-        
-        <span class="bx bx-menu" id="menu-icon"></span>
-
+    <header>
+            <article class="header__title">
+                <p>Darling.</p>
+            </article>
+            
+            <button id="navToggleButton">☰</button>
+            <article class="header__nav" id="navButtons">
+                <button class="header__nav--button" id="home">Home</button>
+                <button class="header__nav--button" id="shop">Shop</button>
+                <button class="header__nav--button" id="collections">Collections</button>
+                <button class="header__nav--button" id="about">About</button>
+                <button class="header__nav--button" id="contact">Contact</button>
+                <button class="header__nav--button" id="profile"><img src="../assets/Profile 1.png" alt="" /></button>
+                <button class="header__nav--button" id="cart"><img src="../assets/Shopping cart 1.png" alt="" /></button>
+            </article>
+    
     </header>
     <main class="main">
         <p class="purchase__objects--order">Order summary</p>
@@ -160,87 +145,61 @@
         </section>
     </main>
     <footer class="footer">
-        <section class="footer__banner">
-            <div class="footer__message">
-                <p class="footer__message--title">From the people</p>
-                <p class="footer__message--text">We love hearing from our <br>customers!<br>
-                    You're the reason we're here and <br>the reason we do what we do.</p>
-            </div>
-            <figure class="footer__figure">
-                <img src="../assets/footerImg.png" alt="footer__figure--img">
-                <figcaption class="footer__figure--figcaption">The ring itself is stunning, with a beautiful design that catches the light and sparkles from every angle. 
-                    The quality of the materials used is evident, as the ring feels substantial and durable. The gemstone is exquisite,
-                     with a vibrant color and exceptional clarity.
-                    <p class="footer__figcaption--title">Anna Fernandez</p>
-                    <p class="footer__figcaption--p">USA</p>
-                </figcaption>
-                <div class="buttons_container">
-                    <button class="button__left">&lt;</button>
-                    <button class="button__right">&gt;</button>
-                </div>
-            </figure>
-        </section>
-        
-        <section class="footer__section--top">
-            <h1 class="footer__section__container--top">
-                <a class="footer__a">Darling</a>  
-                <!-- Se puede re utilizar el title -->
-            </h1>
-            <ul class="footer__ul">
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Shop</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Collections</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">About</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Contact</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Privacy</a>
-                </li>
-                <li class="footer__li">
-                    <a href="" class="footer__a footer__a--nav">Terms</a>
-                </li>
-            </ul>
-            <div class="subscribe__container">
-                <p class="subscribe__item--title">Subscribe to our newsletter</p>
-                <p class="subscribe__item--p">For product announcements and exclusive insights</p>
-                <input class="subscribe__item--input"type="text" placeholder="           Input your email">
-                <button class="subscribe__btn">Subscribe</button>
-            </div>
-        </section>
+        <section class="footer__section">
+            <article class="footer__darling__container">
+                    <p class="footer__darling__container--darling">Darling</p>
+            </article>
 
-        <section class="footer__section__socialmedia">
-            <p class="footer__container copyrigth-container">
-                © 2022 Brand, Inc.
-            </p>
 
-            <ul class="social-icons">
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo twitter 1.png" alt="Twitter" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo facebook 1.png" alt="Meta" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo linkedin 1.png" alt="LinkedIn" class="social-icons__icon">
-                    </a>
-                </li>
-                <li class="social-icons__item">
-                    <a href="" class="social-icons__a">
-                        <img src="../assets/Logo youtube 1.png" alt="Youtube" class="social-icons__icon">
-                    </a>
-                </li>
-            </ul>
+            <article class="footer__nav__container">
+                    <article class="footer__nav__container--left__column">
+                        <button class="footer__nav--button" id="shop">Shop</button>
+                        <button class="footer__nav--button" id="collections">Collections</button>
+                        <button class="footer__nav--button" id="about">About</button>
+                    </article>
+
+                    <article class="footer__nav__container--right__column">
+                        <button class="footer__nav--button" id="contact">Contact</button>
+                        <button class="footer__nav--button" id="privacy">Privacy</button>
+                        <button class="footer__nav--button" id="terms">Terms</button>
+                    </article>
+            </article>
+
+
+            <article class="footer__subscribe__container">
+                    <article class="footer__subscribe__container--text__container">
+                        <p class="footer__subscribe__container--text__container--title">Subscribe to our newsletter</p>
+                        <p class="footer__subscribe__container--text__container--text">For product announcements and exclcusivee insights</p>
+                    </article>
+                    
+                    <article  class="footer__subscribe__container--input__container">
+
+                        <input class="footer__subscribe__container--input__container--input" type="text" placeholder="           Input your email">
+                        <button class="footer__subscribe__container--input__container--button">Subscribe</button>
+
+                    </article>
+
+            </article>
+        </section>
+        <section class="footer__mark__section">
+            <article class="footer__mark__section--copyright">
+
+            <p class="footer__mark__section--copyright--text">© 2022 Brand, Inc.</p>
+
+            </article>
+
+            <article class="footer__mark__section">
+
+                <figure>
+                    <img src="../assets/Logo twitter 1.png" alt="">
+                    <img src="../assets/Logo facebook 1.png" alt="">
+                    <img src="../assets/Logo linkedin 1.png" alt="">
+                    <img src="../assets/Logo youtube 1.png" alt="">
+                </figure>
+
+            </article>
+
+
         </section>
     </footer>
     <script src="./purchase.js"></script>

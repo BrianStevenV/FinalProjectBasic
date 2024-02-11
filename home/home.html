@@ -21,28 +21,19 @@
 </head>
 <body>
     <header>
-        <section class="header">
-            <h1 class="darlingTitle">Darling.</h1>
-            <nav id="navlist" class="open">
-                <ul >
-                    <li class="menuItem"><a href="#">Home</a></li>
-                    <li class="menuItem"><a href="#">Shop</a></li>
-                    <li class="menuItem"><a href="#">Collections</a></li>
-                    <li class="menuItem"><a href="#">About</a></li>
-                    <li class="menuItem"><a href="#">Contact</a></li>
-                    <li class="menuItem"><a href="#">
-                        <img src="../assets/Profile 1.png" alt="Profile">
-                    </a>
-                    </li>
-                    <li class="menuItem"><a href="#">
-                        <img src="../assets/Shopping cart 1.png" alt="Shopping Cart"></a>
-                    </li>
-                </ul>
+        <article class="header__title">
+            <p>Darling.</p>
+        </article>
 
-                
-            </nav>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </section>
+        <article class="header__nav">
+            <button class="header__nav--button" id="home">Home</button>
+            <button class="header__nav--button" id="shop">Shop</button>
+            <button class="header__nav--button" id="collections">Collections</button>
+            <button class="header__nav--button" id="about">About</button>
+            <button class="header__nav--button" id="contact">Contact</button>
+            <button class="header__nav--button" id="profile"><img src="../assets/Profile 1.png" alt="" /></button>
+            <button class="header__nav--button" id="cart"><img src="../assets/Shopping cart 1.png" alt="" /></button>
+        </article>
     </header>
         <section class="hero">
             <button class="buttonShopNow">Shop now</button>
@@ -95,7 +86,7 @@
                     <img src="../assets/Lock landscape 1.png" alt="Locked wallet" class="description--img">
                 </figure>
                 <article>
-                    <p class="description__container--description__container--p--title">Payment security</li>
+                    <p class="description__container--description__container--p--title">Payment security</p>
                     <p class="description__container--description__container--p">Ea esse elit anim commodo laborum pariatur nisi. Voluptate elit d</p>
                 </article>
             </article>
@@ -255,75 +246,103 @@
     </main>
 
 
-
     <footer class="footer">
-
-        <section class="section__footer">
-
-            <article class="article__footer--h1--p">
-                <h1 class="article__footer--h1">From the people</h1>
-                <p class="article__footer--p"> We love hearing from our <br>customers!<br>
+        <section class="footer__banner">
+            <div class="footer__message">
+                <p class="footer__message--title">From the people</p>
+                <p class="footer__message--text">We love hearing from our <br>customers!<br>
                     You're the reason we're here and <br>the reason we do what we do.</p>
+            </div>
+            <figure class="footer__figure">
                 
-            </article>
-
-            <figure class="footer_figure">
-                <img src="../assets/footerImg.png" alt="Footer img" class="footer_img">
-                <figcaption class="footer__figcaption">The ring itself is stunning, with a beautiful design that catches the light and sparkles from every angle. 
-                    The quality of the materials used is evident, as the ring feels substantial and durable. The gemstone is exquisite,
-                     with a vibrant color and exceptional clarity.
-                    <h1 class="footer__figcaption--h1">Anna Fernandez</h1>
-                    <p class="footer__figcaption--p">USA</p>
+                <img class="footer__figure--img__container--woman__img" src="../assets/footerImg.png" alt="footer__figure--img">
                 <div class="buttons_container">
                     <button class="button__left">&lt;</button>
                     <button class="button__right">&gt;</button>
                 </div>
+                <figcaption class="footer__figure--figcaption">The ring itself is stunning, with a beautiful design that
+                    catches the light and sparkles from every angle.
+                    The quality of the materials used is evident, as the ring feels substantial and durable. The
+                    gemstone is exquisite,
+                    with a vibrant color and exceptional clarity.
+                    <p class="footer__figcaption--title">Anna Fernandez</p>
+                    <article>
+
+                    <p class="footer__figcaption--p">USA</p>
+
+                    </article>
+                    
+            
                 </figcaption>
+                
             </figure>
-
+            
         </section>
         
-        
-        <section class="footer__container__contact">
 
-            <div class="footer__darlingTitle">
-                <h1 class="darlingTitle">Darling.</h1>
-            </div>
 
-            <section class="section__footer__items">
-                <div class="footer__items--left">
-                    <p class="footer__item--left--p">Shop</p>
-                    <p class="footer__item--left--p">Collections</p>
-                    <p class="footer__item--left--p">About</p>
-                </div>
-                <div class="footer__items--right">
-                    <p class="footer__item--right--p">Contact</p>
-                    <p class="footer__item--right--p">Privacy</p>
-                    <p class="footer__item--right--p">Terms</p>
-                </div>
-            </section>
-            
-            <article class="article__container__subscribe">
-                <p class="article__container__subscribe--p--primary">Subscribe to our newsletter</p>
-                <p class="article__container__subscribe--p--secundary">For product announcements and exclusive insights</p>
-                <input  type="text" placeholder="           Input your email" class="footer__input">
-                <button class="footer__btn">Subscribe</button>
+
+
+        <section class="footer__section">
+            <article class="footer__darling__container">
+                    <p class="footer__darling__container--darling">Darling</p>
             </article>
-            
+
+
+            <article class="footer__nav__container">
+                    <article class="footer__nav__container--left__column">
+                        <button class="footer__nav--button" id="shop">Shop</button>
+                        <button class="footer__nav--button" id="collections">Collections</button>
+                        <button class="footer__nav--button" id="about">About</button>
+                    </article>
+
+                    <article class="footer__nav__container--right__column">
+                        <button class="footer__nav--button" id="contact">Contact</button>
+                        <button class="footer__nav--button" id="privacy">Privacy</button>
+                        <button class="footer__nav--button" id="terms">Terms</button>
+                    </article>
+            </article>
+
+
+            <article class="footer__subscribe__container">
+                    <article class="footer__subscribe__container--text__container">
+                        <p class="footer__subscribe__container--text__container--title">Subscribe to our newsletter</p>
+                        <p class="footer__subscribe__container--text__container--text">For product announcements and exclcusivee insights</p>
+                    </article>
+                    
+                    <article  class="footer__subscribe__container--input__container">
+
+                        <input class="footer__subscribe__container--input__container--input" type="text" placeholder="           Input your email">
+                        <button class="footer__subscribe__container--input__container--button">Subscribe</button>
+
+                    </article>
+
+            </article>
+        </section>
+        <section class="footer__mark__section">
+            <article class="footer__mark__section--copyright">
+
+            <p class="footer__mark__section--copyright--text">© 2022 Brand, Inc.</p>
+
+            </article>
+
+            <article class="footer__mark__section">
+
+                <figure>
+                    <img src="../assets/Logo twitter 1.png" alt="">
+                    <img src="../assets/Logo facebook 1.png" alt="">
+                    <img src="../assets/Logo linkedin 1.png" alt="">
+                    <img src="../assets/Logo youtube 1.png" alt="">
+                </figure>
+
+            </article>
+
+
         </section>
 
-        <section class="footer__container__socialmedia">
-            <div class="footer__container__socialmedia__copyright">© 2022 Brand, Inc.</div>
-            <figure class="footer__socialmedia">
-                <img src="../assets/Logo twitter 1.png" alt="Twitter" class="socialmedia__img">
-                <img src="../assets/Logo facebook 1.png" alt="Meta" class="socialmedia__img">
-                <img src="../assets/Logo linkedin 1.png" alt="LinkedIn" class="socialmedia__img">
-                <img src="../assets/Logo youtube 1.png" alt="Youtube" class="socialmedia__img">
-            </figure>
-        </section>
 
+    
     </footer>
-
 
    <script src="./home.js"></script>
 

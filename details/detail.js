@@ -265,4 +265,37 @@ function printNavBar(productObject){
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const quantityElement = document.querySelector('.quantity');
+    const decreaseButton = document.querySelector('.decrease');
+    const increaseButton = document.querySelector('.increase');
 
+    decreaseButton.addEventListener('click', function() {
+        let quantity = parseInt(quantityElement.textContent);
+        if (quantity > 1) {
+            quantity--;
+            quantityElement.textContent = quantity;
+        }
+    });
+
+    increaseButton.addEventListener('click', function() {
+        let quantity = parseInt(quantityElement.textContent);
+        quantity++;
+        quantityElement.textContent = quantity;
+    });
+});
+
+
+
+document.addEventListener('click', (event) => {
+    const { target } = event;
+
+    if (target.id === "shop" ||   target.id === "collections") {
+        window.location.href = "../products/product.html";
+    } else if(target.id === "about" || target.id === "contact" ){
+        window.scrollTo(0, document.body.scrollHeight);
+    }else if(target.id === "home"){
+        window.location.href = "../home/home.html";
+    
+      }
+});
