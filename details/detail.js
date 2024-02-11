@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 printNavBar(productData);
                 const btnAddToBag = document.getElementById("btn-add");
                 btnAddToBag.addEventListener('click', () => addProductBag(productData))
-
+                init();
+        
+                
         
             } else {
                 console.error('Error en la solicitud:', responseApi.status, responseApi.statusText);
@@ -120,10 +122,10 @@ function createProductDetailsSection(productObject) {
                     <p class="card__product__main--title">${product.name}</p>
                     <p class="card__product__main--code">Code:${product.code}</p>
                     <p class="card__product__main--price">$${product.price}</p>
-                    <p class="card__product__main--color--name">Color - ${product.color}</p>
+                    <p class="card__product__main--color--name">Color - ${product.amount.map(size => size.color).join(' - ')}</p>
+
                     <div class="choose__color">
-                        <input type="radio" name="color" class="color--name--white">
-                        <input type="radio" name="color" class="color--name--rosegold">
+                        ${createChooseColor(product)}
                     </div>
                 </article>
                 <article class="card__product__main--size">
@@ -144,9 +146,9 @@ function createProductDetailsSection(productObject) {
                         <p class="card__product__main--quantity--title">Quantity</p>
                     </article>
                     <article class="card__product__main--quantity__container">
-                        <p class="card__product__main--quantity--p">-</p>
-                        <p class="card__product__main--quantity--p">1</p>
-                        <p class="card__product__main--quantity--p">+</p>
+                        <p class="card__product__main--quantity--p decrease">-</p>
+                        <p class="card__product__main--quantity--p quantity">1</p>
+                        <p class="card__product__main--quantity--p increase">+</p>
 
                     </article>                    
                 </article>
@@ -195,12 +197,37 @@ function createProductDetailsSection(productObject) {
     
     `
     
+    
 }
 
 
+const createChooseColor = (productObject) => {
+    let htmlContent = '';
+
+    const mapColorProduct = productObject.amount.map(size => size.color)
+    console.log(mapColorProduct);
+
+
+    mapColorProduct.forEach(color => {
+        const inputChooseColorSection = document.createElement('input');
+        inputChooseColorSection.className = 'color--name';
+        inputChooseColorSection.style.backgroundColor = color;
+
+        console.log(`From choos ecolor ${inputChooseColorSection}`);
+
+        htmlContent += inputChooseColorSection.outerHTML;
+
+
+    })
+
+    return htmlContent
+
+    
+
+}
 
 function createProductDescription(productObject) {
-    // Crear el contenido HTML dinámico
+    
     const product = productObject;
 
     const productDescriptionContainer = document.querySelector('.card__product__description')
@@ -273,25 +300,38 @@ function printNavBar(productObject){
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+
+
+function handleDecrease() {
     const quantityElement = document.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    if (quantity > 1) {
+        quantity--;
+        quantityElement.textContent = quantity;
+    }
+}
+
+function handleIncrease() {
+    const quantityElement = document.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    quantity++;
+    quantityElement.textContent = quantity;
+}
+
+function init() {
+    const quantityElement = document.querySelector('.quantity');
+    console.log(quantityElement);
     const decreaseButton = document.querySelector('.decrease');
+    console.log(decreaseButton);
     const increaseButton = document.querySelector('.increase');
 
-    decreaseButton.addEventListener('click', function() {
-        let quantity = parseInt(quantityElement.textContent);
-        if (quantity > 1) {
-            quantity--;
-            quantityElement.textContent = quantity;
-        }
-    });
+    decreaseButton.addEventListener('click', handleDecrease);
+    increaseButton.addEventListener('click', handleIncrease);
+}
 
-    increaseButton.addEventListener('click', function() {
-        let quantity = parseInt(quantityElement.textContent);
-        quantity++;
-        quantityElement.textContent = quantity;
-    });
-});
+document.addEventListener("DOMContentLoaded", init);
+
+
 
 
 
