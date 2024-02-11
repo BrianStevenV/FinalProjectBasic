@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 btnAddToBag.addEventListener('click', () => addProductBag(productData))
                 init();
         
+                captureColorClick();
                 
         
             } else {
@@ -201,6 +202,20 @@ function createProductDetailsSection(productObject) {
 }
 
 
+
+
+const captureColorClick = () => {
+    const colorElements = document.querySelectorAll('.color--name');
+
+    colorElements.forEach(colorElement => {
+        colorElement.addEventListener('click', function() {
+            const altValue = this.style.backgroundColor;
+            console.log('Clicked color:', altValue);
+            
+        });
+    });
+}
+
 const createChooseColor = (productObject) => {
     let htmlContent = '';
 
@@ -212,17 +227,18 @@ const createChooseColor = (productObject) => {
         const inputChooseColorSection = document.createElement('input');
         inputChooseColorSection.className = 'color--name';
         inputChooseColorSection.style.backgroundColor = color;
+        inputChooseColorSection.alt = color;
+        inputChooseColorSection.type="radio"
 
-        console.log(`From choos ecolor ${inputChooseColorSection}`);
+        console.log(`From choos ecolor ${inputChooseColorSection.alt}`);
 
         htmlContent += inputChooseColorSection.outerHTML;
 
 
     })
 
-    return htmlContent
-
     
+    return htmlContent
 
 }
 
