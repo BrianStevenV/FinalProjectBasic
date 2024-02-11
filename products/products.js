@@ -97,18 +97,6 @@ const filterProductsByCategory = async (categoryName) => {
 
 const containerCategoryList = [ containerFigureTops, containerFigureBottoms, containerFigurePrimary];
 
-// const redirectDetailsPage = () => {
-//     const redirectURL = '../details/details.html';
-//     window.location.href = redirectURL;
-// }
-// const filterCategoryRedirect = () => document.addEventListener("click", () => {
-//     containerCategoryList.forEach((click) => {
-//         console.log(click);
-//         captureFigcaptionH1(click);
-//         redirectDetailsPage();
-//     })
-// })
-
 containerFigurePrimary.addEventListener('click', () => {
     const redirectURL = '../details/details.html';
     window.location.href = redirectURL;
@@ -156,50 +144,3 @@ const captureFigcaptionH1 = (element) => {
     console.log(storage);
     
 }
-
-// const containerFigureTops = document.querySelectorAll(".figure--top");
-// const containerFigureBottoms = document.querySelectorAll(".figure--bottom");
-// const containerFigurePrimary = document.querySelector(".figure__primary--bottom");
-
-// const containerCategoryList = [containerFigurePrimary];
-
-// const redirectDetailsPage = () => {
-//     const redirectURL = '../details/details.html';
-//     window.location.href = redirectURL;
-// }
-
-// const captureFigcaptionH1 = (element) => {
-//     const h1Element = element.querySelector('.figcaption__h1');
-//     const valueOnly = h1Element.textContent.trim();
-//     console.log(`value ${valueOnly}`);
-//     sessionStorage.setItem('productTitle', valueOnly);
-// }
-
-// const handleContainerClick = (container) => {
-//     captureFigcaptionH1(parent);
-//     redirectDetailsPage();
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     containerCategoryList.forEach(container => {
-//         container.addEventListener('click', () => {
-//             handleContainerClick(container);
-//         });
-//     });
-
-//     containerFigureTops.forEach(containerFigureTop => {
-//         containerFigureTop.addEventListener('click', () => {
-//             handleContainerClick(containerFigureTop);
-//         });
-//     });
-
-//     containerFigureBottoms.forEach(containerFigureBottom => {
-//         containerFigureBottom.addEventListener('click', () => {
-//             handleContainerClick(containerFigureBottom);
-//         });
-//     });
-// });
-
-
-
-
