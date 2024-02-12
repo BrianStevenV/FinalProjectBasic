@@ -332,7 +332,14 @@ const addProductBag = async (productData) => {
 
         if (validate && validate.message === "Stock available for purchase") {
             const storedProductList = sessionStorage.getItem('productList');
+            
             const productList = storedProductList ? JSON.parse(storedProductList) : [];
+
+            productData.amount = {
+                quantity: amount,
+                color: selectedColor,
+                size: selectedSize
+            };
             
             productList.push(productData);
             
@@ -347,6 +354,8 @@ const addProductBag = async (productData) => {
         console.error("Error from addProductbag Catch", error);
     }
 };
+
+
 
 function printNavBar(productObject){
     console.log(`From begin function print nav`);
@@ -428,3 +437,4 @@ document.addEventListener('click', (event) => {
     
       }
 });
+

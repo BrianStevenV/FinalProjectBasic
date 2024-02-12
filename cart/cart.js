@@ -82,7 +82,7 @@ const printProducts = (listProduct) => {
                       <p>✏</p>
                   </article>
                   <article class="quantity__container">
-                      <p>x1</p>
+                      <p>${product.amount.quantity}</p>
                   </article>
               </section>
           </figcaption>`;
