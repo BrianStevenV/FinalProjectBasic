@@ -4,31 +4,24 @@ export const postValidateProductStockFromColorAndSize = async (req, res) => {
     try {
         
         const {id, quantity, color, size} = req.body;
-        console.log(id);
-
+        
         const productFound = await Product.findById(id);
-        console.log(`product found ${productFound}`);
 
         if(!productFound) {
-            console.log(`Entre a !productFound`);
             return res.status(404).json({error: 'Product not found'})
         }
 
         const matchingStock = productFound.amount.find(
             item => item.color == color && item.size == size
         );
-        console.log(`HOlaaaaa ${productFound.amount}`);
-        console.log(`MMMMMM ${matchingStock}`);
 
         if (!matchingStock) {
-            console.log(`Entre a !matchingStock`);
             return res.status(404).json({
                 error: 'Stock not found for the specified color and size',
             });
         }
 
         if (matchingStock.quantity < quantity) {
-            console.log(`Entre a menor cantidad`);
             return res.status(400).json({ error: 'Insufficient stock' });
         }
         console.log(`Finish`);
@@ -113,8 +106,7 @@ export const getByPrice = async (req, res) => {
 }
 
 export const getCalculateToPay = (req, res) => {
-    // const [{name, code, price, accesory, images, description, amount}] = req.body
-    
+        
     const priceUniteProducts = req.body;
     let totalToPay = 0;
 
