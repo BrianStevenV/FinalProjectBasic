@@ -54,8 +54,10 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+
 
 }
     .cart__img{
@@ -96,6 +98,9 @@
             font-size: 1.2rem;
         }
 
+        .cart__container .cart:not(:last-child) {
+            border-bottom: 1px solid #DEE1E6;
+        }
 
 
 
