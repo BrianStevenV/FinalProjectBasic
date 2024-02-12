@@ -166,18 +166,12 @@ const total = () => {
     document.addEventListener('DOMContentLoaded', () => {
         const storedTotalPay = sessionStorage.getItem('totalPay');
         if (storedTotalPay) {
-            const formattedTotal = parseFloat(storedTotalPay).toFixed(3);
+            const formattedTotal = parseFloat(storedTotalPay).toFixed(2);
             totalElement.textContent = `Total: ${formattedTotal}`;
             informationElement.textContent = formattedTotal;
         }
     });
 };
-
-total();
-
-
-total();
-
 
 total();
 
