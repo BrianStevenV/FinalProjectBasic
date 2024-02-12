@@ -21,6 +21,10 @@ async function createCartSection() {
   try {
     const totalPay = await fetchTotalPay();
 
+    const totalPayStorage = totalPay.totalToPay;
+    const formattedTotal = parseFloat(totalPayStorage).toFixed(3);
+    sessionStorage.setItem('totalPay', totalPayStorage);
+
     const bodyCartSection = document.createElement('section');
     bodyCartSection.className = 'body__cart';
 
@@ -40,7 +44,7 @@ async function createCartSection() {
         <section class="cart__footer">
           <article class="cart__footer--total__price">
             <p class="total__price--total">Total:</p>
-            <p class="total__price--price">$${totalPay.totalToPay}</p>
+            <p class="total__price--price">$${formattedTotal}</p>
           </article>
           <article class="cart__footer--button__container">
             <a href="../purchase/purchase.html" class="button--a">
