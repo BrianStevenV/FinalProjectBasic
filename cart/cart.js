@@ -22,7 +22,7 @@ async function createCartSection() {
     const totalPay = await fetchTotalPay();
 
     const totalPayStorage = totalPay.totalToPay;
-    const formattedTotal = parseFloat(totalPayStorage).toFixed(3);
+    const formattedTotal = parseFloat(totalPayStorage).toFixed(2);
     sessionStorage.setItem('totalPay', totalPayStorage);
 
     const bodyCartSection = document.createElement('section');

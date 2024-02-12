@@ -11,7 +11,7 @@
 
 .body__cart{
     display: flex;
-    padding: 25% 5%;
+    padding: 2.5% 5%;
     background: #ffffff;
     position: absolute;
     top: 0;
@@ -67,7 +67,7 @@
         justify-content: space-between;
         width: 100%;
         margin-left: 1rem;
-        /* line-height: 0.5; */
+        
 
     }
         .title__container{
@@ -125,6 +125,8 @@
 .cart__footer--button__container{
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-top: 5%;
     
 }
 .cart__footer--button__container--button{
@@ -139,7 +141,7 @@
 
 }
 hr{
-    width: 87%;
+    margin: 4% 7%;
 }
 .footer__hr{
     margin-top: 10rem;
@@ -152,6 +154,7 @@ hr{
 .button--a{
     text-decoration: none;
     color: #ffffff;
+    width: 100%;
 }
 
 
