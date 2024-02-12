@@ -1,5 +1,37 @@
 import Product from '../models/product.model.js'
 
+export const postValidateProductStockFromColorAndSize = async (req, res) => {
+    try {
+        
+        const {id, quantity, color, size} = req.body;
+        
+        const productFound = await Product.findById(id);
+
+        if(!productFound) {
+            return res.status(404).json({error: 'Product not found'})
+        }
+
+        const matchingStock = productFound.amount.find(
+            item => item.color == color && item.size == size
+        );
+
+        if (!matchingStock) {
+            return res.status(404).json({
+                error: 'Stock not found for the specified color and size',
+            });
+        }
+
+        if (matchingStock.quantity < quantity) {
+            return res.status(400).json({ error: 'Insufficient stock' });
+        }
+        console.log(`Finish`);
+        res.status(200).json({ message: 'Stock available for purchase' });
+        
+    } catch (error) {
+        console.error({error: `Internal Server Error`});
+    }
+}
+
 export const getByCategory = async (req, res) => {
     try {
 
@@ -74,14 +106,17 @@ export const getByPrice = async (req, res) => {
 }
 
 export const getCalculateToPay = (req, res) => {
-    // const [{name, code, price, accesory, images, description, amount}] = req.body
-    
+        
     const priceUniteProducts = req.body;
+
+    console.log('From', priceUniteProducts);
+
     let totalToPay = 0;
 
-    priceUniteProducts.array.forEach(element => {
-        const totalPrice = element.price * element.amount;
-        totalToPay+= totalPrice;
+    priceUniteProducts.forEach(element => {
+        const totalPrice = element.price * element.quantity;
+        totalToPay += totalPrice;
+        console.log(totalToPay);
 
     });
 

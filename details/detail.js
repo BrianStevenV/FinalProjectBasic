@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 printNavBar(productData);
                 const btnAddToBag = document.getElementById("btn-add");
                 btnAddToBag.addEventListener('click', () => addProductBag(productData))
-
+                init();
+                captureColorClick();
+                captureSizeClick();
         
             } else {
                 console.error('Error en la solicitud:', responseApi.status, responseApi.statusText);
@@ -60,12 +62,11 @@ const fetchDataAndRenderProduct = async (name) => {
         const responseApi = await fetch(name);
 
         if(responseApi.ok) {
-            const productData = await responseApi.json();
             containerProductNav.innerHTML = "";
             containerProductCard.innerHTML = "";
             containerProductDescription.innerHTML = "";
 
-            let htmlContent = "";
+            
 
             const product = responseApi;
 
@@ -120,10 +121,10 @@ function createProductDetailsSection(productObject) {
                     <p class="card__product__main--title">${product.name}</p>
                     <p class="card__product__main--code">Code:${product.code}</p>
                     <p class="card__product__main--price">$${product.price}</p>
-                    <p class="card__product__main--color--name">Color - ${product.color}</p>
+                    <p class="card__product__main--color--name">Color - ${product.amount.map(color => color.color).join(' - ')}</p>
+
                     <div class="choose__color">
-                        <input type="radio" name="color" class="color--name--white">
-                        <input type="radio" name="color" class="color--name--rosegold">
+                        ${createChooseColor(product)}
                     </div>
                 </article>
                 <article class="card__product__main--size">
@@ -133,7 +134,7 @@ function createProductDetailsSection(productObject) {
                 <article class="card__product__main--ul__container">
 
                     <ul class="card__product__main--ul">
-                    ${product.amount.map(size => `<li class="card__product__main--li">${size.color}</li>`).join('')}
+                    ${product.amount.map(size => `<li class="card__product__main--li" alt="${size.size}">${size.size}</li>`).join('')}
                     </ul>
 
                 </article>
@@ -144,9 +145,9 @@ function createProductDetailsSection(productObject) {
                         <p class="card__product__main--quantity--title">Quantity</p>
                     </article>
                     <article class="card__product__main--quantity__container">
-                        <p class="card__product__main--quantity--p">-</p>
-                        <p class="card__product__main--quantity--p">1</p>
-                        <p class="card__product__main--quantity--p">+</p>
+                        <p class="card__product__main--quantity--p decrease">-</p>
+                        <p class="card__product__main--quantity--p quantity">1</p>
+                        <p class="card__product__main--quantity--p increase">+</p>
 
                     </article>                    
                 </article>
@@ -198,9 +199,68 @@ function createProductDetailsSection(productObject) {
 }
 
 
+let selectedColor = null;
+
+const captureColorClick = () => {
+  const colorElements = document.querySelectorAll('.color--name');
+
+  colorElements.forEach(colorElement => {
+    colorElement.addEventListener('click', function() {
+      selectedColor = this.style.backgroundColor;
+      
+      selectedColor = selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1);
+      console.log('Clicked color:', selectedColor);
+    });
+  });
+
+  return selectedColor;
+};
+
+let selectedSize = null;
+
+const captureSizeClick = () => {
+  const sizeElements = document.querySelectorAll('.card__product__main--li');
+
+  sizeElements.forEach(sizeElement => {
+    sizeElement.addEventListener('click', function() {
+      selectedSize = this.getAttribute('alt');
+      console.log(`Clicked size:`, selectedSize);
+    });
+  });
+
+  return selectedSize;
+};
+
+
+
+const createChooseColor = (productObject) => {
+    let htmlContent = '';
+
+    const mapColorProduct = productObject.amount.map(color => color.color)
+    console.log(mapColorProduct);
+
+
+    mapColorProduct.forEach(color => {
+        const inputChooseColorSection = document.createElement('input');
+        inputChooseColorSection.className = 'color--name';
+        inputChooseColorSection.style.backgroundColor = color;
+        inputChooseColorSection.alt = color;
+        inputChooseColorSection.type="radio"
+
+        console.log(`From choos ecolor ${inputChooseColorSection.alt}`);
+
+        htmlContent += inputChooseColorSection.outerHTML;
+
+
+    })
+
+    
+    return htmlContent
+
+}
 
 function createProductDescription(productObject) {
-    // Crear el contenido HTML dinámico
+    
     const product = productObject;
 
     const productDescriptionContainer = document.querySelector('.card__product__description')
@@ -224,19 +284,78 @@ function createProductDescription(productObject) {
 }
 
 let productList = [];
+const validateStock = async (id, quantity, color, size) => {
+    try {
+        console.log(`I'm inside!`);
 
-const addProductBag = (productData) => {
-   
-    const storedProductList = sessionStorage.getItem('productList');
+        const bodyData = {
+            id: id,
+            quantity: quantity,
+            color: color,
+            size: size
+        }
 
-    const productList = storedProductList ? JSON.parse(storedProductList) : [];
+        console.log(bodyData.id);
+        console.log(bodyData.quantity);
+        console.log(bodyData.color);
+        console.log(bodyData.size);
 
-    productList.push(productData);
+        const responseApi = await fetch('http://localhost:3000/api/product/stock/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(bodyData),
+        });
 
-    sessionStorage.setItem('productList', JSON.stringify(productList));
+        console.log(responseApi);
+        if(responseApi.ok){
+            return await responseApi.json();
+        }   else{
+            console.error("Error", responseApi.status, responseApi.statusText);
+            return null;
+        }
+        
+    } catch (error) {
+        console.log({error: error});
+    }
+}
 
-    console.log('Product added to the bag:', productList);
+
+const addProductBag = async (productData) => {
+    const amountElement = document.querySelector('.quantity');
+    let amount = parseInt(amountElement.textContent);
+    const idProduct = productData._id;
+
+    try {
+        const validate = await validateStock(idProduct, amount, selectedColor, selectedSize);
+
+        if (validate && validate.message === "Stock available for purchase") {
+            const storedProductList = sessionStorage.getItem('productList');
+            
+            const productList = storedProductList ? JSON.parse(storedProductList) : [];
+
+            productData.amount = {
+                quantity: amount,
+                color: selectedColor,
+                size: selectedSize
+            };
+            
+            productList.push(productData);
+            
+            sessionStorage.setItem('productList', JSON.stringify(productList));
+            
+            console.log('Product added to the bag:', productList);
+        } else {
+            console.error("Error from addProductbag Else");
+            alert("Product doesn't available.")
+        }
+    } catch (error) {
+        console.error("Error from addProductbag Catch", error);
+    }
 };
+
+
 
 function printNavBar(productObject){
     console.log(`From begin function print nav`);
@@ -274,27 +393,38 @@ function printNavBar(productObject){
 
 // boton interactivo
 
-document.addEventListener("DOMContentLoaded", function() {
+let quantity = 1;
+console.log(`From quantity is now: ${quantity}`);
+
+function handleDecrease() {
     const quantityElement = document.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    if (quantity > 1) {
+        quantity--;
+        quantityElement.textContent = quantity;
+    }
+    
+}
+
+function handleIncrease() {
+    const quantityElement = document.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    quantity++;
+    quantityElement.textContent = quantity;
+    
+}
+
+function init() {
+    const quantityElement = document.querySelector('.quantity');
+    
+    
     const decreaseButton = document.querySelector('.decrease');
     const increaseButton = document.querySelector('.increase');
 
-    decreaseButton.addEventListener('click', function() {
-        let quantity = parseInt(quantityElement.textContent);
-        if (quantity > 1) {
-            quantity--;
-            quantityElement.textContent = quantity;
-        }
-    });
-
-    increaseButton.addEventListener('click', function() {
-        let quantity = parseInt(quantityElement.textContent);
-        quantity++;
-        quantityElement.textContent = quantity;
-    });
-});
-
-
+    decreaseButton.addEventListener('click', handleDecrease);
+    increaseButton.addEventListener('click', handleIncrease);
+    
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     // Variable para almacenar la talla seleccionada

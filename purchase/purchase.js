@@ -55,8 +55,9 @@ document.addEventListener('click', (event) => {
       }
 });
 function createCartSection() {
+    const storedTotalPay = sessionStorage.getItem('totalPay');
     const productListString = sessionStorage.getItem('productList');
-    const productList = JSON.parse(productListString);
+    
 
     const bodyCartSection = document.createElement('section');
     bodyCartSection.className = 'body__cart';
@@ -80,7 +81,7 @@ function createCartSection() {
             <section class="cart__footer">
                 <article class="cart__footer--total__price">
                     <p class="total__price--total">Total:</p>
-                    <p class="total__price--price">$621.75</p>
+                    <p class="total__price--price">$${storedTotalPay}</p>
                 </article>
                 <article class="cart__footer--button__container">
                     <button class="cart__footer--button__container--button">
@@ -93,9 +94,7 @@ function createCartSection() {
 
     bodyCartSection.innerHTML = cartContent;
 
-    const print = document.body.appendChild(bodyCartSection);
-    console.log(`print print print ${print.textContent}`);
-    console.log(`Var content ${bodyCartSection.textContent}`);
+    
     
     const productsContainer = document.querySelector('.purchase__objects');
     productsContainer.innerHTML = printCartProducts();

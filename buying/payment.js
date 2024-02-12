@@ -51,26 +51,32 @@ const orderDate = () => {
     return `${mm}/${dd}/${yyyy}`;
 }
 
+const storedTotalPay = sessionStorage.getItem('totalPay');
+const formattedTotal = parseFloat(storedTotalPay).toFixed(2);
+
 const dateElement = document.getElementById("purchase__date");
 const orderNumberElement = document.getElementById("purchase__orderNumber");
 const nameElement = document.getElementById("purchase__name");
 const methodElement = document.getElementById("purchase__method");
 const productContainer = document.querySelectorAll(".product__card");
-
+const productsShowcase = document.querySelector('.products__showcase');
+const totalPriceElement = document.getElementById('purchase__totalPrice');
 
 dateElement.textContent = orderDate();
 orderNumberElement.textContent = orderNumberRandom();
 nameElement.textContent = cardName;
 methodElement.textContent = cardMethod
+totalPriceElement.textContent = `$${formattedTotal}`;
 
-const printProducts = () => {
-    console.log(`object`);
-    productContainer.forEach(product => {
-        product.innerHTML =""
-    })
+
+
+const printProductsShowCase = () => {
+    productsShowcase.innerHTML = '';
+
     const productListString = sessionStorage.getItem('productList');
     const productList = JSON.parse(productListString);
-    let htmlContent = ''; 
+
+    let htmlContent = '';
 
     productList.forEach( product => {
         const createArticle = document.createElement('article');
@@ -78,30 +84,30 @@ const printProducts = () => {
 
         const addedProduct = `
                         <figure class="product__card--figure">
-                            <img class="product__card--img" src="${product.images[0]}" alt="${product.name}">
-                        </figure>
+                             <img class="product__card--img" src="${product.images[0]}" alt="${product.name}">
+                         </figure>
 
-                        <article class="product__card--info">
-                            <h1 class="product__card--info--h1">
-                                ${product.name}
-                            </h1>
+                         <article class="product__card--info">
+                             <h1 class="product__card--info--h1">
+                                 ${product.name}
+                             </h1>
                             <p class="product__card--info--p--code">
-                                ${product.code}
+                                 ${product.code}
+                             </p>
+                             <p class="product__card--info--p--quantity">
+                                 x${product.amount.quantity}
                             </p>
-                            <p class="product__card--info--p--quantity">
-                                x1
-                            </p>
-                        </article>
+                         </article>
 
-                        <article class="product__card--price">
-                            <p class="product__card--price--p">
+                         <article class="product__card--price">
+                             <p class="product__card--price--p">
                                 $${product.price}
                             </p>
-                        </article>
-        `
+                         </article>
+         `
         createArticle.innerHTML = addedProduct;
         htmlContent += createArticle;
-        document.body.appendChild(createArticle);
+        productsShowcase.appendChild(createArticle);
     })
 
     return htmlContent;
