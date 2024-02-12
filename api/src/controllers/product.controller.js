@@ -108,11 +108,15 @@ export const getByPrice = async (req, res) => {
 export const getCalculateToPay = (req, res) => {
         
     const priceUniteProducts = req.body;
+
+    console.log('From', priceUniteProducts);
+
     let totalToPay = 0;
 
-    priceUniteProducts.array.forEach(element => {
-        const totalPrice = element.price * element.amount;
-        totalToPay+= totalPrice;
+    priceUniteProducts.forEach(element => {
+        const totalPrice = element.price * element.quantity;
+        totalToPay += totalPrice;
+        console.log(totalToPay);
 
     });
 

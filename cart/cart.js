@@ -13,52 +13,53 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-  
 
-function createCartSection() {
-
+async function createCartSection() {
   const productListString = sessionStorage.getItem('productList');
   const productList = JSON.parse(productListString);
-  
-  const bodyCartSection = document.createElement('section');
-  bodyCartSection.className = 'body__cart';
 
-  var cartContent = `
-    <section class="your__cart">
-      <article class="your__cart--h1__p__container">
-        <h1 class="h1__p__container--h1">Your cart</h1>
-        <div class="bx bx-x" id="close-icon"></div>
-      </article>
+  try {
+    const totalPay = await fetchTotalPay();
 
-      <section class="cart__container">
-          ${printProducts(productList)}
-      </section>
-      
-      <hr class="footer__hr" />
-      
-      <section class="cart__footer">
-        <article class="cart__footer--total__price">
-          <p class="total__price--total">Total:</p>
-          <p class="total__price--price">$621.75</p>
+    const bodyCartSection = document.createElement('section');
+    bodyCartSection.className = 'body__cart';
+
+    var cartContent = `
+      <section class="your__cart">
+        <article class="your__cart--h1__p__container">
+          <h1 class="h1__p__container--h1">Your cart</h1>
+          <div class="bx bx-x" id="close-icon"></div>
         </article>
-        <article class="cart__footer--button__container">
-          <a href="../purchase/purchase.html" class="button--a">
-            <button class="cart__footer--button__container--button">
-            Continue to check out
-            
-            </button>
-          </a>
-        </article>
+
+        <section class="cart__container">
+            ${printProducts(productList)}
+        </section>
+        
+        <hr class="footer__hr" />
+        
+        <section class="cart__footer">
+          <article class="cart__footer--total__price">
+            <p class="total__price--total">Total:</p>
+            <p class="total__price--price">$${totalPay.totalToPay}</p>
+          </article>
+          <article class="cart__footer--button__container">
+            <a href="../purchase/purchase.html" class="button--a">
+              <button class="cart__footer--button__container--button">
+                Continue to check out
+              </button>
+            </a>
+          </article>
+        </section>
       </section>
-    </section>
-  `;
+    `;
 
-  bodyCartSection.innerHTML = cartContent;
+    bodyCartSection.innerHTML = cartContent;
 
-  document.body.appendChild(bodyCartSection);
-  
+    document.body.appendChild(bodyCartSection);
+  } catch (error) {
+    console.error('Error in createCartSection:', error);
+  }
 }
-
 
 
 const printProducts = (listProduct) => {
@@ -95,4 +96,36 @@ const printProducts = (listProduct) => {
 }
 
 
-
+const fetchTotalPay = () => {
+  try {
+    
+    const productListString = sessionStorage.getItem('productList');
+    const productList = JSON.parse(productListString);
+    console.log(productList);
+    const transformedList = productList.map(item => ({
+      price: item.price,
+      quantity: item.amount.quantity,
+    }));
+    console.log(transformedList);
+    return fetch(`http://localhost:3000/api/product/pay/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(transformedList),
+    })
+      .then(responseApi => {
+        if (responseApi.ok) {
+          return responseApi.json();
+        }
+        throw new Error('Error in API response');
+      })
+      .catch(error => {
+        console.error(error);
+        return null;
+      });
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
