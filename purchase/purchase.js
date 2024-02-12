@@ -41,8 +41,7 @@ function printCartProducts(){
     return htmlContent;
 }
 
-<<<<<<< HEAD
-}
+
 document.addEventListener('click', (event) => {
     const { target } = event;
 
@@ -50,12 +49,11 @@ document.addEventListener('click', (event) => {
         window.location.href = "../products/product.html";
     } else if(target.id === "about" || target.id === "contact" ){
         window.scrollTo(0, document.body.scrollHeight);
-    }else if(target.id === "home"){
+    }else if(target.id === "home" || target.id === "darling"){
         window.location.href = "../home/home.html";
     
       }
 });
-=======
 function createCartSection() {
     const productListString = sessionStorage.getItem('productList');
     const productList = JSON.parse(productListString);
@@ -102,4 +100,17 @@ function createCartSection() {
     const productsContainer = document.querySelector('.purchase__objects');
     productsContainer.innerHTML = printCartProducts();
 }
->>>>>>> a84bcee1e5a135a3cacfad0d751f436c223b1ddb
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navToggleButton = document.getElementById("navToggleButton");
+    var navButtons = document.getElementById("navButtons");
+
+    navToggleButton.addEventListener("click", function() {
+        if (navButtons.style.display === "none" || navButtons.style.display === "") {
+            navButtons.style.display = "flex";
+        } else {
+            navButtons.style.display = "none";
+        }
+    });
+});

@@ -272,6 +272,7 @@ function printNavBar(productObject){
 
 }
 
+// boton interactivo
 
 document.addEventListener("DOMContentLoaded", function() {
     const quantityElement = document.querySelector('.quantity');
@@ -295,6 +296,47 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Variable para almacenar la talla seleccionada
+    let selectedSize = null;
+
+    // Obtener todos los elementos <li> que representan tallas
+    const sizes = document.querySelectorAll('.card__product__main--li');
+
+    // Iterar sobre cada talla y agregar un event listener para el clic
+    sizes.forEach(function(size) {
+        size.addEventListener('click', function() {
+            // Obtener el valor de la talla seleccionada
+            const valueSelectedSize = size.textContent;
+            
+            // Actualizar la variable de la talla seleccionada
+            selectedSize = valueSelectedSize;
+
+            // Aquí puedes hacer lo que necesites con la talla seleccionada
+            console.log("Talla seleccionada:", selectedSize);
+        });
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navToggleButton = document.getElementById("navToggleButton");
+    var navButtons = document.getElementById("navButtons");
+
+    navToggleButton.addEventListener("click", function() {
+        if (navButtons.style.display === "none" || navButtons.style.display === "") {
+            navButtons.style.display = "flex";
+        } else {
+            navButtons.style.display = "none";
+        }
+    });
+});
+
+
+
+
+
 document.addEventListener('click', (event) => {
     const { target } = event;
 
@@ -302,8 +344,12 @@ document.addEventListener('click', (event) => {
         window.location.href = "../products/product.html";
     } else if(target.id === "about" || target.id === "contact" ){
         window.scrollTo(0, document.body.scrollHeight);
-    }else if(target.id === "home"){
+    }else if(target.id === "home" || target.id === "darling"){
         window.location.href = "../home/home.html";
     
       }
 });
+
+
+
+

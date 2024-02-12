@@ -8,7 +8,6 @@
     --backgroundsColor: #093931;
     --fontsColor: #ffffff;
     --titlesSize: 30px;
-
 }
 
 *{
@@ -48,9 +47,11 @@ header{
         font-family: var(--fontCormorant);
         font-size: var(--titlesSize);
     }
-    .header__title:hover{
-        cursor: pointer;
-    }
+        .header__title:hover{
+            cursor: pointer;
+        }
+
+
     .header__nav{
         display: flex;
         margin-right: 7%;
@@ -76,77 +77,61 @@ header{
         }
 
 
-
-
-.hero{
-    background-color: #093931;
-    position: relative;
-    width: 100%;
+.hero__welcome{
+    display: flex;
+    height: 40rem;
+    margin-left: 7%;
+    margin-right: 7%;
+    position: absolute;
+    z-index: 10;
 }
-.hero__figure{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-
-.vector{
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-    position: relative;
-}
-
 
 .heroSparkleText{
-    z-index: 3;
-    position: absolute;
-    margin-top: 15%;
-    margin-left:10%;
+    width: 50%;
+    align-self: center;
 }
-    .sparkleImage{
-        width: 120%;
+    .hero__sparkle__text--text{
+        font-size: 300%;
+        font-family: var(--fontCormorant);
+        color: var(--titlesColor);
+        font-weight: lighter;
+        margin-bottom: 10%;
     }
 
-.heroProductsImages{
-    position: absolute;
-    justify-content: space-between;
-    z-index: 2;
-    margin-top: 10%;
-    margin-left: 50%;
+        .heroProductsImages{
+            margin-top: 10%;
+        }
+        .necklaceImage{
+            width: 20rem;
+            position: absolute;
 
+        }
+        .ringsImage{
+            width: 12rem;
+            height: 17rem;
+            position: absolute;
+            margin-top: 10%;
+            margin-left: 27%;
+        }
+
+
+
+    .hero__figure{
+        background-color: var(--backgroundsColor);
+        position: absolute;
+        height: 40rem;
+        width: 100%;
+    }
+        .vector{
+            height: 100%;
+            width: 100%;
+        }
+
+
+
+main{
+    margin-top: 60%;
 }
-    .necklaceImage{
-        width:28rem;
-        height: auto;
-        position: absolute;
-
-    }
-    .ringsImage{
-        position: absolute;
-        width: 20rem;
-        height: auto;
-        margin-left: 20rem;
-        z-index: 3;
-        margin-top:7.3rem;
-
-    }
-
-    .buttonHeroPng{
-        position: absolute;
-        z-index: 1000;
-        top: 475px;
-        left: 1425px;
-        background-color: transparent;
-        border-style: none;
-    }
-
-    .buttonHeroImg{
-        width: 120%
-    }
-    .buttonHeroImg:hover{
-        cursor: pointer;
-    }
 
 
 .buttonShopNow{
@@ -158,8 +143,6 @@ header{
     color: #FFFFFF;
     line-height: 28px;
     bottom: 29%;
-    margin-left:10%;
-    position: absolute;
     font-size: 1.125rem;
     width: 13rem;
     height: 3.25rem;
@@ -177,16 +160,14 @@ header{
     justify-content: space-evenly;
     text-align: center;
     margin-top: 5%;
-    margin-right: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
     .description__container{
-        width: 20%;
         font-family: Manrope;
         font-size: 1.5rem;   
-        margin-left: 10%;
     }
 
-    /* QUITAR FONT SIZE DE TITLE Y TEXT ???? */
     
         .description__figure--logo {
             justify-content: center;
@@ -229,83 +210,56 @@ header{
 .main__collections{
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 7%;
-    justify-content: center;
     align-items: center;
+    margin-right: 7%;
+    margin-left: 7%;
 }
-
-    .section__container__collections--title{
-        display: flex;
-
-    }
-
+.section__container__collections--title{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
     .section__container__collections--imgs{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 50px;
-        width: 100%;
-        height: 100vh;
-        margin-top: -100px;
+        justify-content: center;
+        gap: 5%;
+        margin-left: 7%;
+        margin-right: 7%;
     }
-
-
-
-    .section__container__collections--left{
-        margin-top: 15rem;
-        width: auto;
-    }
-
-    .section__container__collections--center{
-        margin-top: 10rem;
-        width: auto;
-    }
-
+    .section__container__collections--left,
     .section__container__collections--rigth{
-        margin-top: 15rem;
-        width: auto;
-    }
-
-    .collections__img{
-        border-radius: 8px;
-        width: 100%;
-    }
-
-    .section__container__collections--btn{
-        margin-top: 5rem;
-    }
-
-    .figcaption__collections__img1, .figcaption__collections__img2,
-    .figcaption__collections__img3, .figcaption__collections__img4,
-    .figcaption__collections__img5, .figcaption__collections__img6 {
-        font-family: Cormorant Garamond;
-        font-size: 2rem;
-        text-align: center;
-        color: #FFFFFF;
-        position: relative;
-        bottom: 4.0625rem;
-    }
-
-
-/* espacio para selection */
-.main_selection_products{
-    display: flex;
-    margin-top:5%;
-    width: 100%;
-}
-    .selections__title{
-        margin-top: 20%;
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3rem;
-        color:#0D554A;
-        width: 70%;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
+    
+        margin-top: 4rem;
 
     }
+
+        .section__container__collections--left,
+        .section__container__collections--center,
+        .section__container__collections--rigth{
+            overflow: hidden;
+         
+            width: 100%;
+        }
+        .secondary__image{
+            margin-top: 3rem;
+        }
+            .collections__img{
+                width: 90%;
+                border-radius: 18px;
+                overflow: hidden;
+            }
+            .figcaption__collections__img1{
+                text-align: center;
+                margin-top: -3rem;
+                font-family: var(--fontCormorant);
+                color: var(--fontsColor);
+                font-size: 1.6rem;
+                font-weight: 100;
+                overflow: hidden;
+
+            }
+
+
+ 
    
 /* espacio para Our Story */
 
@@ -315,8 +269,8 @@ header{
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
-    margin-left:10%;
-    margin-right: 10%;
+    margin-left:7%;
+    margin-right: 7%;
     margin-top: 5%;
 }
 
@@ -325,7 +279,6 @@ header{
     font-size: 2.5rem;
     font-weight: bold;
     color: #0D554A;
-    margin: 1rem;
     margin-bottom: 3%;
     
 }
@@ -610,17 +563,18 @@ footer{
 /*  -------------------------------------------------------------------- */
 
 .main--features--products{
-    max-width: 100%;
     overflow: hidden;
+    justify-content: space-between;
     margin-top: 5%;
     display: flex;
-    
+    margin-left: 7%;
+    margin-right: 7%;
+    gap: 10%;
 }
 
 .container--featured{
     width: 25%;
-    padding-right: 100px;
-    margin-left: 10%;
+
 }
     .features--title{
         font-family: 'Cormorant Garamond';
@@ -636,7 +590,6 @@ footer{
         margin-top: 2rem;
         margin-bottom: 2rem;
         font-size: 1.2rem;
-        width: 20rem;
     }
 
 
@@ -805,8 +758,7 @@ align-items: center;
 .footer__subscribe__container--input__container--button{
     width: 20%
 }
-.footer__mark__section{
-}
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 456px) {
@@ -833,716 +785,199 @@ align-items: center;
         display: flex;
         flex-direction: column;
         width: 5rem;
-        background-color: red;
 
     }
-    .description__container--description__container--p{
-        background-color: blue
-       
+    
+    
+    .container--featured{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+        margin: 0;
     }
+.main__collections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+}
 
-
-
+.collections__img{
+    width: 90%;
+}
+    
+}
 /*  -------------------------------------------------------------------- */
-@media only screen and (max-width: 480px){
-    
-    #menu-icon{
-        display: flex;
-        position: relative;
-        right: 1.5rem;
-
-    }
-
-    #navlist{
-        position: absolute;
-        top: 100%;
-        right: -7%;
-        width: 300px;
-        height: 40vh;
-        display: block;
-        align-items: center;
-        flex-direction: column;
-        padding: 50px 20px;
-        background: #0D554A;
-        transition: all .55s ease;
-    }
-
-    #navlist.open{
-        transform: translate(0);
-        right: -100%;
-    }
-
-    
-
-    ul{
-        display: block;
-        margin-left: 50px;
-    }
-
-    #navlist a{
-        display: block;
-        font-size: 1.2rem;
-    }
 
 
-    /* Hero */
 
-    .heroSparkleText{
-        top: 5rem;
-    }
-        .sparkleImage{
-            width: 90%;
-        }
-        .buttonShopNow{
-            bottom: 45%;
-        }
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
 
-
-        .necklaceImage{
-            width: 15rem;
-            top: 28.5rem;
-            right: -4rem;
-        }
-        .ringsImage{
-            width: 12rem;
-            top: 25.5rem;
-            right: -10rem;
-        }
-
-        .buttonHeroPng{
-            left: 17.1875rem;
-            top: 40.625rem;
-        }
-    
-
-        /*  Description */
     .description{
-        display: block;
-        
-    }
-        .description__container{
-            display: flex;
-        }
-
-        .article__container__title__p{
-            height: 100%;
-        }
-
-
-        .description__container--description__container--p--title{
-            font-size: 1.6rem;
-        }
-        .description__container--description__container--p{
-            width:40vh;
-            font-size: 1.125rem;
-        }
-
-
-
-        /* Main collections */
-
-        .main__collections{
-            margin: 10%;
-        }
-
-        .section__container__collections--imgs{
-            margin: 0;
-            display: block;
-        
-        
-
-        }
-
-        .section__container__collections--center, 
-        .section__container__collections--rigth, 
-        .section__container__collections--left{
-            display: flex;
-            margin: 0 0 0 0;
-        }
-
-        .collections__img{
-            width: 50%;
-            border-radius: 0px;
-
-        }
-
-
-        .figcaption__collections__img1, .figcaption__collections__img2,
-        .figcaption__collections__img3, .figcaption__collections__img4,
-        .figcaption__collections__img5, .figcaption__collections__img6{
-
-            font-size: 1.5rem;
-            right: 7.8125rem;
-
-            position: absolute;
-            color: #FFFFFF;
-            z-index: 10000;
-
-    
-
-    }
-
-
-    .figcaption__collections__img1{
-        top: 115.625rem;
-        left: -3.125rem;
-
-    }
-    .figcaption__collections__img2{
-        top: 114.375rem;
-        left: 18.75rem;
-
-    }
-    .figcaption__collections__img3{
-        top: 128.125rem;
-        left: -4.2rem;
-    }
-    .figcaption__collections__img4{
-        top: 126.875rem;
-        left: 18.75rem;
-
-    }
-    .figcaption__collections__img5{
-        top: 140rem;
-        left: -4.2rem;
-    }
-    .figcaption__collections__img6{
-        top: 138.75rem;
-        left: 18.75rem;
-    }
-
-    .section__container__collections--btn{
-        margin-top: -14rem;
-    }
-
-
-
-    /* Featured products   */
-
-
-    /* Our Story */
-
-
-    .main__story{
-        width: 80%;
-        height: auto;
-    }
-
-    .main__story__figure{
-        width: 100%;
-        margin-top: 1.5rem;
-    
-    }
-
-    .main__story__figure--image{
-        width: 100%;
-        height: 25vh;
-    
-    }
-
-    .button__ourstory{
-        margin-top: 80px;
-    }
-
-
-    /* Footer */
-
-    
-
-
-
-
-}
-
-
-
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-
-    .header{
-        max-width: 100%;
-    }
-
-
-    #menu-icon{
-        display: flex;
+        margin-top: 40rem;
         position: relative;
-        right: 1.5rem;
-
     }
 
-    #navlist{
-        position: absolute;
-        top: 100%;
-        right: -7%;
-        width: 300px;
-        height: 40vh;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 50px 20px;
-        background: #0D554A;
-        transition: all .55s ease;
-    }
+}
 
-    #navlist.open{
-        right: -100%;
-    }
 
-    ul{
-        display: block;
-        margin-left: 50px;
-    }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
 
-    nav a{
-        display: block;
-        font-size: 1.2rem;
-    }
-
-    /* Hero */
-
+.heroProductsImages{
+    display: none;
+}
+.heroSparkleText{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.features--text{
+    display: flex;
+    align-self: center;
+}
+.features__button{
+    align-self: center;
+    margin-bottom: 5%;
+}
+.container--featured{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
     
-    .heroSparkleText{
-        top: 10rem;
-    }
-        .sparkleImage{
-            width: 60%;
-        }
 
-    .buttonShopNow{
-        bottom: 37%;
-    }
+}
+.main--features--products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.section__container__collections--imgs{
+    display: flex;
+    flex-direction: column;
+}
+.collections__img{
+    width: 20rem;
+}
 
-
-    
-        .necklaceImage{
-            width:18rem;
-            height: auto;
-            position: absolute;
-            top: 10rem;
-            left: 3rem;
-
-        }
-        .ringsImage{
-            position: absolute;
-            width: 12.5rem;
-            height: auto;
-            z-index: 3;
-            margin-top:7.3rem;
-
-            left: -8rem;
-            top: 9rem;
-
-        }
-        .buttonHeroPng{
-            position: absolute;
-            z-index: 1000;
-            top: 26.25rem;
-            left: 40.625rem;
-            background-color: transparent;
-            border-style: none;
-        }
+.figcaption__collections__img1{
+    width: 20rem;
+    margin-bottom: 5rem;
+}
 
 
-        /* Description */
-
-        .description{
-            width: 100%;
-        } 
-            .description__container{
-                width: 30%;
-                margin-left: 0px;
-            }
-
-            .description__figure--logo{
-                padding-bottom: 5px;
-            }
-
-            .description__container--description__container--p--title{
-                font-size: 1.3rem;
-            }
-
-            .description__container--description__container--p{
-                font-size: 1rem;
-            }
-
-
-        /* Featured Products */
-
-        .container--featured{
-            margin-left: 5%;
-            width: 25%;
-        }
-
-            .features--title{
-                font-size: 2.3rem;
-                width: 25vh;
-        
-            }
-
-            .features--text{
-                font-size: 1rem;
-                width: 13rem;
-            }
-
-        
-
-        .container--products{
-            margin-left: 3rem;
-        }
-            .product--img{
-                width: 15rem;
-            }
-
-            .product--figcaption--title{
-                font-size: 1.2rem;
-            }
-
-            .product--figcaption--text{
-                font-size: 1rem;
-            }
-
-
-        /* Our collections */
-
-        .main__collections{
-            margin-left: 5%;
-            margin-right: 5%;
-            margin-top: 10%;
-        }
-
-            .section__container__collections--imgs{
-                margin-top: -150px;
-                gap: 1rem;
-                width: 100%;
-                margin-top: -180px;
-                margin-bottom: -100px;
-            }
-
-            .collections__img{
-                width: 100%;
-            }
-
-            .figcaption__collections__img1, .figcaption__collections__img2,
-            .figcaption__collections__img3, .figcaption__collections__img4,
-            .figcaption__collections__img5, .figcaption__collections__img6 {
-                font-family: Cormorant Garamond;
-                font-size: 1.5rem;
-                text-align: center;
-                color: #FFFFFF;
-                position: relative;
-                bottom: 3.8rem;
-    }
-
-    /* Footer */
-
-
-
-   
 }
 
 
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
 
-
-    .header{
-        width: 100%;
+@media only screen and (min-width: 320px) and (max-width: 768px){
+    .header__nav{
+        background-color: #093931;
+        z-index: 40;
     }
-
-    ul{
-        margin-right: 0;
-    }
-
-    nav{
-        margin-right: 0;
-    }
-
-    .hero{
-        width: 100%;
-        height: 90vh;
-    }
-
-
-    .darlingTitle{
-        margin-left: 10%;
+        #navButtons {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            margin-top: 24rem;
+        }
+        
+        
+        #navButtons {
+            display: none;
     
+        }
+        #navToggleButton{
+            margin-right: 7%;
+            border: none;
+            background-color: transparent;
+            color: #F2C66D;
+            font-size: 2rem;
+        }
+        
+    }
+    @media only screen and (min-width: 769px) and (max-width: 2000px){
+        #navToggleButton{
+            display: none;
+        }
     }
 
-    .heroSparkleText{
-        z-index: 3;
-        position: absolute;
-        margin-top: 20%;
-        margin-left:10%;
+    @media only screen and (min-width: 320px) and (max-width: 491px){
+
+
+        .footer__nav__container{
+            width: 70%;
+        }
+        .footer__subscribe__container--input__container--button{
+            width: 20%;
+            font-size: 0.5rem;
+        }
+        .footer__subscribe__container{
+            text-align: center;
+        }
+        .section__description{
+            display: flex;
+            flex-direction: column;
+        }
     }
-        .sparkleImage{
-            width: 85%;
+
+
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+
+        .section__figure--top{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .figure--top{
+            width: 20rem;
+        }
+        .section__figure--bottom{
+            display: flex;
+            flex-direction: column;
+        }
+        .card__primary__container{
+            width: 100%;
+        }
+            .figure--bottom--img--big{
+                height: 30rem;
+            }
+    
+    
+        .card__secondary__container{
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+        .figure--bottom{
+            width: 20rem;
+        }
+    }
+
+    @media only screen and (min-width: 1005px) and (max-width: 2000px){
+
+        main{
+            margin-top: 40rem;
         }
 
+    }
 
+    @media only screen and (min-width: 1049px) and (max-width: 2000px){
 
         .heroProductsImages{
-            position: absolute;
+
+            display: flex;
             justify-content: space-between;
-            z-index: 2;
-            margin-top: 15%;
-            left: 8.6%;
+        }
+
+        .hero__welcome{
+            width: 90%;
         }
             .necklaceImage{
-                width:22rem;
-                height: auto;
-                position: absolute;
-        
+                margin-left: 10%;
             }
-            .ringsImage{
-                position: absolute;
-                width: 14.5rem;
-                height: auto;
-                margin-left: 12rem;
-                z-index: 3;
-                margin-top:7.3rem;
-        
-            }
-            .buttonHeroPng{
-                position: absolute;
-                z-index: 1000;
-                top: 380px;
-                left: 900px;
-                background-color: transparent;
-                border-style: none;
-            }
-        
-        .buttonShopNow{
-            bottom: 37%;
-        }
-
-        .vector{
-            height: 90vh;
-        }
-
-    /*  Description ---->  */
-
-    .description{
-        width: 100%;
     }
-
-        .description__container{
-            margin-left: 0px;
-            width: 30%;
-        }
-        
-
-
-
-        .description__figure--logo {
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 15px;
-            
-            margin-bottom: 0px;
-            
-        }
-        .description__container--description__container--p--title{
-            font-weight: bold;
-            font-family: Cormorant Garamond;
-            font-size: 1.6rem;
-        }
-        .description__container--description__container--p{
-            color:#9095A0;
-            font-family: Manrope;
-            font-size: 1rem;
-        }
-
-
-        /* Featured Products */
-
-        .features--title{
-            font-size: 2.6rem;
-            width: 16.5rem;
-        }
-
-        .features--text{
-            font-size: 1rem;
-            width: 16.5rem;
-        }
-
-
-
-        .container--products{
-            margin-left: 2.5rem;
-        }
-        .product--img{
-            width: 15rem;
-
-        }
-
-
-        /* Collections ----> */
-
-
-        .figcaption__collections__img1, .figcaption__collections__img2,
-    .figcaption__collections__img3, .figcaption__collections__img4,
-    .figcaption__collections__img5, .figcaption__collections__img6 {
-        font-family: Cormorant Garamond;
-        font-size: 1.7rem;
-        text-align: center;
-        color: #FFFFFF;
-        position: relative;
-        bottom: 3rem;
-    }
-
-    .section__container__collections--btn{
-        margin-top: 1rem;
-
-    }
-
-    .section__container__collections--imgs{
-        margin-top: -175px;
-    }
-
-        
-
-    /* Footer */
-
-
-  
-    
-}
-
-
-
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-    }
-
-    .menuItem:hover{
-        color: #F2C66D;
-        text-decoration: none; /* Quita el subrayado predeterminado */
-        border-bottom: 3px solid #F2C66D; /* Agrega una línea en la parte inferior */
-        padding-bottom: 5px;
-        cursor: pointer;
-        border-radius: 2px;
-    }
-
-
-
-        .sparkleImage{
-            width: 100%;
-        }
-
-
-
-    .heroProductsImages{
-        position: absolute;
-        justify-content: space-between;
-        z-index: 2;
-        margin-top: 10%;
-        margin-left: 55%;
-    }
-
-        .necklaceImage{
-            width:auto;
-            height: auto;
-            position: absolute;
-    
-        }
-        .ringsImage{
-            position: absolute;
-            width: auto;
-            height: auto;
-            margin-left: 17rem;
-            z-index: 3;
-            margin-top:7.3rem;
-        }
-        .buttonHeroPng{
-            position: absolute;
-            z-index: 1000;
-            top: 390px;
-            left: 1085px;
-            background-color: transparent;
-            border-style: none;
-        }
-        .buttonHeroImg{
-            width: 100%
-        }
-        .buttonHeroImg:hover{
-            cursor: pointer;
-        }
-
-        /* Description  */
-
-        .description{
-            width: 100%;
-            margin-right: 0px;
-        }
-
-            .description__container{
-                width: 25%;
-                margin-left: 0px;
-            }
-            .description__container--description__container--p--title{
-                font-size: 1.485rem;
-            }
-            .description__container--description__container--p{
-                font-size: 1.125rem;
-            }
-
-        
-        /* Featured products */
-        .container--featured{
-            width: 25%;
-            padding-right: 100px;
-            margin-left: 10%;
-        }
-            .features--title{
-                font-family: 'Cormorant Garamond';
-                font-size: 2.875rem;
-                color: #0D554A;
-                margin-bottom: 0.5rem;
-                margin-top: 0.7rem;
-            }
-        
-            .features--text{
-                font-family: Manrope;
-                color:#9095A0;
-                margin-top: 2rem;
-                margin-bottom: 2rem;
-                font-size: 1.125rem;
-                width: 18rem;
-            }
-
-
-            .product--img{
-                width: 18rem;
-                border-radius: 10px 10px 0px 0px;
-            }
-                .product--img--figcaption{
-                    margin-left: 1rem;
-                }
-                .product--figcaption--title{
-                    font-size: 1.485rem;
-                    font-family: Cormorant Garamond;
-            
-                }
-                .product--figcaption--text{
-                    font-size: 1.125rem;
-                    font-family: Manrope;
-            
-                }
-
-
-                /*  Footer  */
-
-                
-
-            }
-
-
-
-
-
-

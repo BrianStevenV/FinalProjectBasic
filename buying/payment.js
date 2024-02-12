@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('click', (event) => {
     const { target } = event;
 
@@ -6,7 +5,7 @@ document.addEventListener('click', (event) => {
         window.location.href = "../products/product.html";
     } else if(target.id === "about" || target.id === "contact" ){
         window.scrollTo(0, document.body.scrollHeight);
-    }else if(target.id === "home"){
+    }else if(target.id === "home" || target.id === "darling"){
         window.location.href = "../home/home.html";
     
       }
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-=======
 const userData = sessionStorage.getItem('formData');
 const userDataParse = JSON.parse(userData);
 
@@ -114,4 +112,3 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
->>>>>>> a84bcee1e5a135a3cacfad0d751f436c223b1ddb
