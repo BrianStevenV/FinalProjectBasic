@@ -28,11 +28,12 @@ async function createCartSection() {
     const bodyCartSection = document.createElement('section');
     bodyCartSection.className = 'body__cart';
 
+
     var cartContent = `
       <section class="your__cart">
         <article class="your__cart--h1__p__container">
           <h1 class="h1__p__container--h1">Your cart</h1>
-          <div class="bx bx-x" id="close-icon" id="close-icon"></div>
+          <div class="bx bx-x" id="close-icon"></div>
         </article>
 
         <section class="cart__container">
@@ -148,17 +149,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 
-  // Agregar evento de clic al icono de cierre
-  document.addEventListener('click', function(event) {
-      const closeIcon = event.target.closest('#close-icon');
-      if (closeIcon) {
-          hideCart();
-      }
-  });
+ 
 });
-
-// Función para ocultar el carrito
+document.addEventListener('click', function(event) {
+  const closeIcon = event.target.closest('#close-icon');
+  if (closeIcon) {
+      hideCart();
+  }
+});
 function hideCart() {
   const cartSection = document.querySelector('.body__cart');
-  cartSection.classList.add('hidden');
+  cartSection.id.add('hidden');
 }

@@ -140,6 +140,7 @@ header{
     }
         .card__product__aside--img{
             width: 4rem;
+            height: 7rem;
             margin-bottom: 20%;
         }
 

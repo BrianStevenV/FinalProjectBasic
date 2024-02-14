@@ -113,6 +113,14 @@ header{
             margin-top: 10%;
             margin-left: 27%;
         }
+        .playImage{
+            width: 3rem;
+            height: 3rem;
+            z-index: 6;
+            position: absolute;
+            margin-top: 15%;
+            margin-left: 32%;
+        }
 
 
 
@@ -966,7 +974,7 @@ align-items: center;
 
     }
 
-    @media only screen and (min-width: 1049px) and (max-width: 2000px){
+    @media only screen and (min-width: 1801px) and (max-width: 2000px){
 
         .heroProductsImages{
 
@@ -980,4 +988,95 @@ align-items: center;
             .necklaceImage{
                 margin-left: 10%;
             }
-    }
+            .ringsImage{
+                margin-top: 5%;
+                margin-left: 25%;
+            }
+            
+            .playImage{
+                margin-left: 30%;
+                margin-top: 11%;
+            }
+
+        }
+
+        @media only screen and (min-width: 1701px) and (max-width: 1800px){
+
+            .heroProductsImages{
+    
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .hero__welcome{
+                width: 90%;
+            }
+            .necklaceImage{
+                margin-left: 10%;
+            }
+            .ringsImage{
+                margin-top: 5%;
+                margin-left: 25%;
+            }
+            
+            .playImage{
+                margin-left: 30%;
+                margin-top: 11%;
+            }
+
+        }
+        @media only screen and (min-width: 1601px) and (max-width: 1700px){
+
+            .heroProductsImages{
+    
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .hero__welcome{
+                width: 90%;
+            }
+            .necklaceImage{
+                margin-left: 10%;
+            }
+            .ringsImage{
+                margin-top: 5%;
+                margin-left: 26%;
+            }
+            
+            .playImage{
+                margin-left: 31%;
+                margin-top: 11%;
+            }
+
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1600px){
+
+            .hero__welcome{
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .heroSparkleText{
+                width: 100%;
+            }
+            .ringsImage{
+                margin-left: 48%;
+                margin-top: 17%;
+            }
+            .playImage{
+                margin-top: 35%;
+                margin-left: 63%;
+            }
+
+
+        }
+
+
+        @media only screen and (min-width: 1px) and (max-width: 1023px){
+            .heroProductsImages{
+                display: none;
+            }
+
+        }
