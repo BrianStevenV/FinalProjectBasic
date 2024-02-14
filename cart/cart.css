@@ -12,6 +12,9 @@
     display: none;
   }
   
+#hidden {
+    display: none;
+  }
 .body__cart{
     display: flex;
     padding: 2.5% 5%;
