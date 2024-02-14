@@ -32,7 +32,7 @@ async function createCartSection() {
       <section class="your__cart">
         <article class="your__cart--h1__p__container">
           <h1 class="h1__p__container--h1">Your cart</h1>
-          <div class="bx bx-x" id="close-icon"></div>
+          <div class="bx bx-x" id="close-icon" id="close-icon"></div>
         </article>
 
         <section class="cart__container">
@@ -133,3 +133,32 @@ const fetchTotalPay = () => {
     return null;
   }
 };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const detailsContainer = document.querySelector(".card__product__container");
+
+  detailsContainer.addEventListener('click', function(event) {
+      const purchaseButton = event.target.closest('.card__product__main--btn--buy');
+
+      if (purchaseButton) {
+          console.log('Purchase button clicked');
+          
+          createCartSection();
+      }
+  });
+
+  // Agregar evento de clic al icono de cierre
+  document.addEventListener('click', function(event) {
+      const closeIcon = event.target.closest('#close-icon');
+      if (closeIcon) {
+          hideCart();
+      }
+  });
+});
+
+// Función para ocultar el carrito
+function hideCart() {
+  const cartSection = document.querySelector('.body__cart');
+  cartSection.classList.add('hidden');
+}
