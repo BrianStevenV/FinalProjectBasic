@@ -1000,7 +1000,7 @@ align-items: center;
 
         }
 
-        @media only screen and (min-width: 1701px) and (max-width: 1800px){
+        @media only screen and (min-width: 1701px) and (max-width: 1900px){
 
             .heroProductsImages{
     
@@ -1051,7 +1051,7 @@ align-items: center;
 
         }
 
-        @media only screen and (min-width: 1024px) and (max-width: 1600px){
+        @media only screen and (min-width: 1024px) and (max-width: 1283px){
 
             .hero__welcome{
                 width: 50%;
@@ -1062,17 +1062,64 @@ align-items: center;
                 width: 100%;
             }
             .ringsImage{
-                margin-left: 48%;
+                margin-left: 40%;
                 margin-top: 17%;
             }
             .playImage{
-                margin-top: 35%;
-                margin-left: 63%;
+                margin-top: 33%;
+                margin-left: 52%;
             }
 
 
         }
+        @media only screen and (min-width: 1284px) and (max-width: 1300px){
+            .hero__welcome{
+                width: 50%;
 
+                display: flex;
+                justify-content: space-between;
+            }
+            .ringsImage{
+                margin-left: 40%;
+                margin-top: 17%;
+            }
+            .playImage{
+                margin-top: 33%;
+                margin-left: 52%;
+            }
+        }
+        @media only screen and (min-width: 1301px) and (max-width: 1400px){
+            .hero__welcome{
+                width: 50%;
+
+                display: flex;
+                justify-content: space-between;
+            }
+            .ringsImage{
+                margin-left: 35%;
+                margin-top: 17%;
+            }
+            .playImage{
+                margin-top: 33%;
+                margin-left: 47%;
+            }
+        }
+        @media only screen and (min-width: 1401px) and (max-width: 1600px){
+            .hero__welcome{
+                width: 50%;
+
+                display: flex;
+                justify-content: space-between;
+            }
+            .ringsImage{
+                margin-left: 35%;
+                margin-top: 17%;
+            }
+            .playImage{
+                margin-top: 31%;
+                margin-left: 46%;
+            }
+        }
 
         @media only screen and (min-width: 1px) and (max-width: 1023px){
             .heroProductsImages{
