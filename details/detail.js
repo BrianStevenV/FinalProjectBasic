@@ -107,13 +107,13 @@ function createProductDetailsSection(productObject) {
 
     detailsContainer.innerHTML = `
     <figure class="card__product__aside--left">
-                <img src="../assets/details_img/Img 1 aside.png" alt="Ring 1" class="card__product__aside--img">
-                <img src="../assets/details_img/Img 2 aside.png" alt="Ring 2" class="card__product__aside--img">
-                <img src="../assets/details_img/Img 3 aside.png" alt="RIng 3" class="card__product__aside--img">
-                <img src="../assets/details_img/Img 4 aside.png" alt="Ring 4" class="card__product__aside--img">
+                <img src="${product.images[1]}" alt="Ring 1" class="card__product__aside--img">
+                <img src="${product.images[2]}" alt="Ring 2" class="card__product__aside--img">
+                <img src="${product.images[3]}" class="card__product__aside--img">
+                <img src="${product.images[4]}" alt="Ring 4" class="card__product__aside--img">
             </figure>
             <figure class="card__product__main">
-                <img src="${product.images}" alt="${product.name}"
+                <img src="${product.images[0]}" alt="${product.name}"
                     class="card__product__main__card__product__main--img">
             </figure>
             <section class="card__product__main--figcaption">
@@ -275,7 +275,7 @@ function createProductDescription(productObject) {
                 ${product.description}</p>
             </article>
             <figure class="card__product__description__figure">
-                <img src="${product.images}" alt=""
+                <img src="${product.images[0]}" alt=""
                     class="card__product__description__img">
             </figure>
     
@@ -427,22 +427,20 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Variable para almacenar la talla seleccionada
+    
     let selectedSize = null;
 
-    // Obtener todos los elementos <li> que representan tallas
+    
     const sizes = document.querySelectorAll('.card__product__main--li');
 
-    // Iterar sobre cada talla y agregar un event listener para el clic
+  
     sizes.forEach(function(size) {
         size.addEventListener('click', function() {
-            // Obtener el valor de la talla seleccionada
+            
             const valueSelectedSize = size.textContent;
             
-            // Actualizar la variable de la talla seleccionada
+           
             selectedSize = valueSelectedSize;
-
-            // Aquí puedes hacer lo que necesites con la talla seleccionada
             console.log("Talla seleccionada:", selectedSize);
         });
     });

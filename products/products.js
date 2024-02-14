@@ -58,7 +58,7 @@ const fetchDataAndRenderProducts = async (url) => {
 
             categoryData.forEach(product => {
                 htmlContent += `<figure class="figure--top">
-                    <img src="${product.images}" alt="${product.name}" class="figure--top--img">
+                    <img src="${product.images[0]}" alt="${product.name}" class="figure--top--img">
                     <figcaption class="figure--top--figcaption">
                         <p class="figcaption__h1">${product.name}</p>
                         <p class="figcaption__p">$${product.price}</p>
@@ -143,4 +143,50 @@ const captureFigcaptionH1 = (element) => {
     const storage = sessionStorage.setItem('productTitle', valueOnly);
     console.log(storage);
     
+}
+
+const getProductByName = () => {
+    const searchBar = document.getElementById('search-bar');
+
+    searchBar.addEventListener('keyup', async (event) => {
+        console.log('object');
+        if (event.key === 'Enter') {
+            const name = searchBar.value;
+            console.log(name);
+            const responseApi = await fetchByName(name);
+            console.log(`From ${responseApi}`);
+            
+            const product = responseApi;
+            if (product) {
+                containerTop.innerHTML = "";
+                containerBottom.innerHTML = "";
+
+                let htmlContent = `<figure class="figure--top">
+                    <img src="${product.images[0]}" alt="${product.name}" class="figure--top--img">
+                    <figcaption class="figure--top--figcaption">
+                        <p class="figcaption__h1">${product.name}</p>
+                        <p class="figcaption__p">$${product.price}</p>
+                    </figcaption>
+                </figure>`;
+
+                containerTop.innerHTML = htmlContent;
+            }
+        } else {
+            console.error(`Error if key up`);
+        }
+    });
+}
+
+const fetchByName = async (name) => {
+    console.log(`From fetch name`);
+    const url = `http://localhost:3000/api/product/name/${name}`;
+    const responseApi = await fetch(url);
+
+    if (responseApi.ok) {
+        console.log(`From good`);
+        return await responseApi.json();
+    } else {
+        console.error("Error from fetchByName", responseApi.status, responseApi.statusText);
+        return null;
+    }
 }
