@@ -40,7 +40,10 @@ Also, it will be capable of choosing how many items it wants in the cart.
 
 
 
+
+
+
 Techonologies applied:
 
-Mongoose, JavaScript, HTML, CSS and JSON server
+Mongoose, JavaScript, HTML, CSS and NodeJs
 
